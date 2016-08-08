@@ -1,0 +1,16 @@
+//
+//  XMLYFM-Prefix.pch
+//  XMLYFM
+//
+//  Created by East_wu on 16/8/8.
+//  Copyright © 2016年 East_wu. All rights reserved.
+//
+
+#ifndef XMLYFM_Prefix_pch
+#define XMLYFM_Prefix_pch
+
+#import "XMLYMacro.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* XMLYFM_Prefix_pch */

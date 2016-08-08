@@ -8,13 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		2B6E09E31D58367D000A8C58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E09E21D58367D000A8C58 /* main.m */; };
-		2B6E09E61D58367D000A8C58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E09E51D58367D000A8C58 /* AppDelegate.m */; };
-		2B6E09E91D58367D000A8C58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E09E81D58367D000A8C58 /* ViewController.m */; };
-		2B6E09EC1D58367D000A8C58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6E09EA1D58367D000A8C58 /* Main.storyboard */; };
-		2B6E09EE1D58367D000A8C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6E09ED1D58367D000A8C58 /* Assets.xcassets */; };
-		2B6E09F11D58367D000A8C58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6E09EF1D58367D000A8C58 /* LaunchScreen.storyboard */; };
 		2B6E09FC1D58367D000A8C58 /* XMLYFMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E09FB1D58367D000A8C58 /* XMLYFMTests.m */; };
 		2B6E0A071D58367D000A8C58 /* XMLYFMUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E0A061D58367D000A8C58 /* XMLYFMUITests.m */; };
+		2B6E0A371D58402A000A8C58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E0A361D58402A000A8C58 /* AppDelegate.m */; };
+		2B6E0A3C1D584062000A8C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6E0A3B1D584062000A8C58 /* Assets.xcassets */; };
+		2B6E0A461D584577000A8C58 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6E0A451D584577000A8C58 /* Root.storyboard */; };
+		2B6E0A491D5845CF000A8C58 /* XMLYRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E0A481D5845CF000A8C58 /* XMLYRootViewController.m */; };
+		2B6E0A4F1D58471C000A8C58 /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6E0A4E1D58471C000A8C58 /* Find.storyboard */; };
+		2B6E0A521D584BA1000A8C58 /* XMLYFindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E0A511D584BA1000A8C58 /* XMLYFindViewController.m */; };
+		2B6E0A581D584BF6000A8C58 /* SubScribe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6E0A571D584BF6000A8C58 /* SubScribe.storyboard */; };
+		2B6E0A5B1D584C6C000A8C58 /* XMLYSubScribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E0A5A1D584C6C000A8C58 /* XMLYSubScribeViewController.m */; };
+		2B6E0A611D584D46000A8C58 /* Play.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6E0A601D584D46000A8C58 /* Play.storyboard */; };
+		2B6E0A641D584E2A000A8C58 /* XMLYPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E0A631D584E2A000A8C58 /* XMLYPlayViewController.m */; };
+		2B6E0A6E1D584EC4000A8C58 /* DownLoad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6E0A6D1D584EC4000A8C58 /* DownLoad.storyboard */; };
+		2B6E0A711D584F19000A8C58 /* XMLYDownLoadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E0A701D584F19000A8C58 /* XMLYDownLoadViewController.m */; };
+		2B6E0A731D584F30000A8C58 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6E0A721D584F30000A8C58 /* Mine.storyboard */; };
+		2B6E0A761D584F74000A8C58 /* XMLYMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E0A751D584F74000A8C58 /* XMLYMineViewController.m */; };
+		2B6E0A7C1D588481000A8C58 /* XMLYMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E0A7B1D588481000A8C58 /* XMLYMacro.m */; };
+		DE6862F7B22BC967779F6B89 /* libPods-XMLYFM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D832EE11D9F3816A4F52F6 /* libPods-XMLYFM.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,13 +48,6 @@
 /* Begin PBXFileReference section */
 		2B6E09DE1D58367D000A8C58 /* XMLYFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMLYFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6E09E21D58367D000A8C58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2B6E09E41D58367D000A8C58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		2B6E09E51D58367D000A8C58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2B6E09E71D58367D000A8C58 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2B6E09E81D58367D000A8C58 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2B6E09EB1D58367D000A8C58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2B6E09ED1D58367D000A8C58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2B6E09F01D58367D000A8C58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B6E09F21D58367D000A8C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B6E09F71D58367D000A8C58 /* XMLYFMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XMLYFMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6E09FB1D58367D000A8C58 /* XMLYFMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLYFMTests.m; sourceTree = "<group>"; };
@@ -51,6 +55,33 @@
 		2B6E0A021D58367D000A8C58 /* XMLYFMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XMLYFMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6E0A061D58367D000A8C58 /* XMLYFMUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLYFMUITests.m; sourceTree = "<group>"; };
 		2B6E0A081D58367D000A8C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B6E0A351D58402A000A8C58 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2B6E0A361D58402A000A8C58 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2B6E0A3B1D584062000A8C58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B6E0A451D584577000A8C58 /* Root.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
+		2B6E0A471D5845CF000A8C58 /* XMLYRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYRootViewController.h; sourceTree = "<group>"; };
+		2B6E0A481D5845CF000A8C58 /* XMLYRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYRootViewController.m; sourceTree = "<group>"; };
+		2B6E0A4E1D58471C000A8C58 /* Find.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
+		2B6E0A501D584BA1000A8C58 /* XMLYFindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindViewController.h; sourceTree = "<group>"; };
+		2B6E0A511D584BA1000A8C58 /* XMLYFindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindViewController.m; sourceTree = "<group>"; };
+		2B6E0A571D584BF6000A8C58 /* SubScribe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SubScribe.storyboard; sourceTree = "<group>"; };
+		2B6E0A591D584C6C000A8C58 /* XMLYSubScribeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYSubScribeViewController.h; sourceTree = "<group>"; };
+		2B6E0A5A1D584C6C000A8C58 /* XMLYSubScribeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYSubScribeViewController.m; sourceTree = "<group>"; };
+		2B6E0A601D584D46000A8C58 /* Play.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Play.storyboard; sourceTree = "<group>"; };
+		2B6E0A621D584E2A000A8C58 /* XMLYPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYPlayViewController.h; sourceTree = "<group>"; };
+		2B6E0A631D584E2A000A8C58 /* XMLYPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYPlayViewController.m; sourceTree = "<group>"; };
+		2B6E0A6D1D584EC4000A8C58 /* DownLoad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DownLoad.storyboard; sourceTree = "<group>"; };
+		2B6E0A6F1D584F19000A8C58 /* XMLYDownLoadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYDownLoadViewController.h; sourceTree = "<group>"; };
+		2B6E0A701D584F19000A8C58 /* XMLYDownLoadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYDownLoadViewController.m; sourceTree = "<group>"; };
+		2B6E0A721D584F30000A8C58 /* Mine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		2B6E0A741D584F74000A8C58 /* XMLYMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYMineViewController.h; sourceTree = "<group>"; };
+		2B6E0A751D584F74000A8C58 /* XMLYMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYMineViewController.m; sourceTree = "<group>"; };
+		2B6E0A7A1D588481000A8C58 /* XMLYMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYMacro.h; sourceTree = "<group>"; };
+		2B6E0A7B1D588481000A8C58 /* XMLYMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYMacro.m; sourceTree = "<group>"; };
+		2B6E0A7E1D588957000A8C58 /* XMLYFM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XMLYFM-Prefix.pch"; sourceTree = "<group>"; };
+		74D832EE11D9F3816A4F52F6 /* libPods-XMLYFM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XMLYFM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B7040AA7CAB90D071FCA8D3 /* Pods-XMLYFM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMLYFM.release.xcconfig"; path = "Pods/Target Support Files/Pods-XMLYFM/Pods-XMLYFM.release.xcconfig"; sourceTree = "<group>"; };
+		D0485ABDEC5652D66D70C0F1 /* Pods-XMLYFM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMLYFM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XMLYFM/Pods-XMLYFM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE6862F7B22BC967779F6B89 /* libPods-XMLYFM.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +117,8 @@
 				2B6E09FA1D58367D000A8C58 /* XMLYFMTests */,
 				2B6E0A051D58367D000A8C58 /* XMLYFMUITests */,
 				2B6E09DF1D58367D000A8C58 /* Products */,
+				DB988004C20E5E40051DDF8C /* Pods */,
+				A5A39674C437B4106C96A8EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +135,13 @@
 		2B6E09E01D58367D000A8C58 /* XMLYFM */ = {
 			isa = PBXGroup;
 			children = (
-				2B6E09E41D58367D000A8C58 /* AppDelegate.h */,
-				2B6E09E51D58367D000A8C58 /* AppDelegate.m */,
-				2B6E09E71D58367D000A8C58 /* ViewController.h */,
-				2B6E09E81D58367D000A8C58 /* ViewController.m */,
-				2B6E09EA1D58367D000A8C58 /* Main.storyboard */,
-				2B6E09ED1D58367D000A8C58 /* Assets.xcassets */,
-				2B6E09EF1D58367D000A8C58 /* LaunchScreen.storyboard */,
-				2B6E09F21D58367D000A8C58 /* Info.plist */,
+				2B6E0A321D583FE6000A8C58 /* Resources */,
+				2B6E0A441D584181000A8C58 /* General */,
+				2B6E0A431D58415A000A8C58 /* HTTPRequest */,
+				2B6E0A3D1D5840AD000A8C58 /* Sections */,
+				2B6E0A341D583FFF000A8C58 /* Venders */,
+				2B6E0A331D583FF6000A8C58 /* AppDelegate */,
+				2B6E0A311D583FC7000A8C58 /* Root */,
 				2B6E09E11D58367D000A8C58 /* Supporting Files */,
 			);
 			path = XMLYFM;
@@ -117,7 +150,9 @@
 		2B6E09E11D58367D000A8C58 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2B6E09F21D58367D000A8C58 /* Info.plist */,
 				2B6E09E21D58367D000A8C58 /* main.m */,
+				2B6E0A7E1D588957000A8C58 /* XMLYFM-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -140,6 +175,319 @@
 			path = XMLYFMUITests;
 			sourceTree = "<group>";
 		};
+		2B6E0A311D583FC7000A8C58 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A451D584577000A8C58 /* Root.storyboard */,
+				2B6E0A471D5845CF000A8C58 /* XMLYRootViewController.h */,
+				2B6E0A481D5845CF000A8C58 /* XMLYRootViewController.m */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		2B6E0A321D583FE6000A8C58 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A3B1D584062000A8C58 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2B6E0A331D583FF6000A8C58 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A351D58402A000A8C58 /* AppDelegate.h */,
+				2B6E0A361D58402A000A8C58 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2B6E0A341D583FFF000A8C58 /* Venders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Venders;
+			sourceTree = "<group>";
+		};
+		2B6E0A3D1D5840AD000A8C58 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A3F1D58412B000A8C58 /* FindSection */,
+				2B6E0A421D58412B000A8C58 /* SubScribeSection */,
+				2B6E0A411D58412B000A8C58 /* PlaySection */,
+				2B6E0A3E1D58412B000A8C58 /* DownloadSection */,
+				2B6E0A401D58412B000A8C58 /* MineSection */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		2B6E0A3E1D58412B000A8C58 /* DownloadSection */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A651D584E9C000A8C58 /* Controller */,
+				2B6E0A661D584E9C000A8C58 /* Model */,
+				2B6E0A671D584E9C000A8C58 /* StroyBoard */,
+				2B6E0A681D584E9C000A8C58 /* View */,
+			);
+			path = DownloadSection;
+			sourceTree = "<group>";
+		};
+		2B6E0A3F1D58412B000A8C58 /* FindSection */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A4A1D5846E6000A8C58 /* Controller */,
+				2B6E0A4B1D5846E6000A8C58 /* Model */,
+				2B6E0A4D1D5846E6000A8C58 /* View */,
+				2B6E0A4C1D5846E6000A8C58 /* StoryBoard */,
+			);
+			path = FindSection;
+			sourceTree = "<group>";
+		};
+		2B6E0A401D58412B000A8C58 /* MineSection */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A691D584EA5000A8C58 /* Controller */,
+				2B6E0A6A1D584EA6000A8C58 /* Model */,
+				2B6E0A6B1D584EA6000A8C58 /* StroyBoard */,
+				2B6E0A6C1D584EA6000A8C58 /* View */,
+			);
+			path = MineSection;
+			sourceTree = "<group>";
+		};
+		2B6E0A411D58412B000A8C58 /* PlaySection */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A5C1D584D2F000A8C58 /* Controller */,
+				2B6E0A5D1D584D2F000A8C58 /* Model */,
+				2B6E0A5F1D584D2F000A8C58 /* View */,
+				2B6E0A5E1D584D2F000A8C58 /* StoryBoard */,
+			);
+			path = PlaySection;
+			sourceTree = "<group>";
+		};
+		2B6E0A421D58412B000A8C58 /* SubScribeSection */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A531D584BE0000A8C58 /* Controller */,
+				2B6E0A541D584BE0000A8C58 /* Model */,
+				2B6E0A561D584BE0000A8C58 /* View */,
+				2B6E0A551D584BE0000A8C58 /* StroyBoard */,
+			);
+			path = SubScribeSection;
+			sourceTree = "<group>";
+		};
+		2B6E0A431D58415A000A8C58 /* HTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HTTPRequest;
+			sourceTree = "<group>";
+		};
+		2B6E0A441D584181000A8C58 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A771D58846E000A8C58 /* XMLYConfig */,
+				2B6E0A781D58846E000A8C58 /* XMLYMacro */,
+				2B6E0A791D58846E000A8C58 /* XMLYNotification */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		2B6E0A4A1D5846E6000A8C58 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A501D584BA1000A8C58 /* XMLYFindViewController.h */,
+				2B6E0A511D584BA1000A8C58 /* XMLYFindViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B6E0A4B1D5846E6000A8C58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6E0A4C1D5846E6000A8C58 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A4E1D58471C000A8C58 /* Find.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		2B6E0A4D1D5846E6000A8C58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6E0A531D584BE0000A8C58 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A591D584C6C000A8C58 /* XMLYSubScribeViewController.h */,
+				2B6E0A5A1D584C6C000A8C58 /* XMLYSubScribeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B6E0A541D584BE0000A8C58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6E0A551D584BE0000A8C58 /* StroyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A571D584BF6000A8C58 /* SubScribe.storyboard */,
+			);
+			path = StroyBoard;
+			sourceTree = "<group>";
+		};
+		2B6E0A561D584BE0000A8C58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6E0A5C1D584D2F000A8C58 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A621D584E2A000A8C58 /* XMLYPlayViewController.h */,
+				2B6E0A631D584E2A000A8C58 /* XMLYPlayViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B6E0A5D1D584D2F000A8C58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6E0A5E1D584D2F000A8C58 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A601D584D46000A8C58 /* Play.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		2B6E0A5F1D584D2F000A8C58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6E0A651D584E9C000A8C58 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A6F1D584F19000A8C58 /* XMLYDownLoadViewController.h */,
+				2B6E0A701D584F19000A8C58 /* XMLYDownLoadViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B6E0A661D584E9C000A8C58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6E0A671D584E9C000A8C58 /* StroyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A6D1D584EC4000A8C58 /* DownLoad.storyboard */,
+			);
+			path = StroyBoard;
+			sourceTree = "<group>";
+		};
+		2B6E0A681D584E9C000A8C58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6E0A691D584EA5000A8C58 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A741D584F74000A8C58 /* XMLYMineViewController.h */,
+				2B6E0A751D584F74000A8C58 /* XMLYMineViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B6E0A6A1D584EA6000A8C58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6E0A6B1D584EA6000A8C58 /* StroyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A721D584F30000A8C58 /* Mine.storyboard */,
+			);
+			path = StroyBoard;
+			sourceTree = "<group>";
+		};
+		2B6E0A6C1D584EA6000A8C58 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6E0A771D58846E000A8C58 /* XMLYConfig */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XMLYConfig;
+			sourceTree = "<group>";
+		};
+		2B6E0A781D58846E000A8C58 /* XMLYMacro */ = {
+			isa = PBXGroup;
+			children = (
+				2B6E0A7A1D588481000A8C58 /* XMLYMacro.h */,
+				2B6E0A7B1D588481000A8C58 /* XMLYMacro.m */,
+			);
+			path = XMLYMacro;
+			sourceTree = "<group>";
+		};
+		2B6E0A791D58846E000A8C58 /* XMLYNotification */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XMLYNotification;
+			sourceTree = "<group>";
+		};
+		A5A39674C437B4106C96A8EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74D832EE11D9F3816A4F52F6 /* libPods-XMLYFM.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB988004C20E5E40051DDF8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0485ABDEC5652D66D70C0F1 /* Pods-XMLYFM.debug.xcconfig */,
+				8B7040AA7CAB90D071FCA8D3 /* Pods-XMLYFM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +495,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B6E0A0B1D58367D000A8C58 /* Build configuration list for PBXNativeTarget "XMLYFM" */;
 			buildPhases = (
+				35C231E31D1F2EA11D0990B8 /* [CP] Check Pods Manifest.lock */,
 				2B6E09DA1D58367D000A8C58 /* Sources */,
 				2B6E09DB1D58367D000A8C58 /* Frameworks */,
 				2B6E09DC1D58367D000A8C58 /* Resources */,
+				F2940B790002E888CD7C4377 /* [CP] Embed Pods Frameworks */,
+				C886AB5E4B51D617BE6C292A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,9 +594,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B6E09F11D58367D000A8C58 /* LaunchScreen.storyboard in Resources */,
-				2B6E09EE1D58367D000A8C58 /* Assets.xcassets in Resources */,
-				2B6E09EC1D58367D000A8C58 /* Main.storyboard in Resources */,
+				2B6E0A6E1D584EC4000A8C58 /* DownLoad.storyboard in Resources */,
+				2B6E0A461D584577000A8C58 /* Root.storyboard in Resources */,
+				2B6E0A581D584BF6000A8C58 /* SubScribe.storyboard in Resources */,
+				2B6E0A3C1D584062000A8C58 /* Assets.xcassets in Resources */,
+				2B6E0A731D584F30000A8C58 /* Mine.storyboard in Resources */,
+				2B6E0A4F1D58471C000A8C58 /* Find.storyboard in Resources */,
+				2B6E0A611D584D46000A8C58 /* Play.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,14 +620,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35C231E31D1F2EA11D0990B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C886AB5E4B51D617BE6C292A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMLYFM/Pods-XMLYFM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2940B790002E888CD7C4377 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XMLYFM/Pods-XMLYFM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2B6E09DA1D58367D000A8C58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B6E09E91D58367D000A8C58 /* ViewController.m in Sources */,
-				2B6E09E61D58367D000A8C58 /* AppDelegate.m in Sources */,
+				2B6E0A641D584E2A000A8C58 /* XMLYPlayViewController.m in Sources */,
+				2B6E0A5B1D584C6C000A8C58 /* XMLYSubScribeViewController.m in Sources */,
 				2B6E09E31D58367D000A8C58 /* main.m in Sources */,
+				2B6E0A521D584BA1000A8C58 /* XMLYFindViewController.m in Sources */,
+				2B6E0A7C1D588481000A8C58 /* XMLYMacro.m in Sources */,
+				2B6E0A711D584F19000A8C58 /* XMLYDownLoadViewController.m in Sources */,
+				2B6E0A761D584F74000A8C58 /* XMLYMineViewController.m in Sources */,
+				2B6E0A371D58402A000A8C58 /* AppDelegate.m in Sources */,
+				2B6E0A491D5845CF000A8C58 /* XMLYRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,25 +715,6 @@
 			targetProxy = 2B6E0A031D58367D000A8C58 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		2B6E09EA1D58367D000A8C58 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2B6E09EB1D58367D000A8C58 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2B6E09EF1D58367D000A8C58 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2B6E09F01D58367D000A8C58 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2B6E0A091D58367D000A8C58 /* Debug */ = {
@@ -413,23 +803,35 @@
 		};
 		2B6E0A0C1D58367D000A8C58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0485ABDEC5652D66D70C0F1 /* Pods-XMLYFM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XMLYFM/XMLYFM-Prefix.pch";
 				INFOPLIST_FILE = XMLYFM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wudong.XMLYFM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		2B6E0A0D1D58367D000A8C58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B7040AA7CAB90D071FCA8D3 /* Pods-XMLYFM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XMLYFM/XMLYFM-Prefix.pch";
 				INFOPLIST_FILE = XMLYFM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wudong.XMLYFM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -498,6 +900,7 @@
 				2B6E0A0D1D58367D000A8C58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B6E0A0E1D58367D000A8C58 /* Build configuration list for PBXNativeTarget "XMLYFMTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +909,7 @@
 				2B6E0A101D58367D000A8C58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B6E0A111D58367D000A8C58 /* Build configuration list for PBXNativeTarget "XMLYFMUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +918,7 @@
 				2B6E0A131D58367D000A8C58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
