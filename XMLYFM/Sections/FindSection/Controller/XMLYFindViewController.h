@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMLYBaseController.h"
 
-@interface XMLYFindViewController : UIViewController
+@interface XMLYFindViewController : XMLYBaseController
 
 @end

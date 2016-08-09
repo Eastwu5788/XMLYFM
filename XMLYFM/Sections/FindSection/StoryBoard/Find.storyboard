@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="iBd-Y8-SuE">
             <objects>
-                <navigationController id="WXC-de-HPS" sceneMemberID="viewController">
+                <navigationController id="WXC-de-HPS" customClass="XMLYBaseNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="MWM-Cr-f2O"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZN6-HT-PHk">
@@ -16,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="4tK-RP-DY5" kind="relationship" relationship="rootViewController" id="UOo-p1-g6m"/>
+                        <segue destination="4tK-RP-DY5" kind="relationship" relationship="rootViewController" id="yFT-8n-6JC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJm-P4-1ga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-167" y="399"/>
         </scene>
-        <!--Find View Controller-->
+        <!--发现-->
         <scene sceneID="lBY-x7-KwR">
             <objects>
                 <viewController id="4tK-RP-DY5" customClass="XMLYFindViewController" sceneMemberID="viewController">
@@ -34,13 +35,30 @@
                     <view key="view" contentMode="scaleToFill" id="dOl-gS-U9e">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TXK-JY-Ys9" customClass="XMLYFindSubTitleView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3Of-6f-lgj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TXK-JY-Ys9" firstAttribute="leading" secondItem="dOl-gS-U9e" secondAttribute="leadingMargin" constant="-20" id="6S7-oR-kWi"/>
+                            <constraint firstItem="TXK-JY-Ys9" firstAttribute="top" secondItem="eRe-js-y0Y" secondAttribute="bottom" id="7ND-RG-bh8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TXK-JY-Ys9" secondAttribute="trailing" constant="-20" id="WjT-oO-wDs"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="f3g-6K-FdQ"/>
+                    <navigationItem key="navigationItem" title="发现" id="f3g-6K-FdQ"/>
+                    <connections>
+                        <outlet property="subTitleView" destination="TXK-JY-Ys9" id="GR0-Qf-5V6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bof-7t-5Ws" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="501" y="389"/>
+            <point key="canvasLocation" x="521" y="414"/>
         </scene>
     </scenes>
 </document>

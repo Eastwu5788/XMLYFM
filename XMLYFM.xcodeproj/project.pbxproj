@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B4005C81D59769600605EFB /* XMLYFindSubTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005C71D59769600605EFB /* XMLYFindSubTitleView.m */; };
+		2B4005D11D59887C00605EFB /* XMLYBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005CF1D59887C00605EFB /* XMLYBaseController.m */; };
+		2B4005D41D59889600605EFB /* XMLYBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005D31D59889600605EFB /* XMLYBaseNavigationController.m */; };
+		2B4005E61D59B13100605EFB /* XMLYSubFindController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005E51D59B13100605EFB /* XMLYSubFindController.m */; };
+		2B4005EB1D59E3D400605EFB /* XMLYRecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005EA1D59E3D400605EFB /* XMLYRecommendView.m */; };
+		2B4005F01D59E7F700605EFB /* XMLYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005EF1D59E7F700605EFB /* XMLYBaseRequest.m */; };
+		2B4005F51D59ECE100605EFB /* XMLYBaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005F41D59ECE100605EFB /* XMLYBaseAPI.m */; };
+		2B4005F81D59ED6600605EFB /* XMLYFindAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005F71D59ED6600605EFB /* XMLYFindAPI.m */; };
 		2B6E09E31D58367D000A8C58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E09E21D58367D000A8C58 /* main.m */; };
 		2B6E09FC1D58367D000A8C58 /* XMLYFMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E09FB1D58367D000A8C58 /* XMLYFMTests.m */; };
 		2B6E0A071D58367D000A8C58 /* XMLYFMUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E0A061D58367D000A8C58 /* XMLYFMUITests.m */; };
@@ -46,6 +54,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B4005C61D59769600605EFB /* XMLYFindSubTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindSubTitleView.h; sourceTree = "<group>"; };
+		2B4005C71D59769600605EFB /* XMLYFindSubTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindSubTitleView.m; sourceTree = "<group>"; };
+		2B4005CE1D59887C00605EFB /* XMLYBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYBaseController.h; sourceTree = "<group>"; };
+		2B4005CF1D59887C00605EFB /* XMLYBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYBaseController.m; sourceTree = "<group>"; };
+		2B4005D21D59889600605EFB /* XMLYBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYBaseNavigationController.h; sourceTree = "<group>"; };
+		2B4005D31D59889600605EFB /* XMLYBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYBaseNavigationController.m; sourceTree = "<group>"; };
+		2B4005E41D59B13100605EFB /* XMLYSubFindController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYSubFindController.h; sourceTree = "<group>"; };
+		2B4005E51D59B13100605EFB /* XMLYSubFindController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYSubFindController.m; sourceTree = "<group>"; };
+		2B4005E91D59E3D400605EFB /* XMLYRecommendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYRecommendView.h; sourceTree = "<group>"; };
+		2B4005EA1D59E3D400605EFB /* XMLYRecommendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYRecommendView.m; sourceTree = "<group>"; };
+		2B4005EE1D59E7F700605EFB /* XMLYBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYBaseRequest.h; sourceTree = "<group>"; };
+		2B4005EF1D59E7F700605EFB /* XMLYBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYBaseRequest.m; sourceTree = "<group>"; };
+		2B4005F31D59ECE100605EFB /* XMLYBaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYBaseAPI.h; sourceTree = "<group>"; };
+		2B4005F41D59ECE100605EFB /* XMLYBaseAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYBaseAPI.m; sourceTree = "<group>"; };
+		2B4005F61D59ED6600605EFB /* XMLYFindAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindAPI.h; sourceTree = "<group>"; };
+		2B4005F71D59ED6600605EFB /* XMLYFindAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindAPI.m; sourceTree = "<group>"; };
 		2B6E09DE1D58367D000A8C58 /* XMLYFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMLYFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6E09E21D58367D000A8C58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2B6E09F21D58367D000A8C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,6 +134,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B4005C51D59767B00605EFB /* SubTitleView */ = {
+			isa = PBXGroup;
+			children = (
+				2B4005C61D59769600605EFB /* XMLYFindSubTitleView.h */,
+				2B4005C71D59769600605EFB /* XMLYFindSubTitleView.m */,
+			);
+			path = SubTitleView;
+			sourceTree = "<group>";
+		};
+		2B4005C91D59875600605EFB /* XMLYCommenUI */ = {
+			isa = PBXGroup;
+			children = (
+				2B4005CD1D59887C00605EFB /* BaseController */,
+				2B4005D01D59887C00605EFB /* BaseNavigationController */,
+			);
+			path = XMLYCommenUI;
+			sourceTree = "<group>";
+		};
+		2B4005CD1D59887C00605EFB /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				2B4005CE1D59887C00605EFB /* XMLYBaseController.h */,
+				2B4005CF1D59887C00605EFB /* XMLYBaseController.m */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		2B4005D01D59887C00605EFB /* BaseNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				2B4005D21D59889600605EFB /* XMLYBaseNavigationController.h */,
+				2B4005D31D59889600605EFB /* XMLYBaseNavigationController.m */,
+			);
+			path = BaseNavigationController;
+			sourceTree = "<group>";
+		};
+		2B4005E81D59E3BE00605EFB /* RecommendView */ = {
+			isa = PBXGroup;
+			children = (
+				2B4005E91D59E3D400605EFB /* XMLYRecommendView.h */,
+				2B4005EA1D59E3D400605EFB /* XMLYRecommendView.m */,
+			);
+			path = RecommendView;
+			sourceTree = "<group>";
+		};
+		2B4005ED1D59E7E700605EFB /* HTTPBaseRequest */ = {
+			isa = PBXGroup;
+			children = (
+				2B4005EE1D59E7F700605EFB /* XMLYBaseRequest.h */,
+				2B4005EF1D59E7F700605EFB /* XMLYBaseRequest.m */,
+			);
+			path = HTTPBaseRequest;
+			sourceTree = "<group>";
+		};
+		2B4005F11D59ECD500605EFB /* XMLYBaseAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2B4005F31D59ECE100605EFB /* XMLYBaseAPI.h */,
+				2B4005F41D59ECE100605EFB /* XMLYBaseAPI.m */,
+			);
+			path = XMLYBaseAPI;
+			sourceTree = "<group>";
+		};
+		2B4005F21D59ECD500605EFB /* XMLYFindAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2B4005F61D59ED6600605EFB /* XMLYFindAPI.h */,
+				2B4005F71D59ED6600605EFB /* XMLYFindAPI.m */,
+			);
+			path = XMLYFindAPI;
+			sourceTree = "<group>";
+		};
 		2B6E09D51D58367D000A8C58 = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +375,9 @@
 		2B6E0A431D58415A000A8C58 /* HTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
+				2B4005F11D59ECD500605EFB /* XMLYBaseAPI */,
+				2B4005F21D59ECD500605EFB /* XMLYFindAPI */,
+				2B4005ED1D59E7E700605EFB /* HTTPBaseRequest */,
 			);
 			path = HTTPRequest;
 			sourceTree = "<group>";
@@ -286,6 +385,7 @@
 		2B6E0A441D584181000A8C58 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				2B4005C91D59875600605EFB /* XMLYCommenUI */,
 				2B6E0A771D58846E000A8C58 /* XMLYConfig */,
 				2B6E0A781D58846E000A8C58 /* XMLYMacro */,
 				2B6E0A791D58846E000A8C58 /* XMLYNotification */,
@@ -298,6 +398,8 @@
 			children = (
 				2B6E0A501D584BA1000A8C58 /* XMLYFindViewController.h */,
 				2B6E0A511D584BA1000A8C58 /* XMLYFindViewController.m */,
+				2B4005E41D59B13100605EFB /* XMLYSubFindController.h */,
+				2B4005E51D59B13100605EFB /* XMLYSubFindController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,6 +422,8 @@
 		2B6E0A4D1D5846E6000A8C58 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2B4005E81D59E3BE00605EFB /* RecommendView */,
+				2B4005C51D59767B00605EFB /* SubTitleView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -674,14 +778,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B6E0A641D584E2A000A8C58 /* XMLYPlayViewController.m in Sources */,
+				2B4005C81D59769600605EFB /* XMLYFindSubTitleView.m in Sources */,
 				2B6E0A5B1D584C6C000A8C58 /* XMLYSubScribeViewController.m in Sources */,
 				2B6E09E31D58367D000A8C58 /* main.m in Sources */,
 				2B6E0A521D584BA1000A8C58 /* XMLYFindViewController.m in Sources */,
 				2B6E0A7C1D588481000A8C58 /* XMLYMacro.m in Sources */,
 				2B6E0A711D584F19000A8C58 /* XMLYDownLoadViewController.m in Sources */,
+				2B4005F51D59ECE100605EFB /* XMLYBaseAPI.m in Sources */,
+				2B4005F81D59ED6600605EFB /* XMLYFindAPI.m in Sources */,
+				2B4005EB1D59E3D400605EFB /* XMLYRecommendView.m in Sources */,
 				2B6E0A761D584F74000A8C58 /* XMLYMineViewController.m in Sources */,
+				2B4005E61D59B13100605EFB /* XMLYSubFindController.m in Sources */,
 				2B6E0A371D58402A000A8C58 /* AppDelegate.m in Sources */,
+				2B4005D11D59887C00605EFB /* XMLYBaseController.m in Sources */,
+				2B4005D41D59889600605EFB /* XMLYBaseNavigationController.m in Sources */,
 				2B6E0A491D5845CF000A8C58 /* XMLYRootViewController.m in Sources */,
+				2B4005F01D59E7F700605EFB /* XMLYBaseRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

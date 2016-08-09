@@ -7,6 +7,7 @@
 //
 
 #import "XMLYRootViewController.h"
+#import "XMLYBaseNavigationController.h"
 
 #define kStoryBoardFind         @"Find"
 #define kStoryBoardSubScribe    @"SubScribe"
@@ -91,11 +92,11 @@
 - (void)configSubControllers {
     self.tabBar.hidden = YES;
     
-    UINavigationController *findNav = [self navigationControllerWithIdentifier:kStoryBoardFind];
-    UINavigationController *subScrNav = [self navigationControllerWithIdentifier:kStoryBoardSubScribe];
-    UINavigationController *playNav = [self navigationControllerWithIdentifier:kStoryBoardPlay];
-    UINavigationController *downNav = [self navigationControllerWithIdentifier:kStoryBoardDownLoad];
-    UINavigationController *meNav   = [self navigationControllerWithIdentifier:kStoryBoardMine];
+    XMLYBaseNavigationController *findNav   = [self navigationControllerWithIdentifier:kStoryBoardFind];
+    XMLYBaseNavigationController *subScrNav = [self navigationControllerWithIdentifier:kStoryBoardSubScribe];
+    XMLYBaseNavigationController *playNav   = [self navigationControllerWithIdentifier:kStoryBoardPlay];
+    XMLYBaseNavigationController *downNav   = [self navigationControllerWithIdentifier:kStoryBoardDownLoad];
+    XMLYBaseNavigationController *meNav     = [self navigationControllerWithIdentifier:kStoryBoardMine];
     
     self.viewControllers = @[findNav,subScrNav,playNav,downNav,meNav];
 }
@@ -104,8 +105,8 @@
 /**
  *  根据StoryBoard的名称生成控制器
  */
-- (UINavigationController *)navigationControllerWithIdentifier:(NSString *)identifier {
-    UINavigationController *nav = [[UIStoryboard storyboardWithName:identifier bundle:nil] instantiateInitialViewController];
+- (XMLYBaseNavigationController *)navigationControllerWithIdentifier:(NSString *)identifier {
+    XMLYBaseNavigationController *nav = [[UIStoryboard storyboardWithName:identifier bundle:nil] instantiateInitialViewController];
     return nav;
 }
 

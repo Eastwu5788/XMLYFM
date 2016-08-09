@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="Rze-Nq-1PZ">
             <objects>
-                <navigationController id="jx1-Jf-SLu" sceneMemberID="viewController">
+                <navigationController id="jx1-Jf-SLu" customClass="XMLYBaseNavigationController" sceneMemberID="viewController">
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Hh-rp-17K">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
