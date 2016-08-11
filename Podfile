@@ -7,4 +7,5 @@ pod 'Masonry'
 pod 'SDWebImage'
 pod 'YYWebImage'
 pod 'ReactiveCocoa','2.5'
+pod 'MJExtension'
 end

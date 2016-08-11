@@ -7,11 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B331DDB1D5AFFA50092AA75 /* XMLYFindRecommendController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B331DDA1D5AFFA50092AA75 /* XMLYFindRecommendController.m */; };
+		2B331DDE1D5B00230092AA75 /* XMLYSubFindFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B331DDD1D5B00230092AA75 /* XMLYSubFindFactory.m */; };
+		2B331DE11D5B01C10092AA75 /* XMLYFindRankController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B331DE01D5B01C10092AA75 /* XMLYFindRankController.m */; };
+		2B331DE41D5B01D50092AA75 /* XMLYFindRadioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B331DE31D5B01D50092AA75 /* XMLYFindRadioController.m */; };
+		2B331DE71D5B01E80092AA75 /* XMLYFindCategoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B331DE61D5B01E80092AA75 /* XMLYFindCategoryController.m */; };
+		2B331DED1D5B02440092AA75 /* XMLYFindAnchorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B331DEC1D5B02440092AA75 /* XMLYFindAnchorController.m */; };
+		2B331DF11D5B08A70092AA75 /* XMLYFindBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B331DF01D5B08A70092AA75 /* XMLYFindBaseController.m */; };
+		2B331DF71D5B0DF50092AA75 /* XMLYFindRecomViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B331DF61D5B0DF50092AA75 /* XMLYFindRecomViewModel.m */; };
+		2B331DF81D5B14BC0092AA75 /* XMLYFindRecomViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B331DF61D5B0DF50092AA75 /* XMLYFindRecomViewModel.m */; };
+		2B331DFF1D5B20E80092AA75 /* XMLYBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B331DFE1D5B20E80092AA75 /* XMLYBaseModel.m */; };
+		2B331E021D5B21360092AA75 /* XMLYFindLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B331E011D5B21360092AA75 /* XMLYFindLiveModel.m */; };
+		2B331E051D5B23EB0092AA75 /* XMLYFindRecommendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B331E041D5B23EB0092AA75 /* XMLYFindRecommendModel.m */; };
 		2B4005C81D59769600605EFB /* XMLYFindSubTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005C71D59769600605EFB /* XMLYFindSubTitleView.m */; };
 		2B4005D11D59887C00605EFB /* XMLYBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005CF1D59887C00605EFB /* XMLYBaseController.m */; };
 		2B4005D41D59889600605EFB /* XMLYBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005D31D59889600605EFB /* XMLYBaseNavigationController.m */; };
-		2B4005E61D59B13100605EFB /* XMLYSubFindController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005E51D59B13100605EFB /* XMLYSubFindController.m */; };
-		2B4005EB1D59E3D400605EFB /* XMLYRecommendView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005EA1D59E3D400605EFB /* XMLYRecommendView.m */; };
 		2B4005F01D59E7F700605EFB /* XMLYBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005EF1D59E7F700605EFB /* XMLYBaseRequest.m */; };
 		2B4005F51D59ECE100605EFB /* XMLYBaseAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005F41D59ECE100605EFB /* XMLYBaseAPI.m */; };
 		2B4005F81D59ED6600605EFB /* XMLYFindAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005F71D59ED6600605EFB /* XMLYFindAPI.m */; };
@@ -54,16 +64,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B331DD91D5AFFA50092AA75 /* XMLYFindRecommendController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindRecommendController.h; sourceTree = "<group>"; };
+		2B331DDA1D5AFFA50092AA75 /* XMLYFindRecommendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindRecommendController.m; sourceTree = "<group>"; };
+		2B331DDC1D5B00230092AA75 /* XMLYSubFindFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYSubFindFactory.h; sourceTree = "<group>"; };
+		2B331DDD1D5B00230092AA75 /* XMLYSubFindFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYSubFindFactory.m; sourceTree = "<group>"; };
+		2B331DDF1D5B01C10092AA75 /* XMLYFindRankController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindRankController.h; sourceTree = "<group>"; };
+		2B331DE01D5B01C10092AA75 /* XMLYFindRankController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindRankController.m; sourceTree = "<group>"; };
+		2B331DE21D5B01D50092AA75 /* XMLYFindRadioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindRadioController.h; sourceTree = "<group>"; };
+		2B331DE31D5B01D50092AA75 /* XMLYFindRadioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindRadioController.m; sourceTree = "<group>"; };
+		2B331DE51D5B01E80092AA75 /* XMLYFindCategoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindCategoryController.h; sourceTree = "<group>"; };
+		2B331DE61D5B01E80092AA75 /* XMLYFindCategoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindCategoryController.m; sourceTree = "<group>"; };
+		2B331DEB1D5B02440092AA75 /* XMLYFindAnchorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindAnchorController.h; sourceTree = "<group>"; };
+		2B331DEC1D5B02440092AA75 /* XMLYFindAnchorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindAnchorController.m; sourceTree = "<group>"; };
+		2B331DEF1D5B08A70092AA75 /* XMLYFindBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindBaseController.h; sourceTree = "<group>"; };
+		2B331DF01D5B08A70092AA75 /* XMLYFindBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindBaseController.m; sourceTree = "<group>"; };
+		2B331DF51D5B0DF50092AA75 /* XMLYFindRecomViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindRecomViewModel.h; sourceTree = "<group>"; };
+		2B331DF61D5B0DF50092AA75 /* XMLYFindRecomViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindRecomViewModel.m; sourceTree = "<group>"; };
+		2B331DFD1D5B20E80092AA75 /* XMLYBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYBaseModel.h; sourceTree = "<group>"; };
+		2B331DFE1D5B20E80092AA75 /* XMLYBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYBaseModel.m; sourceTree = "<group>"; };
+		2B331E001D5B21360092AA75 /* XMLYFindLiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindLiveModel.h; sourceTree = "<group>"; };
+		2B331E011D5B21360092AA75 /* XMLYFindLiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindLiveModel.m; sourceTree = "<group>"; };
+		2B331E031D5B23EA0092AA75 /* XMLYFindRecommendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindRecommendModel.h; sourceTree = "<group>"; };
+		2B331E041D5B23EB0092AA75 /* XMLYFindRecommendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindRecommendModel.m; sourceTree = "<group>"; };
 		2B4005C61D59769600605EFB /* XMLYFindSubTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindSubTitleView.h; sourceTree = "<group>"; };
 		2B4005C71D59769600605EFB /* XMLYFindSubTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindSubTitleView.m; sourceTree = "<group>"; };
 		2B4005CE1D59887C00605EFB /* XMLYBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYBaseController.h; sourceTree = "<group>"; };
 		2B4005CF1D59887C00605EFB /* XMLYBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYBaseController.m; sourceTree = "<group>"; };
 		2B4005D21D59889600605EFB /* XMLYBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYBaseNavigationController.h; sourceTree = "<group>"; };
 		2B4005D31D59889600605EFB /* XMLYBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYBaseNavigationController.m; sourceTree = "<group>"; };
-		2B4005E41D59B13100605EFB /* XMLYSubFindController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYSubFindController.h; sourceTree = "<group>"; };
-		2B4005E51D59B13100605EFB /* XMLYSubFindController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYSubFindController.m; sourceTree = "<group>"; };
-		2B4005E91D59E3D400605EFB /* XMLYRecommendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYRecommendView.h; sourceTree = "<group>"; };
-		2B4005EA1D59E3D400605EFB /* XMLYRecommendView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYRecommendView.m; sourceTree = "<group>"; };
 		2B4005EE1D59E7F700605EFB /* XMLYBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYBaseRequest.h; sourceTree = "<group>"; };
 		2B4005EF1D59E7F700605EFB /* XMLYBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYBaseRequest.m; sourceTree = "<group>"; };
 		2B4005F31D59ECE100605EFB /* XMLYBaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYBaseAPI.h; sourceTree = "<group>"; };
@@ -134,6 +162,99 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B331DD41D5AFF750092AA75 /* AnchorController */ = {
+			isa = PBXGroup;
+			children = (
+				2B331DEB1D5B02440092AA75 /* XMLYFindAnchorController.h */,
+				2B331DEC1D5B02440092AA75 /* XMLYFindAnchorController.m */,
+			);
+			path = AnchorController;
+			sourceTree = "<group>";
+		};
+		2B331DD51D5AFF750092AA75 /* CategoryController */ = {
+			isa = PBXGroup;
+			children = (
+				2B331DE51D5B01E80092AA75 /* XMLYFindCategoryController.h */,
+				2B331DE61D5B01E80092AA75 /* XMLYFindCategoryController.m */,
+			);
+			path = CategoryController;
+			sourceTree = "<group>";
+		};
+		2B331DD61D5AFF750092AA75 /* RadioController */ = {
+			isa = PBXGroup;
+			children = (
+				2B331DE21D5B01D50092AA75 /* XMLYFindRadioController.h */,
+				2B331DE31D5B01D50092AA75 /* XMLYFindRadioController.m */,
+			);
+			path = RadioController;
+			sourceTree = "<group>";
+		};
+		2B331DD71D5AFF750092AA75 /* RankController */ = {
+			isa = PBXGroup;
+			children = (
+				2B331DDF1D5B01C10092AA75 /* XMLYFindRankController.h */,
+				2B331DE01D5B01C10092AA75 /* XMLYFindRankController.m */,
+			);
+			path = RankController;
+			sourceTree = "<group>";
+		};
+		2B331DD81D5AFF750092AA75 /* RecommendControlller */ = {
+			isa = PBXGroup;
+			children = (
+				2B331DD91D5AFFA50092AA75 /* XMLYFindRecommendController.h */,
+				2B331DDA1D5AFFA50092AA75 /* XMLYFindRecommendController.m */,
+				2B331DF41D5B0D960092AA75 /* ViewModel */,
+				2B331DF21D5B0D960092AA75 /* Model */,
+				2B331DF31D5B0D960092AA75 /* View */,
+			);
+			path = RecommendControlller;
+			sourceTree = "<group>";
+		};
+		2B331DEE1D5B08830092AA75 /* FindBaseController */ = {
+			isa = PBXGroup;
+			children = (
+				2B331DEF1D5B08A70092AA75 /* XMLYFindBaseController.h */,
+				2B331DF01D5B08A70092AA75 /* XMLYFindBaseController.m */,
+			);
+			path = FindBaseController;
+			sourceTree = "<group>";
+		};
+		2B331DF21D5B0D960092AA75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B331E001D5B21360092AA75 /* XMLYFindLiveModel.h */,
+				2B331E011D5B21360092AA75 /* XMLYFindLiveModel.m */,
+				2B331E031D5B23EA0092AA75 /* XMLYFindRecommendModel.h */,
+				2B331E041D5B23EB0092AA75 /* XMLYFindRecommendModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B331DF31D5B0D960092AA75 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B331DF41D5B0D960092AA75 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2B331DF51D5B0DF50092AA75 /* XMLYFindRecomViewModel.h */,
+				2B331DF61D5B0DF50092AA75 /* XMLYFindRecomViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2B331DFC1D5B20D90092AA75 /* XMLYBase */ = {
+			isa = PBXGroup;
+			children = (
+				2B331DFD1D5B20E80092AA75 /* XMLYBaseModel.h */,
+				2B331DFE1D5B20E80092AA75 /* XMLYBaseModel.m */,
+			);
+			path = XMLYBase;
+			sourceTree = "<group>";
+		};
 		2B4005C51D59767B00605EFB /* SubTitleView */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,15 +289,6 @@
 				2B4005D31D59889600605EFB /* XMLYBaseNavigationController.m */,
 			);
 			path = BaseNavigationController;
-			sourceTree = "<group>";
-		};
-		2B4005E81D59E3BE00605EFB /* RecommendView */ = {
-			isa = PBXGroup;
-			children = (
-				2B4005E91D59E3D400605EFB /* XMLYRecommendView.h */,
-				2B4005EA1D59E3D400605EFB /* XMLYRecommendView.m */,
-			);
-			path = RecommendView;
 			sourceTree = "<group>";
 		};
 		2B4005ED1D59E7E700605EFB /* HTTPBaseRequest */ = {
@@ -385,6 +497,7 @@
 		2B6E0A441D584181000A8C58 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				2B331DFC1D5B20D90092AA75 /* XMLYBase */,
 				2B4005C91D59875600605EFB /* XMLYCommenUI */,
 				2B6E0A771D58846E000A8C58 /* XMLYConfig */,
 				2B6E0A781D58846E000A8C58 /* XMLYMacro */,
@@ -398,8 +511,14 @@
 			children = (
 				2B6E0A501D584BA1000A8C58 /* XMLYFindViewController.h */,
 				2B6E0A511D584BA1000A8C58 /* XMLYFindViewController.m */,
-				2B4005E41D59B13100605EFB /* XMLYSubFindController.h */,
-				2B4005E51D59B13100605EFB /* XMLYSubFindController.m */,
+				2B331DDC1D5B00230092AA75 /* XMLYSubFindFactory.h */,
+				2B331DDD1D5B00230092AA75 /* XMLYSubFindFactory.m */,
+				2B331DEE1D5B08830092AA75 /* FindBaseController */,
+				2B331DD41D5AFF750092AA75 /* AnchorController */,
+				2B331DD51D5AFF750092AA75 /* CategoryController */,
+				2B331DD61D5AFF750092AA75 /* RadioController */,
+				2B331DD71D5AFF750092AA75 /* RankController */,
+				2B331DD81D5AFF750092AA75 /* RecommendControlller */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -422,7 +541,6 @@
 		2B6E0A4D1D5846E6000A8C58 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2B4005E81D59E3BE00605EFB /* RecommendView */,
 				2B4005C51D59767B00605EFB /* SubTitleView */,
 			);
 			path = View;
@@ -784,16 +902,25 @@
 				2B6E0A521D584BA1000A8C58 /* XMLYFindViewController.m in Sources */,
 				2B6E0A7C1D588481000A8C58 /* XMLYMacro.m in Sources */,
 				2B6E0A711D584F19000A8C58 /* XMLYDownLoadViewController.m in Sources */,
+				2B331DDB1D5AFFA50092AA75 /* XMLYFindRecommendController.m in Sources */,
+				2B331DE71D5B01E80092AA75 /* XMLYFindCategoryController.m in Sources */,
 				2B4005F51D59ECE100605EFB /* XMLYBaseAPI.m in Sources */,
 				2B4005F81D59ED6600605EFB /* XMLYFindAPI.m in Sources */,
-				2B4005EB1D59E3D400605EFB /* XMLYRecommendView.m in Sources */,
 				2B6E0A761D584F74000A8C58 /* XMLYMineViewController.m in Sources */,
-				2B4005E61D59B13100605EFB /* XMLYSubFindController.m in Sources */,
+				2B331DDE1D5B00230092AA75 /* XMLYSubFindFactory.m in Sources */,
+				2B331DF11D5B08A70092AA75 /* XMLYFindBaseController.m in Sources */,
+				2B331E021D5B21360092AA75 /* XMLYFindLiveModel.m in Sources */,
 				2B6E0A371D58402A000A8C58 /* AppDelegate.m in Sources */,
 				2B4005D11D59887C00605EFB /* XMLYBaseController.m in Sources */,
+				2B331DF71D5B0DF50092AA75 /* XMLYFindRecomViewModel.m in Sources */,
+				2B331DE11D5B01C10092AA75 /* XMLYFindRankController.m in Sources */,
 				2B4005D41D59889600605EFB /* XMLYBaseNavigationController.m in Sources */,
 				2B6E0A491D5845CF000A8C58 /* XMLYRootViewController.m in Sources */,
+				2B331DE41D5B01D50092AA75 /* XMLYFindRadioController.m in Sources */,
+				2B331DFF1D5B20E80092AA75 /* XMLYBaseModel.m in Sources */,
+				2B331E051D5B23EB0092AA75 /* XMLYFindRecommendModel.m in Sources */,
 				2B4005F01D59E7F700605EFB /* XMLYBaseRequest.m in Sources */,
+				2B331DED1D5B02440092AA75 /* XMLYFindAnchorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,6 +928,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B331DF81D5B14BC0092AA75 /* XMLYFindRecomViewModel.m in Sources */,
 				2B6E09FC1D58367D000A8C58 /* XMLYFMTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

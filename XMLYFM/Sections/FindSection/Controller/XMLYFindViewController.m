@@ -8,8 +8,9 @@
 
 #import "XMLYFindViewController.h"
 #import "XMLYFindSubTitleView.h"
-#import "XMLYSubFindController.h"
 #import "Masonry.h"
+#import "XMLYFindBaseController.h"
+#import "XMLYSubFindFactory.h"
 
 #define kXMLYBGGray [UIColor colorWithRed:0.92f green:0.93f blue:0.93f alpha:1.00f]
 
@@ -105,7 +106,7 @@
     if(!_controllers) {
         _controllers = [[NSMutableArray alloc] init];
         for(NSString *title in self.subTitleArray) {
-            XMLYSubFindController *con = [XMLYSubFindController subFindControllerWithTitle:title];
+            XMLYFindBaseController *con = [XMLYSubFindFactory subFindControllerWithIdentifier:title];
             [_controllers addObject:con];
         }
     }

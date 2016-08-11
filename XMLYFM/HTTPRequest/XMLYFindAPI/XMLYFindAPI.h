@@ -11,10 +11,19 @@
 
 @interface XMLYFindAPI : XMLYBaseAPI
 
+/**
+ *  请求精品歌单、小编推荐数据
+ */
 + (void)requestRecommends:(XMLYBaseAPICompletion)completion;
 
+/**
+ *  请求发现新奇、猜你喜欢等数据
+ */
 + (void)requestHotAndGuess:(XMLYBaseAPICompletion)completion;
 
+/**
+ *  请求正在直播等数据
+ */
 + (void)requestLiveRecommend:(XMLYBaseAPICompletion)completion;
 
 @end
