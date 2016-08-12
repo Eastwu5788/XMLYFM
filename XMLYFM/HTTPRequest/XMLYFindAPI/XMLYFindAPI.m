@@ -14,6 +14,7 @@
 
 #define kLiveRecommendAPI @"http://live.ximalaya.com/live-activity-web/v3/activity/recommend"
 
+#define kRecomBannerAPI   @"http://adse.ximalaya.com/ting?appid=0&device=iPhone&name=find_banner&network=WIFI&operator=3&scale=2&version=5.4.21"
 
 @implementation XMLYFindAPI
 
@@ -40,6 +41,15 @@
 
 + (void)requestLiveRecommend:(XMLYBaseAPICompletion)completion {
     XMLYBaseRequest *request = [XMLYBaseRequest requestWithURL:kLiveRecommendAPI];
+    [request startWithMethod:XMLYHTTPTypeGET params:nil completion:^(id responseObject, NSString *message, BOOL success) {
+        if(completion){
+            completion(responseObject,message,success);
+        }
+    }];
+}
+
++ (void)requestFooterAd:(XMLYBaseAPICompletion)completion {
+    XMLYBaseRequest *request = [XMLYBaseRequest requestWithURL:kRecomBannerAPI];
     [request startWithMethod:XMLYHTTPTypeGET params:nil completion:^(id responseObject, NSString *message, BOOL success) {
         if(completion){
             completion(responseObject,message,success);

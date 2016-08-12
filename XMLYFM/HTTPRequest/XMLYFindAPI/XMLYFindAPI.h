@@ -25,5 +25,9 @@
  *  请求正在直播等数据
  */
 + (void)requestLiveRecommend:(XMLYBaseAPICompletion)completion;
+/**
+ *  请求推荐中的banner
+ */
++ (void)requestFooterAd:(XMLYBaseAPICompletion)completion;
 
 @end

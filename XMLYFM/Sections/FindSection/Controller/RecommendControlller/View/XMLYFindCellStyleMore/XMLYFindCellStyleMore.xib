@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="73" id="KGk-i7-Jjw" customClass="XMLYFindCellStyleMore">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xgQ-dD-qi1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Yt1-h7-Kq2">
+                                <rect key="frame" x="295" y="17" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="lzk-HP-Wr9"/>
+                                    <constraint firstAttribute="width" constant="15" id="nft-MW-ULE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查看更多分类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP1-j2-XF2">
+                                <rect key="frame" x="50" y="18" width="144" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="VHW-9T-q1d"/>
+                                    <constraint firstAttribute="width" constant="144" id="ujd-8F-gpm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="find_gotocate" translatesAutoresizingMaskIntoConstraints="NO" id="3XD-vX-Wgr">
+                                <rect key="frame" x="10" y="15" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="CAW-ip-WXR"/>
+                                    <constraint firstAttribute="width" constant="20" id="fvq-72-gjR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RP1-j2-XF2" firstAttribute="leading" secondItem="3XD-vX-Wgr" secondAttribute="trailing" constant="20" id="9Fh-YT-vNa"/>
+                            <constraint firstItem="RP1-j2-XF2" firstAttribute="centerY" secondItem="xgQ-dD-qi1" secondAttribute="centerY" id="9bT-m6-TGI"/>
+                            <constraint firstItem="3XD-vX-Wgr" firstAttribute="leading" secondItem="xgQ-dD-qi1" secondAttribute="leading" constant="10" id="LzI-fg-rGW"/>
+                            <constraint firstItem="Yt1-h7-Kq2" firstAttribute="centerY" secondItem="xgQ-dD-qi1" secondAttribute="centerY" id="Zqz-IY-dN8"/>
+                            <constraint firstAttribute="trailing" secondItem="Yt1-h7-Kq2" secondAttribute="trailing" constant="10" id="gpu-wI-hUh"/>
+                            <constraint firstItem="3XD-vX-Wgr" firstAttribute="centerY" secondItem="xgQ-dD-qi1" secondAttribute="centerY" id="w6h-Nm-J6p"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="xgQ-dD-qi1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="5sa-1n-ByR"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="xgQ-dD-qi1" secondAttribute="trailing" constant="-8" id="ji7-kx-7NR"/>
+                    <constraint firstItem="xgQ-dD-qi1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="v7M-gQ-2L0"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="xgQ-dD-qi1" secondAttribute="bottom" constant="1.5" id="yHA-qj-wPN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.90196078430000004" green="0.90588235289999997" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+            <point key="canvasLocation" x="309" y="412"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="cell_arrow" width="15" height="15"/>
+        <image name="find_gotocate" width="20" height="20"/>
+    </resources>
+</document>

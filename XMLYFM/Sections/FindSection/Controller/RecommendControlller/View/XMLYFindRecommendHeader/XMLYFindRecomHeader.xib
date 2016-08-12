@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XMLYFindRecomHeader">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y3A-NI-GZp">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Zi-UP-3dO">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="150" id="Y6r-F0-GpR"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="delegate" destination="y3A-NI-GZp" id="wcL-Ij-ioZ"/>
+                            </connections>
+                        </scrollView>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wjC-6J-JA9">
+                            <rect key="frame" x="0.0" y="150" width="320" height="90"/>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="wjC-6J-JA9" secondAttribute="bottom" id="EdZ-rv-raU"/>
+                        <constraint firstItem="wjC-6J-JA9" firstAttribute="top" secondItem="4Zi-UP-3dO" secondAttribute="bottom" id="Eob-5V-pSO"/>
+                        <constraint firstItem="4Zi-UP-3dO" firstAttribute="leading" secondItem="y3A-NI-GZp" secondAttribute="leading" id="Qhj-Zc-ngA"/>
+                        <constraint firstAttribute="trailing" secondItem="4Zi-UP-3dO" secondAttribute="trailing" id="W8q-ZW-Kzx"/>
+                        <constraint firstItem="wjC-6J-JA9" firstAttribute="leading" secondItem="y3A-NI-GZp" secondAttribute="leading" id="qSo-n0-KPc"/>
+                        <constraint firstItem="4Zi-UP-3dO" firstAttribute="top" secondItem="y3A-NI-GZp" secondAttribute="top" id="t4Y-rd-vBf"/>
+                        <constraint firstAttribute="trailing" secondItem="wjC-6J-JA9" secondAttribute="trailing" id="vXJ-8e-5T2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.90196078430000004" green="0.90588235289999997" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="y3A-NI-GZp" secondAttribute="trailing" id="3ho-By-CGa"/>
+                <constraint firstItem="y3A-NI-GZp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Gtv-6u-NBy"/>
+                <constraint firstAttribute="bottom" secondItem="y3A-NI-GZp" secondAttribute="bottom" constant="10" id="WzF-FI-J2O"/>
+                <constraint firstItem="y3A-NI-GZp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kqT-5x-sLw"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="adverScrollView" destination="4Zi-UP-3dO" id="cSR-ln-NS9"/>
+                <outlet property="cateScrollView" destination="wjC-6J-JA9" id="PEk-PA-Ndo"/>
+            </connections>
+            <point key="canvasLocation" x="439" y="-2"/>
+        </view>
+    </objects>
+</document>

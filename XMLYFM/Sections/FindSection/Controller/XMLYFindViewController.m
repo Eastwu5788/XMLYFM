@@ -79,6 +79,8 @@
     [self.subTitleView trans2ShowAtIndex:index];
 }
 
+
+
 #pragma mark - private
 
 - (NSInteger)indexForViewController:(UIViewController *)controller {

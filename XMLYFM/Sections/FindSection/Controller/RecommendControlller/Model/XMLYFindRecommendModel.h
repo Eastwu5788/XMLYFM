@@ -16,6 +16,12 @@
 
 @property (nonatomic, strong) XMLYFindEditorRecommendAlbumModel *editorRecommendAlbums;
 
+@property (nonatomic, strong) XMLYFindFocusImagesModel          *focusImages;
+
+@property (nonatomic, strong) XMLYSpecialColumnModel            *specialColumn;
+
+@property (nonatomic, copy)   NSString                          *msg;
+
 @end
 
 @interface XMLYFindEditorRecommendAlbumModel : XMLYBaseModel
@@ -38,9 +44,6 @@
  */
 @property (nonatomic, strong) NSMutableArray<XMLYFindEditorRecommendDetailModel *> *list;
 
-@property (nonatomic, strong) XMLYFindFocusImagesModel                             *focusImages;
-
-@property (nonatomic, strong) XMLYSpecialColumnModel                               *specialColumnModel;
 
 @end
 
@@ -88,6 +91,8 @@
 @interface XMLYFindFocusImagesModel : XMLYBaseModel
 
 @property (nonatomic, assign) NSInteger ret;
+
+@property (nonatomic, copy)   NSString  *title;
 
 @property (nonatomic, strong) NSMutableArray<XMLYFindFocusImageDetailModel *>      *list;
 

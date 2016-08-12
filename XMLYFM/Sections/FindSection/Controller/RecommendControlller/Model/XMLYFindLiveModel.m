@@ -10,6 +10,7 @@
 
 @implementation XMLYFindLiveModel
 
+
 @end
 
 @implementation XMLYFindLiveDetailModel

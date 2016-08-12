@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XMLYHeaderIconView">
+            <rect key="frame" x="0.0" y="0.0" width="71" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经典必听" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeG-l4-9oC">
+                    <rect key="frame" x="0.0" y="69" width="71" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="vTi-qB-Asg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lQp-vc-OjW">
+                    <rect key="frame" x="14" y="16" width="43" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="43" id="Rbu-cw-dS6"/>
+                        <constraint firstAttribute="height" constant="43" id="YgG-mn-Umk"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="KeG-l4-9oC" secondAttribute="trailing" id="1MK-Oz-gSb"/>
+                <constraint firstItem="lQp-vc-OjW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="ebc-3o-e1g"/>
+                <constraint firstItem="KeG-l4-9oC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="klZ-F0-Hl7"/>
+                <constraint firstItem="lQp-vc-OjW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mra-4s-Aoa"/>
+                <constraint firstItem="KeG-l4-9oC" firstAttribute="top" secondItem="lQp-vc-OjW" secondAttribute="bottom" constant="10" id="qw1-dv-oMO"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="iconImageVie" destination="lQp-vc-OjW" id="tgU-tw-Iz3"/>
+                <outlet property="titleLabel" destination="KeG-l4-9oC" id="HZy-nC-cJm"/>
+            </connections>
+            <point key="canvasLocation" x="522.5" y="398"/>
+        </view>
+    </objects>
+</document>
