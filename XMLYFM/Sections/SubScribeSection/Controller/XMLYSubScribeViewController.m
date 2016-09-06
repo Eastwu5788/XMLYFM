@@ -7,8 +7,11 @@
 //
 
 #import "XMLYSubScribeViewController.h"
+#import "XMLYSubScribeNavView.h"
 
 @interface XMLYSubScribeViewController ()
+
+@property (nonatomic, strong) XMLYSubScribeNavView *nav;
 
 @end
 
@@ -18,5 +21,18 @@
     [super viewDidLoad];
    
 }
+
+- (void)configNavigationView {
+    [self.navigationController.navigationBar addSubview:[self nav]];    
+}
+
+
+- (XMLYSubScribeNavView *)nav {
+    if(!_nav) {
+        _nav = [XMLYSubScribeNavView subScribeNavView];
+    }
+    return _nav;
+}
+
 
 @end
