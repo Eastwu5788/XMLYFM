@@ -13,7 +13,8 @@
 
 @property (nonatomic, strong) XMLYFindDiscoverDetailModel *detailModel;
 
-
 + (instancetype)headerIconView;
+
+- (void)configWithTitle:(NSString *)title localImageName:(NSString *)imageName;
 
 @end

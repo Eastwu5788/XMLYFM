@@ -20,6 +20,11 @@
 
 @implementation XMLYHeaderIconView
 
+- (void)configWithTitle:(NSString *)title localImageName:(NSString *)imageName {
+    self.titleLabel.text = title;
+    self.iconImageVie.image = [UIImage imageNamed:imageName];
+}
+
 - (void)setDetailModel:(XMLYFindDiscoverDetailModel *)detailModel {
     _detailModel = detailModel;
     

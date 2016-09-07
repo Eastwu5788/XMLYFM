@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="XMLYFindRadioLiveCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="84.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziw-Pl-M4u">
+                        <rect key="frame" x="271" y="26" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="Zus-kJ-ABN"/>
+                            <constraint firstAttribute="height" constant="32" id="h4v-kO-bKn"/>
+                        </constraints>
+                        <state key="normal" image="liveRadioCellPlay"/>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="album_cover_bg" translatesAutoresizingMaskIntoConstraints="NO" id="e1t-uw-Bt0">
+                        <rect key="frame" x="8" y="8" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="Fte-9x-6Bg"/>
+                            <constraint firstAttribute="width" constant="70" id="fWS-eB-UcZ"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N6z-Qc-ZVm">
+                        <rect key="frame" x="14" y="14" width="58" height="58"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="58" id="gJ2-k0-5EQ"/>
+                            <constraint firstAttribute="height" constant="58" id="qt8-eR-9Bf"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="北京怀旧金曲" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opf-sb-BfE">
+                        <rect key="frame" x="86" y="15" width="155" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="gkI-5Q-S24"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.14509803921568629" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直播中：旧单车老情歌" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2i-dN-lee">
+                        <rect key="frame" x="86" y="35" width="155" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="RHd-GW-xuw"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.55686274509803924" green="0.5607843137254902" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收听人数：79.4万人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzv-ow-fkd">
+                        <rect key="frame" x="86" y="55" width="155" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Jnq-sv-2NE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.5568627451" green="0.56078431370000004" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gze-Ub-T3P">
+                        <rect key="frame" x="86" y="84" width="234" height="1"/>
+                        <color key="backgroundColor" red="0.91764705882352937" green="0.92156862745098034" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="LoH-a2-SCs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Zzv-ow-fkd" firstAttribute="width" secondItem="D2i-dN-lee" secondAttribute="width" id="4HN-47-0Jb"/>
+                    <constraint firstItem="D2i-dN-lee" firstAttribute="top" secondItem="opf-sb-BfE" secondAttribute="bottom" constant="5" id="4Ub-Vt-m4n"/>
+                    <constraint firstItem="ziw-Pl-M4u" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6v6-cb-DQF"/>
+                    <constraint firstItem="D2i-dN-lee" firstAttribute="leading" secondItem="e1t-uw-Bt0" secondAttribute="trailing" constant="8" id="Cm2-i3-adg"/>
+                    <constraint firstItem="ziw-Pl-M4u" firstAttribute="leading" secondItem="D2i-dN-lee" secondAttribute="trailing" constant="30" id="HTn-Ik-YOH"/>
+                    <constraint firstItem="gze-Ub-T3P" firstAttribute="leading" secondItem="Zzv-ow-fkd" secondAttribute="leading" id="Hjj-Po-XjE"/>
+                    <constraint firstItem="e1t-uw-Bt0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="I7b-tA-Ug3"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="gze-Ub-T3P" secondAttribute="bottom" constant="-8" id="J4t-Zx-Qd4"/>
+                    <constraint firstItem="N6z-Qc-ZVm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="Lhj-GO-a94"/>
+                    <constraint firstItem="N6z-Qc-ZVm" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="NXc-3O-lt9"/>
+                    <constraint firstItem="Zzv-ow-fkd" firstAttribute="top" secondItem="D2i-dN-lee" secondAttribute="bottom" constant="5" id="Vw5-ZH-lhj"/>
+                    <constraint firstItem="D2i-dN-lee" firstAttribute="width" secondItem="opf-sb-BfE" secondAttribute="width" id="aLo-ej-lLv"/>
+                    <constraint firstItem="Zzv-ow-fkd" firstAttribute="leading" secondItem="D2i-dN-lee" secondAttribute="leading" id="cMH-A1-Oi9"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="gze-Ub-T3P" secondAttribute="trailing" constant="-8" id="cXd-01-4DA"/>
+                    <constraint firstItem="e1t-uw-Bt0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="ghK-38-qUl"/>
+                    <constraint firstItem="D2i-dN-lee" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pI9-w6-eA5"/>
+                    <constraint firstItem="D2i-dN-lee" firstAttribute="leading" secondItem="opf-sb-BfE" secondAttribute="leading" id="rJw-9N-Yvq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ziw-Pl-M4u" secondAttribute="trailing" constant="9" id="zih-wc-xz6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="authorLabel" destination="D2i-dN-lee" id="N9I-px-qLS"/>
+                <outlet property="coverImageView" destination="N6z-Qc-ZVm" id="HgR-Gd-zTe"/>
+                <outlet property="titleLabel" destination="opf-sb-BfE" id="0kY-Bv-gMp"/>
+                <outlet property="usersLabel" destination="Zzv-ow-fkd" id="ULO-8U-x0X"/>
+            </connections>
+            <point key="canvasLocation" x="418" y="448.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="album_cover_bg" width="77" height="77"/>
+        <image name="liveRadioCellPlay" width="32" height="32"/>
+    </resources>
+</document>

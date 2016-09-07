@@ -10,6 +10,8 @@
 #import "XMLYFindBaseCell.h"
 #import "XMLYFindRecommendModel.h"
 
+
+
 @interface XMLYFindCellStyleSpecial : XMLYFindBaseCell
 
 @property (nonatomic, strong) XMLYSpecialColumnModel *specialModel;
