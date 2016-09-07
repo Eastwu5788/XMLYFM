@@ -8,6 +8,7 @@
 
 #import "XMLYBaseModel.h"
 #import "XMLYFindRecommendModel.h"
+#import "XRModel.h"
 
 @class XMLYFindDiscoverProperityModel,XMLYFindDiscoverColumnsModel,XMLYFindDiscoverDetailModel,XMLYFindGuessMode,XMLYCityColumnModel,XMLYHotRecommend,XMLYHotRecommendItemModel;
 

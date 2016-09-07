@@ -46,7 +46,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = Hex(0xf3f3f3);
     
     @weakify(self);
     [self.viewModel.updateContentSignal subscribeNext:^(id x) {

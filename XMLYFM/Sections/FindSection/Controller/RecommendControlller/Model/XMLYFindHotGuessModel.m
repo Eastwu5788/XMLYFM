@@ -14,10 +14,18 @@
 
 @implementation XMLYFindDiscoverColumnsModel
 
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"list":@"XMLYFindDiscoverDetailModel"};
+}
+
 @end
 
 
 @implementation XMLYFindDiscoverDetailModel
+
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"properties":@"XMLYFindDiscoverProperityModel"};
+}
 
 @end
 

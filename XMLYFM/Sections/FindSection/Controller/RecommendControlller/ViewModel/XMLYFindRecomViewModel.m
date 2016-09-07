@@ -156,7 +156,6 @@
             }];
             self.liveModel = [XMLYFindLiveModel mj_objectWithKeyValues:response];
         }
-        NSLog(@"直播动态:%@",response);
         if(completion){
             completion();
         }
@@ -194,7 +193,6 @@
             }];
             self.hotGuessModel = [XMLYFindHotGuessModel mj_objectWithKeyValues:response];
         }
-        NSLog(@"猜你喜欢:%@",response);
         if(completion){
             completion();
         }
@@ -228,8 +226,7 @@
             
             self.recommendModel = [XMLYFindRecommendModel mj_objectWithKeyValues:response];
         }
-        
-        NSLog(@"热门动态:%@",response);
+
         if(completion) {
             completion();
         }

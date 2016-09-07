@@ -7,8 +7,12 @@
 //
 
 #import "XMLYFindRadioController.h"
+#import "XMLYFindRadioViewModel.h"
 
 @interface XMLYFindRadioController ()
+
+@property (nonatomic, weak) UITableView *tableView;
+@property (nonatomic, strong) XMLYFindRadioViewModel *viewModel;
 
 @end
 
@@ -16,8 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = Hex(0xf3f3f3);
     
-    self.view.backgroundColor = [UIColor brownColor];
+    
 }
 
 
