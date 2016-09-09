@@ -93,7 +93,7 @@
 //设置文字标题
 
 - (void)setLabelText:(XMLYFindLiveDetailModel *)model {
-    self.peopleCountLabel.text = [NSString stringWithFormat:@"%ld人参加",model.playCount];
+    self.peopleCountLabel.text = [NSString stringWithFormat:@"%ld人参加",(long)model.playCount];
     self.contentLabel.text = model.name;
     self.subContentLabel.text = model.shortDescription;
 }

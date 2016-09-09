@@ -92,6 +92,7 @@
 - (XMLYFindRecomHeader *)headerView {
     if(!_headerView) {
         _headerView = [XMLYFindRecomHeader findRecomHeader];
+        _headerView.frame = CGRectMake(0, 0, kScreenWidth, 250);
     }
     return _headerView;
 }

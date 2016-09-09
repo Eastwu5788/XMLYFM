@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="XMLYAnchorNormalCell">
+            <rect key="frame" x="0.0" y="0.0" width="105" height="160"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="105" height="160"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1gr-a0-baq">
+                        <rect key="frame" x="10" y="5" width="85" height="110"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="find_person_6" translatesAutoresizingMaskIntoConstraints="NO" id="gR4-SX-xzl">
+                                <rect key="frame" x="0.0" y="0.0" width="85" height="110"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fL8-rY-8Nt">
+                                <rect key="frame" x="8" y="8" width="69" height="72"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="刘同" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3d8-Lh-GEH">
+                                <rect key="frame" x="5" y="85" width="75" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="W7b-9m-8B5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.81176470588235294" green="0.74509803921568629" blue="0.67843137254901964" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="gR4-SX-xzl" firstAttribute="top" secondItem="1gr-a0-baq" secondAttribute="top" id="DjK-nw-0ay"/>
+                            <constraint firstItem="fL8-rY-8Nt" firstAttribute="top" secondItem="1gr-a0-baq" secondAttribute="top" constant="8" id="EQq-tK-IUI"/>
+                            <constraint firstItem="3d8-Lh-GEH" firstAttribute="top" secondItem="fL8-rY-8Nt" secondAttribute="bottom" constant="5" id="SE8-0u-XhH"/>
+                            <constraint firstItem="3d8-Lh-GEH" firstAttribute="leading" secondItem="1gr-a0-baq" secondAttribute="leading" constant="5" id="Wgw-YZ-cbA"/>
+                            <constraint firstItem="fL8-rY-8Nt" firstAttribute="leading" secondItem="1gr-a0-baq" secondAttribute="leading" constant="8" id="bUf-eZ-Wrd"/>
+                            <constraint firstAttribute="trailing" secondItem="3d8-Lh-GEH" secondAttribute="trailing" constant="5" id="gfG-B9-q3i"/>
+                            <constraint firstItem="gR4-SX-xzl" firstAttribute="leading" secondItem="1gr-a0-baq" secondAttribute="leading" id="nzY-bP-WDT"/>
+                            <constraint firstAttribute="trailing" secondItem="gR4-SX-xzl" secondAttribute="trailing" id="tR5-I5-8qY"/>
+                            <constraint firstAttribute="trailing" secondItem="fL8-rY-8Nt" secondAttribute="trailing" constant="8" id="xZc-qL-Dji"/>
+                            <constraint firstAttribute="bottom" secondItem="3d8-Lh-GEH" secondAttribute="bottom" constant="10" id="zHF-1s-OIo"/>
+                            <constraint firstAttribute="bottom" secondItem="gR4-SX-xzl" secondAttribute="bottom" id="zac-gp-fmQ"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="知名畅销书作家、光线传媒" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DA-I1-bEx">
+                        <rect key="frame" x="10" y="120" width="85" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="Qcf-Uv-9nS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.52941176470588236" green="0.53333333333333333" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="9DA-I1-bEx" secondAttribute="bottom" id="4Ry-Wr-2qz"/>
+                <constraint firstAttribute="trailing" secondItem="9DA-I1-bEx" secondAttribute="trailing" constant="10" id="7du-Vy-h4k"/>
+                <constraint firstAttribute="trailing" secondItem="1gr-a0-baq" secondAttribute="trailing" constant="10" id="IDn-Vr-UsX"/>
+                <constraint firstItem="1gr-a0-baq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Ol6-ps-yp1"/>
+                <constraint firstItem="1gr-a0-baq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Zyt-7D-pw3"/>
+                <constraint firstItem="9DA-I1-bEx" firstAttribute="top" secondItem="1gr-a0-baq" secondAttribute="bottom" constant="5" id="gZe-QL-4aG"/>
+                <constraint firstItem="9DA-I1-bEx" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="vGM-CY-wHq"/>
+            </constraints>
+            <connections>
+                <outlet property="coverImageView" destination="fL8-rY-8Nt" id="3AQ-xw-PWY"/>
+                <outlet property="describeLabel" destination="9DA-I1-bEx" id="jk1-e8-Ao1"/>
+                <outlet property="titleLabel" destination="3d8-Lh-GEH" id="8Dl-yM-jdC"/>
+            </connections>
+            <point key="canvasLocation" x="310.5" y="469"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="find_person_6" width="111" height="139"/>
+    </resources>
+</document>

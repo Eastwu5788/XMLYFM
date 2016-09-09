@@ -7,6 +7,7 @@
 //
 
 #import "XMLYBaseModel.h"
+#import "XRModel.h"
 
 @class XMLYFindEditorRecommendAlbumModel,XMLYFindEditorRecommendDetailModel,XMLYFindFocusImagesModel,XMLYFindFocusImageDetailModel,XMLYSpecialColumnModel,XMLYSpecialColumnDetailModel;
 

@@ -26,6 +26,10 @@
 
 @implementation XMLYFindFocusImagesModel
 
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"list":[XMLYFindFocusImageDetailModel class]};
+}
+
 @end
 
 @implementation XMLYFindFocusImageDetailModel

@@ -15,6 +15,8 @@
 @interface XMLYRadioSectionHeaderView () {
     NSString *_location;
     XMLYRadioSectionHeaderViewStyle _style;
+    
+    XMLYFindRankListModel *_model;
 }
 
 
@@ -44,9 +46,28 @@
     return self;
 }
 
++ (instancetype)sectionHeaderWithModel:(XMLYFindRankListModel *)model showMore:(BOOL)showMore {
+    XMLYRadioSectionHeaderView *header = [[XMLYRadioSectionHeaderView alloc] initSectionHeaderWithModel:model showMore:showMore];
+    return header;
+}
+
+- (instancetype)initSectionHeaderWithModel:(XMLYFindRankListModel *)model showMore:(BOOL)showMore {
+    self = [super init];
+    self.backgroundColor = [UIColor whiteColor];
+    self->_model = model;
+    [self configSubViewWithShowMore:showMore];
+    return self;
+}
+
 - (instancetype)init {
     @throw [NSException exceptionWithName:@"XMLYRadioSectionHeaderView Init Error" reason:@"Please use the designated initizalizer" userInfo:nil];
     return nil;
+}
+
+- (void)configSubViewWithShowMore:(BOOL)showMore {
+    [self iconImageView];
+    self.titleLabel.text = self->_model.title;
+    self.moreImageView.hidden = !showMore;
 }
 
 - (void)configSubViews {

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMLYFindRankModel.h"
 
+/**
+ *  这个类在很多地方都有相似被用到的地方，果断时间会重写该类
+ *  让它的适用范围更广，调用方法更简单
+ */
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -26,6 +31,9 @@ typedef NS_ENUM(NSInteger, XMLYRadioSectionHeaderViewStyle) {
  */
 + (instancetype)radioSectionHeaderViewWithSection:(XMLYRadioSectionHeaderViewStyle)style location:(nullable NSString *)location;
 - (instancetype)initRadioSectionHeaderViewWithSection:(XMLYRadioSectionHeaderViewStyle)style location:(nullable NSString *)location;
+
++ (instancetype)sectionHeaderWithModel:(XMLYFindRankListModel *)model showMore:(BOOL)showMore;
+- (instancetype)initSectionHeaderWithModel:(XMLYFindRankListModel *)model showMore:(BOOL)showMore;
 
 - (nullable instancetype)init UNAVAILABLE_ATTRIBUTE;
 - (nullable instancetype)new UNAVAILABLE_ATTRIBUTE;

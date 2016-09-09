@@ -32,6 +32,19 @@ static
 
 @implementation XMLYFindRadioLiveCell
 
+- (void)setRankDetailModel:(XMLYFindRankDetailModel *)rankDetailModel {
+    _rankDetailModel = rankDetailModel;
+    
+    self.titleLabel.text = _rankDetailModel.title;
+    [self.coverImageView yy_setImageWithURL:[NSURL URLWithString:_rankDetailModel.coverPath] options:YYWebImageOptionSetImageWithFadeAnimation];
+    NSString *first = _rankDetailModel.firstKResults.count > 0 ? ((XMLYFindRankItemModel *)_rankDetailModel.firstKResults.firstObject).title : nil;
+    self.authorLabel.text = [NSString stringWithFormat:@"1 %@",first];
+    
+    NSString *second = _rankDetailModel.firstKResults.count >= 2 ? ((XMLYFindRankItemModel *)_rankDetailModel.firstKResults[1]).title : nil;
+    self.usersLabel.text = [NSString stringWithFormat:@"2 %@",second];
+    
+}
+
 - (void)setLiveInfoModel:(XMLYFindRadioInfoModel *)liveInfoModel {
     _liveInfoModel = liveInfoModel;
     

@@ -45,7 +45,6 @@ static force_inline NSDateFormatter *XMLYDateFormatter(NSString *string) {
 + (NSString *)getHelloStringByLocalTime {
     NSDateFormatter *formatter = XMLYDateFormatter(@"HH:mm:ss");
     NSString *dateString = [formatter stringFromDate:[NSDate date]];
-    NSLog(@"dateString:%@",dateString);
     NSArray *resultArr = [dateString componentsSeparatedByString:@":"];
     if(resultArr.count == 0) return nil;
     NSInteger hour = [resultArr.firstObject integerValue];

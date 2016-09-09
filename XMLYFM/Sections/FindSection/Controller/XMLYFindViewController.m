@@ -121,7 +121,7 @@
  */
 - (NSMutableArray *)subTitleArray {
     if(!_subTitleArray) {
-        _subTitleArray = [[NSMutableArray alloc] initWithObjects:@"推荐",@"分类",@"广播",@"榜单",@"主题",nil];
+        _subTitleArray = [[NSMutableArray alloc] initWithObjects:@"推荐",@"分类",@"广播",@"榜单",@"主播",nil];
     }
     return _subTitleArray;
 }
