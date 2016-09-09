@@ -9,10 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface XMLYSubScribeNavView : UIView
+/**
+ *  选中subButton的block
+ */
+@property (nonatomic, copy) void(^subScribeNavViewDidSubClick)(XMLYSubScribeNavView *view,NSInteger index);
 
 /**
  *  订阅听控制器上方的导航栏
  */
-+ (instancetype)subScribeNavView;
++ (instancetype)subScribeNavViewWithTitles:(NSArray *)titles;
+
+- (void)transToControllerAtIndex:(NSInteger)index;
 
 @end

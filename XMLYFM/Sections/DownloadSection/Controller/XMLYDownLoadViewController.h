@@ -6,8 +6,8 @@
 //  Copyright © 2016年 East_wu. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XMLYFindBaseController.h"
 
-@interface XMLYDownLoadViewController : UIViewController
+@interface XMLYDownLoadViewController : XMLYFindBaseController
 
 @end

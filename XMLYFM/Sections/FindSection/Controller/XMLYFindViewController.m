@@ -73,9 +73,15 @@
     return self.controllers.count;
 }
 
-- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers {
-    UIViewController *con = pendingViewControllers.firstObject;
-    NSInteger index = [self indexForViewController:con];
+//- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers {
+//    UIViewController *con = pendingViewControllers.firstObject;
+//    NSInteger index = [self indexForViewController:con];
+//    [self.subTitleView trans2ShowAtIndex:index];
+//}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
+    UIViewController *viewController = self.pageViewController.viewControllers[0];
+    NSUInteger index = [self indexForViewController:viewController];
     [self.subTitleView trans2ShowAtIndex:index];
 }
 

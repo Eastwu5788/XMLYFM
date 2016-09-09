@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - DZNEmptyDataSet (1.8.1)
   - Masonry (1.0.1)
   - MJExtension (3.0.13)
   - ReactiveCocoa (2.5):
@@ -36,6 +37,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - DZNEmptyDataSet
   - Masonry
   - MJExtension
   - ReactiveCocoa (= 2.5)
@@ -44,6 +46,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
@@ -52,6 +55,6 @@ SPEC CHECKSUMS:
   YYImage: 362f44ffba1fc498f2152060f3bb54ed84600981
   YYWebImage: 0431ed108e104527669b86f75efd58958425cca2
 
-PODFILE CHECKSUM: 30092fd3be4c42623e5638ffbc399ccdc4c5e64c
+PODFILE CHECKSUM: 3d81b3317b9dba7ba37b94cc66bf26eacc6da4d1
 
 COCOAPODS: 1.0.1

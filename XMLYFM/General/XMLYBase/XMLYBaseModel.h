@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "MJExtension.h"
 
 @interface XMLYBaseModel : NSObject

@@ -9,91 +9,111 @@
 #import "XMLYSubScribeNavView.h"
 #import "Masonry.h"
 
+#define kTitleColorNormal [UIColor colorWithRed:0.40f green:0.40f blue:0.41f alpha:1.00f]
+#define kTitleColorSelect [UIColor colorWithRed:0.86f green:0.39f blue:0.30f alpha:1.00f]
 
 @interface XMLYSubScribeNavView ()
 
-/**
- *  推荐按钮
- */
-@property (nonatomic, weak) UIButton *recommendButton;
-/**
- *  订阅按钮
- */
-@property (nonatomic, weak) UIButton *subScribeButton;
-/**
- *  历史按钮
- */
-@property (nonatomic, weak) UIButton *historyButton;
 /**
  *  小滑块
  */
 @property (nonatomic, weak) UIView   *sliderView;
 
-@property (nonatomic, assign) CGFloat navigationItemWidth;
+
+@property (nonatomic, strong) NSArray *titles;
 
 @end
 
 @implementation XMLYSubScribeNavView
 
-+ (instancetype)subScribeNavView {
-    XMLYSubScribeNavView *view = [[XMLYSubScribeNavView alloc] init];
++ (instancetype)subScribeNavViewWithTitles:(NSArray *)titles {
+    XMLYSubScribeNavView *view = [[XMLYSubScribeNavView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 44)];
+    view.titles = titles;
     return view;
 }
 
-- (instancetype)init {
-    if(self = [super init]) {
-        self.navigationItemWidth = kScreenWidth / 3.0f;
-        [self subScribeButton];
-        [self recommendButton];
-        [self historyButton];
-    }
-    return self;
+
+
+- (void)setTitles:(NSArray *)titles {
+    _titles = titles;
+    [self configSubView];
+    [self sliderView];
 }
 
-- (UIButton *)subScribeButton {
-    if(!_subScribeButton) {
+
+- (void)configSubView {
+    if(self.titles.count == 0) return;
+    
+    CGFloat width = kScreenWidth / self.titles.count;
+    
+    for(NSInteger i = 0, max = self.titles.count; i < max; i++) {
+        NSString *title = self.titles[i];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setTitle:@"订阅" forState:UIControlStateNormal];
+        btn.frame = CGRectMake(i * width, 0, width, 44);
+        [btn setTitleColor:kTitleColorNormal forState:UIControlStateNormal];
+        [btn setTitleColor:kTitleColorSelect forState:UIControlStateSelected];
+        [btn setTitleColor:kTitleColorSelect forState:UIControlStateHighlighted | UIControlStateSelected];
+        [btn setTitle:title forState:UIControlStateNormal];
+        if(i == 0) btn.selected = YES;
+        [btn addTarget:self action:@selector(subButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
+        btn.tag = 100 + i;
         [self addSubview:btn];
-        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(self.navigationItemWidth, 44));
-            make.top.equalTo(self.mas_top);
-            make.centerX.equalTo(self);
-        }];
-        _subScribeButton = btn;
     }
-    return _subScribeButton;
 }
 
-- (UIButton *)recommendButton {
-    if(!_recommendButton) {
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setTitle:@"推荐" forState:UIControlStateNormal];
-        [self addSubview:btn];
-        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.mas_left);
-            make.right.mas_equalTo(self.subScribeButton.mas_left);
-            make.top.mas_equalTo(self.mas_top);
-            make.bottom.mas_equalTo(self.mas_bottom);
-        }];
-        _recommendButton = btn;
-    }
-    return _recommendButton;
+- (void)transToControllerAtIndex:(NSInteger)index {
+    UIButton *btn = (UIButton *)[self viewWithTag:index + 100];
+    btn.selected = YES;
+    [self unSelectedAllButtonExcept:btn];
+    [self slideViewAnimation:btn];
 }
 
-- (UIButton *)historyButton {
-    if(!_historyButton) {
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [btn setTitle:@"历史" forState:UIControlStateNormal];
-        [self addSubview:btn];
-        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.subScribeButton.mas_right);
-            make.right.mas_equalTo(self.mas_right);
-            make.top.mas_equalTo(self.mas_top);
-            make.bottom.mas_equalTo(self.mas_bottom);
-        }];
+/**
+ *  点击事件处理
+ */
+- (void)subButtonSelected:(UIButton *)btn {
+    btn.selected = YES;
+    [self unSelectedAllButtonExcept:btn];
+    [self slideViewAnimation:btn];
+    if(self.subScribeNavViewDidSubClick) {
+        self.subScribeNavViewDidSubClick(self,btn.tag - 100);
     }
-    return _historyButton;
+}
+
+//小滑块的动画
+- (void)slideViewAnimation:(UIButton *)btn {
+    [UIView animateWithDuration:0.25 animations:^{
+        CGRect frame = self.sliderView.frame;
+        frame.origin.x = btn.frame.origin.x + 2;
+        self.sliderView.frame = frame;
+    }];
+}
+
+//将除了当前按钮之外的所有按钮置为非选中状态
+- (void)unSelectedAllButtonExcept:(UIButton *)btn {
+    [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if([obj isKindOfClass:[UIButton class]] && btn != obj) {
+            ((UIButton *)obj).selected = NO;
+        }
+    }];
+}
+
+
+#pragma mark - Getter
+
+/**
+ *  加载下方的滑块
+ */
+- (UIView *)sliderView {
+    if(!_sliderView) {
+        CGFloat width = kScreenWidth / self.titles.count;
+        UIView *view = [[UIView alloc] init];
+        view.frame = CGRectMake(2, self.frame.size.height - 2.0f, width - 4, 2);
+        view.backgroundColor = kTitleColorSelect;
+        [self addSubview:view];
+        _sliderView = view;
+    }
+    return _sliderView;
 }
 
 @end
