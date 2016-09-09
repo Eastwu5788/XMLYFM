@@ -4,4 +4,14 @@
 1.项目中主要使用了MVVM模式和ReactiveCocoa框架来实现异步并发控制和回调   
 2.使用工厂模式生成不同的cell，不同的控制器
 ##效果演示
-![](https://github.com/Eastwu5788/XMLYFM/raw/master/XMLYRecommend.gif)
+
+推荐页面   <br />
+![](https://github.com/Eastwu5788/XMLYFM/raw/master/recom.gif)  
+
+分类页面   <br />  
+![](https://github.com/Eastwu5788/XMLYFM/raw/master/cate.gif)  
+
+
+广播页面   <br />
+![](https://github.com/Eastwu5788/XMLYFM/raw/master/radio.gif)  
+
