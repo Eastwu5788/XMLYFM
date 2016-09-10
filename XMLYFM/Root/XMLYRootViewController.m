@@ -15,13 +15,15 @@
 #define kStoryBoardDownLoad     @"DownLoad"
 #define kStoryBoardMine         @"Mine"
 
-@interface XMLYRootViewController ()
+@interface XMLYRootViewController () <UITabBarControllerDelegate,UINavigationControllerDelegate>
 
 // 正常图片数组
 @property (nonatomic, strong) NSMutableArray *normalImageArray;
 
 //选中状态下的图片数组
 @property (nonatomic, strong) NSMutableArray *selectedImageArray;
+
+@property (nonatomic, strong) NSArray *controllerIdentiferArray;
 
 //后方的背景图片
 @property (nonatomic, weak)   UIImageView    *bgImageView;
@@ -90,13 +92,14 @@
 - (void)configSubControllers {
     self.tabBar.hidden = YES;
     
-    XMLYBaseNavigationController *findNav   = [self navigationControllerWithIdentifier:kStoryBoardFind];
-    XMLYBaseNavigationController *subScrNav = [self navigationControllerWithIdentifier:kStoryBoardSubScribe];
-    XMLYBaseNavigationController *playNav   = [self navigationControllerWithIdentifier:kStoryBoardPlay];
-    XMLYBaseNavigationController *downNav   = [self navigationControllerWithIdentifier:kStoryBoardDownLoad];
-    XMLYBaseNavigationController *meNav     = [self navigationControllerWithIdentifier:kStoryBoardMine];
+    NSMutableArray *arr = [NSMutableArray new];
+    [self.controllerIdentiferArray enumerateObjectsUsingBlock:^(NSString *identifier, NSUInteger idx, BOOL * _Nonnull stop) {
+        XMLYBaseNavigationController *navi = [self navigationControllerWithIdentifier:identifier];
+        navi.delegate = self;
+        [arr addObject:navi];
+    }];
     
-    self.viewControllers = @[findNav,subScrNav,playNav,downNav,meNav];
+    self.viewControllers = arr;
 }
 
 
@@ -108,9 +111,32 @@
     return nav;
 }
 
+#pragma mark - UITabBarControllerDelegate
+
+//http://stackoverflow.com/questions/10519927/hidesbottombarwhenpushed-for-a-custom-view
+
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (viewController.hidesBottomBarWhenPushed) {
+        self.bgImageView.hidden = YES;
+    }
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    self.tabBar.hidden = YES;
+    if (!viewController.hidesBottomBarWhenPushed) {
+        self.bgImageView.hidden = NO;
+        
+    }
+}
 
 #pragma mark - getter
 
+- (NSArray *)controllerIdentiferArray {
+    if(!_controllerIdentiferArray) {
+        _controllerIdentiferArray = @[kStoryBoardFind,kStoryBoardSubScribe,kStoryBoardPlay,kStoryBoardDownLoad,kStoryBoardMine];
+    }
+    return _controllerIdentiferArray;
+}
 
 /**
  *  选中的图片

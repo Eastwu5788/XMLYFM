@@ -8,6 +8,10 @@
 
 #import "XMLYMineViewController.h"
 #import "XMLYMineHeaderView.h"
+#import "SVWebViewController.h"
+#import "XMLYSettingController.h"
+
+static NSString *const kFreeTraficURL = @"http://hybrid.ximalaya.com/api/telecom/index?app=iting&device=iPhone&impl=com.gemd.iting&telephone=%28null%29&version=5.4.27";
 
 static NSString *const kMeSubScribe   = @"我的订阅";
 static NSString *const kMePlayHistory = @"播放历史";
@@ -24,6 +28,7 @@ static NSString *const kMeSmartDevice = @"智能硬件设备";
 static NSString *const kMeFreeTrafic  = @"免流量服务";
 static NSString *const kMeFeedBack    = @"意见反馈";
 static NSString *const kMeSetting     = @"设置";
+
 
 
 @interface XMLYMineViewController () <UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
@@ -59,6 +64,22 @@ static NSString *const kMeSetting     = @"设置";
     }else {
         return UIStatusBarStyleDefault;
     }
+}
+
+#pragma mark - Private
+/**
+ *  跳转到免费流量服务页面
+ */
+- (void)trans2FreeTraficService {
+    SVWebViewController *web = [[SVWebViewController alloc] initWithAddress:kFreeTraficURL];
+    web.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:web animated:YES];
+}
+
+- (void)trans2SettingController {
+    XMLYSettingController *set = [[XMLYSettingController alloc] init];
+    set.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:set animated:YES];
 }
 
 #pragma mark - UITableViewDelegate/UITableViewdatSource
@@ -97,6 +118,7 @@ static NSString *const kMeSetting     = @"设置";
     return cell;
 }
 
+
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 10)];
     view.backgroundColor = Hex(0xf3f3f3);
@@ -107,6 +129,17 @@ static NSString *const kMeSetting     = @"设置";
     return nil;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    NSString *text = cell.textLabel.text;
+    if([text isEqualToString:kMeFreeTrafic]) { //免费流量服务
+        [self trans2FreeTraficService];
+    }else if([text isEqualToString:kMeSetting]) {
+        [self trans2SettingController];
+    }
+}
+
+#pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat offsetY = scrollView.contentOffset.y;
     if (offsetY <= 0) {

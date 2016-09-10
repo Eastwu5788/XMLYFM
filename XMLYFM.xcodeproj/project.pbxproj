@@ -55,6 +55,24 @@
 		2B4B0C861D801B75009190D1 /* XMLYFindRadioLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4B0C811D801B75009190D1 /* XMLYFindRadioLiveCell.m */; };
 		2B4B0C871D801B75009190D1 /* XMLYFindRadioLiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B4B0C821D801B75009190D1 /* XMLYFindRadioLiveCell.xib */; };
 		2B4B0C881D801B75009190D1 /* XMLYFindRadioTelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4B0C851D801B75009190D1 /* XMLYFindRadioTelCell.m */; };
+		2B5E027A1D83C28F008C5F5E /* SVWebViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B5E02501D83C28F008C5F5E /* SVWebViewController.strings */; };
+		2B5E027B1D83C28F008C5F5E /* MyURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E02591D83C28F008C5F5E /* MyURLCache.m */; };
+		2B5E027C1D83C28F008C5F5E /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E025C1D83C28F008C5F5E /* NJKWebViewProgress.m */; };
+		2B5E027D1D83C28F008C5F5E /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E025E1D83C28F008C5F5E /* NJKWebViewProgressView.m */; };
+		2B5E027E1D83C28F008C5F5E /* NSEtcHosts.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E02601D83C28F008C5F5E /* NSEtcHosts.m */; };
+		2B5E027F1D83C28F008C5F5E /* STTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E02631D83C28F008C5F5E /* STTools.m */; };
+		2B5E02801D83C28F008C5F5E /* SVModalWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E02651D83C28F008C5F5E /* SVModalWebViewController.m */; };
+		2B5E02811D83C28F008C5F5E /* SVWebViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B5E02661D83C28F008C5F5E /* SVWebViewController.bundle */; };
+		2B5E02821D83C28F008C5F5E /* SVWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E02681D83C28F008C5F5E /* SVWebViewController.m */; };
+		2B5E02831D83C28F008C5F5E /* SVWebViewControllerActivityChrome-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5E026B1D83C28F008C5F5E /* SVWebViewControllerActivityChrome-iPad.png */; };
+		2B5E02841D83C28F008C5F5E /* SVWebViewControllerActivityChrome-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5E026C1D83C28F008C5F5E /* SVWebViewControllerActivityChrome-iPad@2x.png */; };
+		2B5E02851D83C28F008C5F5E /* SVWebViewControllerActivityChrome.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E026E1D83C28F008C5F5E /* SVWebViewControllerActivityChrome.m */; };
+		2B5E02861D83C28F008C5F5E /* SVWebViewControllerActivityChrome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5E026F1D83C28F008C5F5E /* SVWebViewControllerActivityChrome@2x.png */; };
+		2B5E02871D83C28F008C5F5E /* SVWebViewControllerActivitySafari-iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5E02711D83C28F008C5F5E /* SVWebViewControllerActivitySafari-iPad.png */; };
+		2B5E02881D83C28F008C5F5E /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5E02721D83C28F008C5F5E /* SVWebViewControllerActivitySafari-iPad@2x.png */; };
+		2B5E02891D83C28F008C5F5E /* SVWebViewControllerActivitySafari.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E02741D83C28F008C5F5E /* SVWebViewControllerActivitySafari.m */; };
+		2B5E028A1D83C28F008C5F5E /* SVWebViewControllerActivitySafari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5E02751D83C28F008C5F5E /* SVWebViewControllerActivitySafari@2x.png */; };
+		2B5E028B1D83C28F008C5F5E /* SVWebViewControllerActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E02771D83C28F008C5F5E /* SVWebViewControllerActivity.m */; };
 		2B6E09E31D58367D000A8C58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E09E21D58367D000A8C58 /* main.m */; };
 		2B6E09FC1D58367D000A8C58 /* XMLYFMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E09FB1D58367D000A8C58 /* XMLYFMTests.m */; };
 		2B6E0A071D58367D000A8C58 /* XMLYFMUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E0A061D58367D000A8C58 /* XMLYFMUITests.m */; };
@@ -73,6 +91,7 @@
 		2B6E0A731D584F30000A8C58 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6E0A721D584F30000A8C58 /* Mine.storyboard */; };
 		2B6E0A761D584F74000A8C58 /* XMLYMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E0A751D584F74000A8C58 /* XMLYMineViewController.m */; };
 		2B6E0A7C1D588481000A8C58 /* XMLYMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E0A7B1D588481000A8C58 /* XMLYMacro.m */; };
+		2B9920B71D84072400B15067 /* XMLYSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9920B61D84072400B15067 /* XMLYSettingController.m */; };
 		2B9EA3441D803D600090CE58 /* XMLYRadioSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9EA3431D803D600090CE58 /* XMLYRadioSectionHeaderView.m */; };
 		2B9EA3491D8043FE0090CE58 /* XMLYTimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9EA3481D8043FE0090CE58 /* XMLYTimeHelper.m */; };
 		2BA741EC1D81022800FAD233 /* XMLYFindRankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BA741EB1D81022800FAD233 /* XMLYFindRankModel.m */; };
@@ -212,6 +231,43 @@
 		2B4B0C821D801B75009190D1 /* XMLYFindRadioLiveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLYFindRadioLiveCell.xib; sourceTree = "<group>"; };
 		2B4B0C841D801B75009190D1 /* XMLYFindRadioTelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindRadioTelCell.h; sourceTree = "<group>"; };
 		2B4B0C851D801B75009190D1 /* XMLYFindRadioTelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindRadioTelCell.m; sourceTree = "<group>"; };
+		2B5E02511D83C28F008C5F5E /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
+		2B5E02521D83C28F008C5F5E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
+		2B5E02531D83C28F008C5F5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
+		2B5E02541D83C28F008C5F5E /* es-ES */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-ES"; path = "es-ES.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
+		2B5E02551D83C28F008C5F5E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
+		2B5E02561D83C28F008C5F5E /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
+		2B5E02571D83C28F008C5F5E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
+		2B5E02581D83C28F008C5F5E /* MyURLCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyURLCache.h; sourceTree = "<group>"; };
+		2B5E02591D83C28F008C5F5E /* MyURLCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyURLCache.m; sourceTree = "<group>"; };
+		2B5E025B1D83C28F008C5F5E /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
+		2B5E025C1D83C28F008C5F5E /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
+		2B5E025D1D83C28F008C5F5E /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
+		2B5E025E1D83C28F008C5F5E /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
+		2B5E025F1D83C28F008C5F5E /* NSEtcHosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSEtcHosts.h; sourceTree = "<group>"; };
+		2B5E02601D83C28F008C5F5E /* NSEtcHosts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSEtcHosts.m; sourceTree = "<group>"; };
+		2B5E02611D83C28F008C5F5E /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
+		2B5E02621D83C28F008C5F5E /* STTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTools.h; sourceTree = "<group>"; };
+		2B5E02631D83C28F008C5F5E /* STTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTools.m; sourceTree = "<group>"; };
+		2B5E02641D83C28F008C5F5E /* SVModalWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVModalWebViewController.h; sourceTree = "<group>"; };
+		2B5E02651D83C28F008C5F5E /* SVModalWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVModalWebViewController.m; sourceTree = "<group>"; };
+		2B5E02661D83C28F008C5F5E /* SVWebViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVWebViewController.bundle; sourceTree = "<group>"; };
+		2B5E02671D83C28F008C5F5E /* SVWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewController.h; sourceTree = "<group>"; };
+		2B5E02681D83C28F008C5F5E /* SVWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewController.m; sourceTree = "<group>"; };
+		2B5E026B1D83C28F008C5F5E /* SVWebViewControllerActivityChrome-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivityChrome-iPad.png"; sourceTree = "<group>"; };
+		2B5E026C1D83C28F008C5F5E /* SVWebViewControllerActivityChrome-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivityChrome-iPad@2x.png"; sourceTree = "<group>"; };
+		2B5E026D1D83C28F008C5F5E /* SVWebViewControllerActivityChrome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewControllerActivityChrome.h; sourceTree = "<group>"; };
+		2B5E026E1D83C28F008C5F5E /* SVWebViewControllerActivityChrome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewControllerActivityChrome.m; sourceTree = "<group>"; };
+		2B5E026F1D83C28F008C5F5E /* SVWebViewControllerActivityChrome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivityChrome@2x.png"; sourceTree = "<group>"; };
+		2B5E02711D83C28F008C5F5E /* SVWebViewControllerActivitySafari-iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivitySafari-iPad.png"; sourceTree = "<group>"; };
+		2B5E02721D83C28F008C5F5E /* SVWebViewControllerActivitySafari-iPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivitySafari-iPad@2x.png"; sourceTree = "<group>"; };
+		2B5E02731D83C28F008C5F5E /* SVWebViewControllerActivitySafari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewControllerActivitySafari.h; sourceTree = "<group>"; };
+		2B5E02741D83C28F008C5F5E /* SVWebViewControllerActivitySafari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewControllerActivitySafari.m; sourceTree = "<group>"; };
+		2B5E02751D83C28F008C5F5E /* SVWebViewControllerActivitySafari@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SVWebViewControllerActivitySafari@2x.png"; sourceTree = "<group>"; };
+		2B5E02761D83C28F008C5F5E /* SVWebViewControllerActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVWebViewControllerActivity.h; sourceTree = "<group>"; };
+		2B5E02771D83C28F008C5F5E /* SVWebViewControllerActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVWebViewControllerActivity.m; sourceTree = "<group>"; };
+		2B5E02781D83C28F008C5F5E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
+		2B5E02791D83C28F008C5F5E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/SVWebViewController.strings"; sourceTree = "<group>"; };
 		2B6E09DE1D58367D000A8C58 /* XMLYFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XMLYFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6E09E21D58367D000A8C58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2B6E09F21D58367D000A8C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -245,6 +301,8 @@
 		2B6E0A7A1D588481000A8C58 /* XMLYMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYMacro.h; sourceTree = "<group>"; };
 		2B6E0A7B1D588481000A8C58 /* XMLYMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYMacro.m; sourceTree = "<group>"; };
 		2B6E0A7E1D588957000A8C58 /* XMLYFM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XMLYFM-Prefix.pch"; sourceTree = "<group>"; };
+		2B9920B51D84072400B15067 /* XMLYSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYSettingController.h; sourceTree = "<group>"; };
+		2B9920B61D84072400B15067 /* XMLYSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYSettingController.m; sourceTree = "<group>"; };
 		2B9EA3421D803D600090CE58 /* XMLYRadioSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYRadioSectionHeaderView.h; sourceTree = "<group>"; };
 		2B9EA3431D803D600090CE58 /* XMLYRadioSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYRadioSectionHeaderView.m; sourceTree = "<group>"; };
 		2B9EA3471D8043FE0090CE58 /* XMLYTimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYTimeHelper.h; sourceTree = "<group>"; };
@@ -724,6 +782,73 @@
 			path = XMLYFindRadioTeleCell;
 			sourceTree = "<group>";
 		};
+		2B5E024F1D83C28F008C5F5E /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				2B5E02501D83C28F008C5F5E /* SVWebViewController.strings */,
+				2B5E02581D83C28F008C5F5E /* MyURLCache.h */,
+				2B5E02591D83C28F008C5F5E /* MyURLCache.m */,
+				2B5E025A1D83C28F008C5F5E /* NJKWebViewProgress */,
+				2B5E025F1D83C28F008C5F5E /* NSEtcHosts.h */,
+				2B5E02601D83C28F008C5F5E /* NSEtcHosts.m */,
+				2B5E02621D83C28F008C5F5E /* STTools.h */,
+				2B5E02631D83C28F008C5F5E /* STTools.m */,
+				2B5E02641D83C28F008C5F5E /* SVModalWebViewController.h */,
+				2B5E02651D83C28F008C5F5E /* SVModalWebViewController.m */,
+				2B5E02661D83C28F008C5F5E /* SVWebViewController.bundle */,
+				2B5E02671D83C28F008C5F5E /* SVWebViewController.h */,
+				2B5E02681D83C28F008C5F5E /* SVWebViewController.m */,
+				2B5E02691D83C28F008C5F5E /* UIActivities */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		2B5E025A1D83C28F008C5F5E /* NJKWebViewProgress */ = {
+			isa = PBXGroup;
+			children = (
+				2B5E025B1D83C28F008C5F5E /* NJKWebViewProgress.h */,
+				2B5E025C1D83C28F008C5F5E /* NJKWebViewProgress.m */,
+				2B5E025D1D83C28F008C5F5E /* NJKWebViewProgressView.h */,
+				2B5E025E1D83C28F008C5F5E /* NJKWebViewProgressView.m */,
+			);
+			path = NJKWebViewProgress;
+			sourceTree = "<group>";
+		};
+		2B5E02691D83C28F008C5F5E /* UIActivities */ = {
+			isa = PBXGroup;
+			children = (
+				2B5E026A1D83C28F008C5F5E /* Chrome */,
+				2B5E02701D83C28F008C5F5E /* Safari */,
+				2B5E02761D83C28F008C5F5E /* SVWebViewControllerActivity.h */,
+				2B5E02771D83C28F008C5F5E /* SVWebViewControllerActivity.m */,
+			);
+			path = UIActivities;
+			sourceTree = "<group>";
+		};
+		2B5E026A1D83C28F008C5F5E /* Chrome */ = {
+			isa = PBXGroup;
+			children = (
+				2B5E026B1D83C28F008C5F5E /* SVWebViewControllerActivityChrome-iPad.png */,
+				2B5E026C1D83C28F008C5F5E /* SVWebViewControllerActivityChrome-iPad@2x.png */,
+				2B5E026D1D83C28F008C5F5E /* SVWebViewControllerActivityChrome.h */,
+				2B5E026E1D83C28F008C5F5E /* SVWebViewControllerActivityChrome.m */,
+				2B5E026F1D83C28F008C5F5E /* SVWebViewControllerActivityChrome@2x.png */,
+			);
+			path = Chrome;
+			sourceTree = "<group>";
+		};
+		2B5E02701D83C28F008C5F5E /* Safari */ = {
+			isa = PBXGroup;
+			children = (
+				2B5E02711D83C28F008C5F5E /* SVWebViewControllerActivitySafari-iPad.png */,
+				2B5E02721D83C28F008C5F5E /* SVWebViewControllerActivitySafari-iPad@2x.png */,
+				2B5E02731D83C28F008C5F5E /* SVWebViewControllerActivitySafari.h */,
+				2B5E02741D83C28F008C5F5E /* SVWebViewControllerActivitySafari.m */,
+				2B5E02751D83C28F008C5F5E /* SVWebViewControllerActivitySafari@2x.png */,
+			);
+			path = Safari;
+			sourceTree = "<group>";
+		};
 		2B6E09D51D58367D000A8C58 = {
 			isa = PBXGroup;
 			children = (
@@ -819,6 +944,7 @@
 		2B6E0A341D583FFF000A8C58 /* Venders */ = {
 			isa = PBXGroup;
 			children = (
+				2B5E024F1D83C28F008C5F5E /* WebView */,
 				2B4B0C591D7FE8A4009190D1 /* XRModel */,
 			);
 			path = Venders;
@@ -1062,6 +1188,7 @@
 			children = (
 				2B6E0A741D584F74000A8C58 /* XMLYMineViewController.h */,
 				2B6E0A751D584F74000A8C58 /* XMLYMineViewController.m */,
+				2B9920B41D84070F00B15067 /* XMLYMineSetViewController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1113,6 +1240,15 @@
 				2B1DF3B21D5DA63300C8BC7F /* XMLYNotification.m */,
 			);
 			path = XMLYNotification;
+			sourceTree = "<group>";
+		};
+		2B9920B41D84070F00B15067 /* XMLYMineSetViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2B9920B51D84072400B15067 /* XMLYSettingController.h */,
+				2B9920B61D84072400B15067 /* XMLYSettingController.m */,
+			);
+			path = XMLYMineSetViewController;
 			sourceTree = "<group>";
 		};
 		2B9EA3411D803D410090CE58 /* XMLYFindRadioSectionHeaderView */ = {
@@ -1523,6 +1659,15 @@
 			knownRegions = (
 				en,
 				Base,
+				da,
+				de,
+				"es-ES",
+				es,
+				fr,
+				ja,
+				pt,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 2B6E09D51D58367D000A8C58;
 			productRefGroup = 2B6E09DF1D58367D000A8C58 /* Products */;
@@ -1543,22 +1688,30 @@
 			files = (
 				2B4B0C681D7FF0BB009190D1 /* XMLYFindCategoryCell.xib in Resources */,
 				2BA742051D81720E00FAD233 /* XMLYAnchorNormalCell.xib in Resources */,
+				2B5E028A1D83C28F008C5F5E /* SVWebViewControllerActivitySafari@2x.png in Resources */,
+				2B5E02811D83C28F008C5F5E /* SVWebViewController.bundle in Resources */,
 				2B1DF3A61D5D782100C8BC7F /* XMLYFindCellStyleSpecial.xib in Resources */,
 				2B6E0A6E1D584EC4000A8C58 /* DownLoad.storyboard in Resources */,
 				2B6E0A461D584577000A8C58 /* Root.storyboard in Resources */,
+				2B5E02881D83C28F008C5F5E /* SVWebViewControllerActivitySafari-iPad@2x.png in Resources */,
+				2B5E02871D83C28F008C5F5E /* SVWebViewControllerActivitySafari-iPad.png in Resources */,
 				2B6E0A581D584BF6000A8C58 /* SubScribe.storyboard in Resources */,
+				2B5E02831D83C28F008C5F5E /* SVWebViewControllerActivityChrome-iPad.png in Resources */,
 				2B1DF3AC1D5D825100C8BC7F /* XMLYFindCellStyleMore.xib in Resources */,
 				2BAED0EE1D828CF200CA7114 /* XMLYScribeRecomCell.xib in Resources */,
 				2BA742001D81696700FAD233 /* XMLYAnchorSignerCell.xib in Resources */,
 				2B6E0A3C1D584062000A8C58 /* Assets.xcassets in Resources */,
 				2B6E0A731D584F30000A8C58 /* Mine.storyboard in Resources */,
 				2BA7420C1D8175EC00FAD233 /* XMLYAnchorHeaderView.xib in Resources */,
+				2B5E02841D83C28F008C5F5E /* SVWebViewControllerActivityChrome-iPad@2x.png in Resources */,
 				2B1DF39F1D5D6E5E00C8BC7F /* XMLYFindCellStyleLive.xib in Resources */,
 				2B1DF3911D5D691700C8BC7F /* XMLYFindCellStyleFee.xib in Resources */,
 				2B6E0A4F1D58471C000A8C58 /* Find.storyboard in Resources */,
 				2B1DF3BB1D5DBA5200C8BC7F /* XMLYFindRecomHeader.xib in Resources */,
 				2B4B0C871D801B75009190D1 /* XMLYFindRadioLiveCell.xib in Resources */,
+				2B5E027A1D83C28F008C5F5E /* SVWebViewController.strings in Resources */,
 				2B1DF3C81D5DCC3500C8BC7F /* XMLYHeaderIconView.xib in Resources */,
+				2B5E02861D83C28F008C5F5E /* SVWebViewControllerActivityChrome@2x.png in Resources */,
 				2B6E0A611D584D46000A8C58 /* Play.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1639,8 +1792,10 @@
 				2B4005C81D59769600605EFB /* XMLYFindSubTitleView.m in Sources */,
 				2B6E0A5B1D584C6C000A8C58 /* XMLYSubScribeViewController.m in Sources */,
 				2B6E09E31D58367D000A8C58 /* main.m in Sources */,
+				2B5E027D1D83C28F008C5F5E /* NJKWebViewProgressView.m in Sources */,
 				2B6E0A521D584BA1000A8C58 /* XMLYFindViewController.m in Sources */,
 				2BA741EC1D81022800FAD233 /* XMLYFindRankModel.m in Sources */,
+				2B5E02801D83C28F008C5F5E /* SVModalWebViewController.m in Sources */,
 				2B6E0A7C1D588481000A8C58 /* XMLYMacro.m in Sources */,
 				2B6E0A711D584F19000A8C58 /* XMLYDownLoadViewController.m in Sources */,
 				2BAED0CD1D825A5600CA7114 /* XMLYCategoryAPI.m in Sources */,
@@ -1659,8 +1814,12 @@
 				2B331DDE1D5B00230092AA75 /* XMLYSubFindFactory.m in Sources */,
 				2BAED0D01D825A5600CA7114 /* XMLYRankAPI.m in Sources */,
 				2B331DF11D5B08A70092AA75 /* XMLYFindBaseController.m in Sources */,
+				2B5E027F1D83C28F008C5F5E /* STTools.m in Sources */,
+				2B5E028B1D83C28F008C5F5E /* SVWebViewControllerActivity.m in Sources */,
 				2B331E021D5B21360092AA75 /* XMLYFindLiveModel.m in Sources */,
+				2B5E027B1D83C28F008C5F5E /* MyURLCache.m in Sources */,
 				2B6E0A371D58402A000A8C58 /* AppDelegate.m in Sources */,
+				2B5E02851D83C28F008C5F5E /* SVWebViewControllerActivityChrome.m in Sources */,
 				2B1DF39E1D5D6E5E00C8BC7F /* XMLYFindCellStyleLive.m in Sources */,
 				2BAED0E31D82776000CA7114 /* XMLYScribeRecomAPI.m in Sources */,
 				2B1DF3A51D5D782100C8BC7F /* XMLYFindCellStyleSpecial.m in Sources */,
@@ -1679,16 +1838,20 @@
 				2B4B0C761D800E7B009190D1 /* XMLYFindRadioModel.m in Sources */,
 				2BAED0D91D826A8400CA7114 /* XMLYScribeRecomController.m in Sources */,
 				2B1DF3B71D5DB8AE00C8BC7F /* XMLYFindRecomHeader.m in Sources */,
+				2B5E027C1D83C28F008C5F5E /* NJKWebViewProgress.m in Sources */,
 				2B1DF3B31D5DA63300C8BC7F /* XMLYNotification.m in Sources */,
 				2BA741EF1D81260200FAD233 /* XMLYFindRankHeaderView.m in Sources */,
+				2B5E02821D83C28F008C5F5E /* SVWebViewController.m in Sources */,
 				2B4005D41D59889600605EFB /* XMLYBaseNavigationController.m in Sources */,
 				2BA742181D81A95900FAD233 /* XMLYAnchorFlowLayout.m in Sources */,
 				2BA741FF1D81696700FAD233 /* XMLYAnchorSignerCell.m in Sources */,
+				2B5E027E1D83C28F008C5F5E /* NSEtcHosts.m in Sources */,
 				2BAED0DC1D826AAC00CA7114 /* XMLYScribeMeScrController.m in Sources */,
 				2BCA2C241D5C7C6E00F99DB2 /* XMLYFindHotGuessModel.m in Sources */,
 				2B1DF3CF1D5DDDC100C8BC7F /* XMLYSubScribeNavView.m in Sources */,
 				2B6E0A491D5845CF000A8C58 /* XMLYRootViewController.m in Sources */,
 				2BAED0CC1D825A5600CA7114 /* XMLYAnchorAPI.m in Sources */,
+				2B9920B71D84072400B15067 /* XMLYSettingController.m in Sources */,
 				2B331DE41D5B01D50092AA75 /* XMLYFindRadioController.m in Sources */,
 				2B331DFF1D5B20E80092AA75 /* XMLYBaseModel.m in Sources */,
 				2B4B0C631D7FED36009190D1 /* XMLYCategoryFooterModel.m in Sources */,
@@ -1707,6 +1870,7 @@
 				2B4B0C861D801B75009190D1 /* XMLYFindRadioLiveCell.m in Sources */,
 				2BAED0FA1D82BC7000CA7114 /* XMLYDownVoiceController.m in Sources */,
 				2B4B0C581D7FCB22009190D1 /* XMLYCategoryModel.m in Sources */,
+				2B5E02891D83C28F008C5F5E /* SVWebViewControllerActivitySafari.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1741,6 +1905,26 @@
 			targetProxy = 2B6E0A031D58367D000A8C58 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2B5E02501D83C28F008C5F5E /* SVWebViewController.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B5E02511D83C28F008C5F5E /* da */,
+				2B5E02521D83C28F008C5F5E /* de */,
+				2B5E02531D83C28F008C5F5E /* en */,
+				2B5E02541D83C28F008C5F5E /* es-ES */,
+				2B5E02551D83C28F008C5F5E /* es */,
+				2B5E02561D83C28F008C5F5E /* fr */,
+				2B5E02571D83C28F008C5F5E /* ja */,
+				2B5E02611D83C28F008C5F5E /* pt */,
+				2B5E02781D83C28F008C5F5E /* zh-Hans */,
+				2B5E02791D83C28F008C5F5E /* zh-Hant */,
+			);
+			name = SVWebViewController.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2B6E0A091D58367D000A8C58 /* Debug */ = {

@@ -49,7 +49,7 @@
 
 - (void)refreshDataSource {
     
-    @weakify(self);
+    @weakify(self); 
     RACSignal *signalRecommend = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         @strongify(self);
         [self requestRecommendList:^{

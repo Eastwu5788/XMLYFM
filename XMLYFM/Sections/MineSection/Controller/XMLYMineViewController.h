@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMLYBaseController.h"
 
-@interface XMLYMineViewController : UIViewController
+@interface XMLYMineViewController : XMLYBaseController
 
 @end
