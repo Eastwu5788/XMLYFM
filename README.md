@@ -12,10 +12,9 @@
 具体的代码分析可以看我的简书博客:[http://www.jianshu.com/p/3f48a1dccf52](http://www.jianshu.com/p/3f48a1dccf52)
 ##效果演示
 
-推荐页面   <br />
-![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/recom.gif)  
-
-分类页面   <br />  
+推荐页面   
+![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/recom.gif) 
+分类页面    
 ![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/cate.gif)  
 
 
