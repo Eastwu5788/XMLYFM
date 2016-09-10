@@ -14,6 +14,7 @@
 
 推荐页面   <br />
 ![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/recom.gif) 
+
 分类页面   <br />  
 ![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/cate.gif)  
 
