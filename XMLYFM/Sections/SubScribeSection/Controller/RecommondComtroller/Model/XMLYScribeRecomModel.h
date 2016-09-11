@@ -32,6 +32,8 @@
 @property (nonatomic, assign) NSInteger tracks;
 @property (nonatomic, assign) NSInteger uid;
 
+
+
 #pragma mark - CellFrame
 
 @property (nonatomic, assign) CGFloat titleLabelHeight;
@@ -47,7 +49,7 @@
 
 @property (nonatomic, assign) BOOL hasMore;
 
-@property (nonatomic, strong) NSMutableArray<XMLYScribeRecomItemModel *> *list;
+@property (nonatomic, strong) NSMutableArray *list;
 
 - (void)calculateFrameForItems;
 

@@ -15,8 +15,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
-@property (weak, nonatomic) IBOutlet UIImageView *moreImageView;
-
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (weak, nonatomic) IBOutlet UILabel *peopleCountLabel;
@@ -61,6 +59,14 @@
 }
 
 #pragma mark - private
+
+- (IBAction)moreButtonClick:(id)sender {
+    if([self.delegate respondsToSelector:@selector(findCellStyleLiveCell:didMoreButtonClick:)]) {
+        [self.delegate findCellStyleLiveCell:self didMoreButtonClick:self.liveMoel];
+    }
+}
+
+
 
 /**
  *  移除所有子图片

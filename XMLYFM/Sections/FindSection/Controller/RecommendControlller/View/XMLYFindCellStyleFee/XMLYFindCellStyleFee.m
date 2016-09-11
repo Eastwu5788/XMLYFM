@@ -13,7 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
-@property (weak, nonatomic) IBOutlet UIImageView *moreImageView;
+@property (weak, nonatomic) IBOutlet UIButton *moreButton;
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageViewLeft;
 
@@ -83,6 +83,11 @@
     }
 }
 
+- (IBAction)showMoreButtonClick:(id)sender {
+    if([self.delegate respondsToSelector:@selector(findCellStyleFeeCellDidMoreClick:)]) {
+        [self.delegate findCellStyleFeeCellDidMoreClick:self];
+    }
+}
 
 + (XMLYFindBaseCell *)findCell:(UITableView *)tableView {
     return [self findCellStyleFee:tableView];

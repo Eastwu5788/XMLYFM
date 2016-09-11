@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "XMLYScribeRecomModel.h"
+#import "XMLYEditRecomModel.h"
 
 @interface XMLYScribeRecomCell : UITableViewCell
 
 @property (nonatomic, strong) XMLYScribeRecomItemModel *model;
+
+@property (nonatomic, strong) XMLYEditRecomItemModel *editRecomModel;
 
 + (instancetype)scribeRecomCell:(UITableView *)tableView;
 

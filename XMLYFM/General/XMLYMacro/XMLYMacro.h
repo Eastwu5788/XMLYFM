@@ -25,5 +25,9 @@
 
 #define force_inline __inline__ __attribute__((always_inline))
 
+static NSString *const kSectionFooter = @"UICollectionElementKindSectionFooter";
+static NSString *const kSectionHeader = @"UICollectionElementKindSectionHeader";
+
+
 @interface XMLYMacro : NSObject
 @end

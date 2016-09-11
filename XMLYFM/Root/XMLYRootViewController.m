@@ -113,7 +113,7 @@
 
 #pragma mark - UITabBarControllerDelegate
 
-//http://stackoverflow.com/questions/10519927/hidesbottombarwhenpushed-for-a-custom-view
+
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (viewController.hidesBottomBarWhenPushed) {

@@ -15,8 +15,6 @@
 #import "XMLYAnchorFlowLayout.h"
 #import "XMLYAnchorAPI.h"
 
-static NSString *const kSectionHeader = @"UICollectionElementKindSectionHeader";
-static NSString *const kSectionFooter = @"UICollectionElementKindSectionFooter";
 
 @interface XMLYFindAnchorController () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 

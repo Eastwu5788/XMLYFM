@@ -18,6 +18,13 @@ MJCodingImplementation
              };
 }
 
++ (NSDictionary *)modelCustomPropertyMapper {
+    return @{@"cid":@"id"};
+}
+
+
+
+
 
 
 @end

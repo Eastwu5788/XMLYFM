@@ -76,6 +76,9 @@ static NSString *const kMeSetting     = @"设置";
     [self.navigationController pushViewController:web animated:YES];
 }
 
+/**
+ *  跳转到设置页面
+ */
 - (void)trans2SettingController {
     XMLYSettingController *set = [[XMLYSettingController alloc] init];
     set.hidesBottomBarWhenPushed = YES;

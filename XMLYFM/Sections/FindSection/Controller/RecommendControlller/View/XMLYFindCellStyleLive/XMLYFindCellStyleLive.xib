@@ -35,13 +35,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liveRadioSectionMore_Normal" translatesAutoresizingMaskIntoConstraints="NO" id="aza-Gi-lIQ">
-                                <rect key="frame" x="275" y="19" width="35" height="12"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="cha-Lp-9ne"/>
-                                    <constraint firstAttribute="height" constant="12" id="ms9-Pj-38D"/>
-                                </constraints>
-                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8s-01-Kc5">
                                 <rect key="frame" x="10" y="45" width="300" height="108"/>
                                 <constraints>
@@ -82,13 +75,11 @@
                             <constraint firstAttribute="trailing" secondItem="Eyc-ay-g29" secondAttribute="trailing" constant="10" id="2px-Mi-v5i"/>
                             <constraint firstItem="Eyc-ay-g29" firstAttribute="leading" secondItem="Hl7-0T-7qt" secondAttribute="trailing" constant="10" id="60j-vP-gMd"/>
                             <constraint firstItem="Eyc-ay-g29" firstAttribute="top" secondItem="g8s-01-Kc5" secondAttribute="bottom" constant="14" id="79L-mv-rle"/>
-                            <constraint firstItem="aza-Gi-lIQ" firstAttribute="centerY" secondItem="qlr-37-5M1" secondAttribute="centerY" id="QjZ-Xo-B6H"/>
                             <constraint firstAttribute="trailing" secondItem="g8s-01-Kc5" secondAttribute="trailing" constant="10" id="RB6-CR-5sn"/>
                             <constraint firstItem="ghd-jE-K0u" firstAttribute="leading" secondItem="tju-8j-CGD" secondAttribute="leading" constant="10" id="S9a-Bo-UQo"/>
                             <constraint firstItem="qlr-37-5M1" firstAttribute="centerY" secondItem="HvN-To-Oyf" secondAttribute="centerY" id="WIu-nX-ZCB"/>
                             <constraint firstItem="ghd-jE-K0u" firstAttribute="top" secondItem="Hl7-0T-7qt" secondAttribute="bottom" constant="9" id="Wqn-xc-hBh"/>
                             <constraint firstAttribute="trailing" secondItem="ghd-jE-K0u" secondAttribute="trailing" constant="10" id="en0-U7-Uy6"/>
-                            <constraint firstAttribute="trailing" secondItem="aza-Gi-lIQ" secondAttribute="trailing" constant="10" id="f6b-bi-dkU"/>
                             <constraint firstItem="Eyc-ay-g29" firstAttribute="centerY" secondItem="Hl7-0T-7qt" secondAttribute="centerY" id="hYW-hu-dUn"/>
                             <constraint firstItem="g8s-01-Kc5" firstAttribute="leading" secondItem="tju-8j-CGD" secondAttribute="leading" constant="10" id="i4Q-Lt-8mk"/>
                             <constraint firstItem="HvN-To-Oyf" firstAttribute="top" secondItem="tju-8j-CGD" secondAttribute="top" constant="19" id="lRh-Ht-8VW"/>
@@ -98,18 +89,33 @@
                             <constraint firstItem="g8s-01-Kc5" firstAttribute="top" secondItem="qlr-37-5M1" secondAttribute="bottom" constant="13" id="x76-yo-4Ei"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bqr-KS-ioV">
+                        <rect key="frame" x="10" y="10" width="300" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="ahc-ZE-nS3"/>
+                        </constraints>
+                        <state key="normal" image="liveRadioSectionMore_Normal"/>
+                        <state key="highlighted" image="liveRadioSectionMore_High"/>
+                        <connections>
+                            <action selector="moreButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oRt-x7-DaU"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="Bqr-KS-ioV" secondAttribute="trailing" constant="2" id="14k-k1-w7A"/>
+                    <constraint firstItem="Bqr-KS-ioV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="4bm-lq-1J8"/>
                     <constraint firstItem="tju-8j-CGD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="63G-NW-FLk"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Bqr-KS-ioV" secondAttribute="trailing" constant="2" id="98b-Cd-Gbl"/>
                     <constraint firstAttribute="bottomMargin" secondItem="tju-8j-CGD" secondAttribute="bottom" constant="1.5" id="VKp-AP-j3b"/>
                     <constraint firstItem="tju-8j-CGD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="jFc-19-Dxj"/>
                     <constraint firstAttribute="trailingMargin" secondItem="tju-8j-CGD" secondAttribute="trailing" constant="-8" id="pI1-if-xK5"/>
+                    <constraint firstItem="Bqr-KS-ioV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="pMf-ne-3ZK"/>
+                    <constraint firstItem="Bqr-KS-ioV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="q98-ze-cc9"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.90196078430000004" green="0.90588235289999997" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="contentLabel" destination="Hl7-0T-7qt" id="H14-x9-3HI"/>
-                <outlet property="moreImageView" destination="aza-Gi-lIQ" id="W2o-AV-BhC"/>
                 <outlet property="peopleCountLabel" destination="Eyc-ay-g29" id="zfC-wZ-Znc"/>
                 <outlet property="scrollView" destination="g8s-01-Kc5" id="V32-NL-Tkh"/>
                 <outlet property="subContentLabel" destination="ghd-jE-K0u" id="g5e-os-E9B"/>
@@ -120,6 +126,7 @@
     </objects>
     <resources>
         <image name="findsection_logo" width="8" height="10"/>
+        <image name="liveRadioSectionMore_High" width="34" height="12"/>
         <image name="liveRadioSectionMore_Normal" width="34" height="12"/>
     </resources>
 </document>

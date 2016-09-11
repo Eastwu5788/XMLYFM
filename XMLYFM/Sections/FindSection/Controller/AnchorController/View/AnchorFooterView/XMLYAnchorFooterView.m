@@ -14,7 +14,7 @@
     NSString *identifier = NSStringFromClass([self class]);
     [collectionView registerClass:[self class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:identifier];
     XMLYAnchorFooterView *footer = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:identifier forIndexPath:indexPath];
-    footer.backgroundColor = Hex(0xf0f0f0);
+    footer.backgroundColor = Hex(0xf3f3f3);
     return footer;
 }
 

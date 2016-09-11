@@ -35,13 +35,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liveRadioSectionMore_Normal" translatesAutoresizingMaskIntoConstraints="NO" id="VAk-bB-IKz">
-                                <rect key="frame" x="275" y="18" width="35" height="12"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="VOF-kl-fzz"/>
-                                    <constraint firstAttribute="height" constant="12" id="erY-DQ-ICU"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="find_usercover" translatesAutoresizingMaskIntoConstraints="NO" id="HyW-P6-gYa">
                                 <rect key="frame" x="10" y="50" width="93" height="93"/>
                                 <constraints>
@@ -141,6 +134,17 @@
                                 <color key="textColor" red="0.52549019610000003" green="0.52941176469999995" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgE-yG-HxC">
+                                <rect key="frame" x="10" y="12" width="300" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Fsh-sh-rGb"/>
+                                </constraints>
+                                <state key="normal" image="liveRadioSectionMore_Normal"/>
+                                <state key="highlighted" image="liveRadioSectionMore_High"/>
+                                <connections>
+                                    <action selector="showMoreButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hfL-OD-8gQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -151,14 +155,16 @@
                             <constraint firstItem="vF7-Zc-bqa" firstAttribute="centerX" secondItem="G0b-n2-aGL" secondAttribute="centerX" id="8er-B1-cNk"/>
                             <constraint firstItem="G0b-n2-aGL" firstAttribute="centerX" secondItem="19q-7b-Ccx" secondAttribute="centerX" id="9Bg-yL-DXM"/>
                             <constraint firstItem="ZXh-7T-xpd" firstAttribute="leading" secondItem="19q-7b-Ccx" secondAttribute="leading" constant="23" id="EMT-oS-nmO"/>
+                            <constraint firstItem="cgE-yG-HxC" firstAttribute="top" secondItem="19q-7b-Ccx" secondAttribute="top" constant="12" id="Ikl-IP-AiH"/>
                             <constraint firstItem="ehy-Ee-1e6" firstAttribute="centerY" secondItem="UyQ-sP-NjS" secondAttribute="centerY" id="JZP-m2-Fgq"/>
                             <constraint firstItem="udC-wg-fDZ" firstAttribute="centerX" secondItem="HyW-P6-gYa" secondAttribute="centerX" id="Jld-Nb-YyD"/>
+                            <constraint firstItem="cgE-yG-HxC" firstAttribute="leading" secondItem="19q-7b-Ccx" secondAttribute="leading" constant="10" id="KQx-lB-iNl"/>
                             <constraint firstItem="2JN-Xv-9Nc" firstAttribute="trailing" secondItem="YnJ-Ws-jdS" secondAttribute="trailing" id="KgZ-7W-Dky"/>
+                            <constraint firstAttribute="trailing" secondItem="cgE-yG-HxC" secondAttribute="trailing" constant="10" id="P4e-ub-xMr"/>
                             <constraint firstItem="YnJ-Ws-jdS" firstAttribute="top" secondItem="HyW-P6-gYa" secondAttribute="top" id="PLf-vr-nBW"/>
                             <constraint firstItem="6kr-RK-w2o" firstAttribute="centerY" secondItem="hTd-wd-ry1" secondAttribute="centerY" id="SsI-Pl-xU1"/>
                             <constraint firstItem="WwL-I3-GSN" firstAttribute="leading" secondItem="19q-7b-Ccx" secondAttribute="leading" constant="10" id="UjQ-ob-b5S"/>
                             <constraint firstItem="2JN-Xv-9Nc" firstAttribute="leading" secondItem="Yja-OV-kV3" secondAttribute="trailing" constant="5" id="Vmc-94-Isa"/>
-                            <constraint firstItem="VAk-bB-IKz" firstAttribute="trailing" secondItem="YnJ-Ws-jdS" secondAttribute="trailing" id="Y5d-hx-zIO"/>
                             <constraint firstItem="Yja-OV-kV3" firstAttribute="leading" secondItem="YnJ-Ws-jdS" secondAttribute="leading" id="btx-gK-5JS"/>
                             <constraint firstItem="HyW-P6-gYa" firstAttribute="top" secondItem="ZXh-7T-xpd" secondAttribute="bottom" constant="17" id="bzP-7Q-cXH"/>
                             <constraint firstItem="hTd-wd-ry1" firstAttribute="trailing" secondItem="G0b-n2-aGL" secondAttribute="trailing" id="cKr-PV-Us4"/>
@@ -167,9 +173,7 @@
                             <constraint firstItem="6kr-RK-w2o" firstAttribute="top" secondItem="vF7-Zc-bqa" secondAttribute="bottom" constant="10" id="iTa-Ce-But"/>
                             <constraint firstItem="ehy-Ee-1e6" firstAttribute="top" secondItem="udC-wg-fDZ" secondAttribute="bottom" constant="10" id="kAg-1i-XC0"/>
                             <constraint firstItem="hTd-wd-ry1" firstAttribute="leading" secondItem="6kr-RK-w2o" secondAttribute="trailing" constant="5" id="kFh-Of-tV0"/>
-                            <constraint firstItem="VAk-bB-IKz" firstAttribute="top" secondItem="19q-7b-Ccx" secondAttribute="top" constant="18" id="msA-sE-HuL"/>
                             <constraint firstItem="cIm-fi-YJO" firstAttribute="centerX" secondItem="YnJ-Ws-jdS" secondAttribute="centerX" id="nMX-fa-7vJ"/>
-                            <constraint firstAttribute="trailing" secondItem="VAk-bB-IKz" secondAttribute="trailing" constant="10" id="pko-fJ-NUT"/>
                             <constraint firstItem="ZXh-7T-xpd" firstAttribute="top" secondItem="19q-7b-Ccx" secondAttribute="top" constant="18" id="plI-a7-GXC"/>
                             <constraint firstItem="UyQ-sP-NjS" firstAttribute="trailing" secondItem="HyW-P6-gYa" secondAttribute="trailing" id="rky-Gm-2vu"/>
                             <constraint firstItem="Yja-OV-kV3" firstAttribute="centerY" secondItem="2JN-Xv-9Nc" secondAttribute="centerY" id="roQ-ll-mAn"/>
@@ -177,6 +181,7 @@
                             <constraint firstItem="UyQ-sP-NjS" firstAttribute="leading" secondItem="ehy-Ee-1e6" secondAttribute="trailing" constant="5" id="unk-t3-YWZ"/>
                             <constraint firstItem="ehy-Ee-1e6" firstAttribute="leading" secondItem="HyW-P6-gYa" secondAttribute="leading" id="w95-WJ-bgr"/>
                             <constraint firstItem="cIm-fi-YJO" firstAttribute="top" secondItem="YnJ-Ws-jdS" secondAttribute="bottom" constant="12" id="wJ6-jg-q56"/>
+                            <constraint firstItem="YnJ-Ws-jdS" firstAttribute="trailing" secondItem="cgE-yG-HxC" secondAttribute="trailing" id="xmt-dI-qM9"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -195,7 +200,7 @@
                 <outlet property="iconImageViewLeft" destination="HyW-P6-gYa" id="h9i-oj-p4v"/>
                 <outlet property="iconImageViewMiddle" destination="G0b-n2-aGL" id="avM-B3-0mF"/>
                 <outlet property="iconImageViewRight" destination="YnJ-Ws-jdS" id="t6M-K5-MDt"/>
-                <outlet property="moreImageView" destination="VAk-bB-IKz" id="6Go-pf-Pfh"/>
+                <outlet property="moreButton" destination="cgE-yG-HxC" id="c1q-Kl-6E1"/>
                 <outlet property="subContentLeft" destination="UyQ-sP-NjS" id="ceP-r5-WSd"/>
                 <outlet property="subContentMiddle" destination="hTd-wd-ry1" id="jP2-zr-fbL"/>
                 <outlet property="subContentRight" destination="2JN-Xv-9Nc" id="jtl-jr-fqP"/>
@@ -208,6 +213,7 @@
         <image name="find_specialicon" width="10" height="10"/>
         <image name="find_usercover" width="145" height="145"/>
         <image name="findsection_logo" width="8" height="10"/>
+        <image name="liveRadioSectionMore_High" width="34" height="12"/>
         <image name="liveRadioSectionMore_Normal" width="34" height="12"/>
     </resources>
 </document>

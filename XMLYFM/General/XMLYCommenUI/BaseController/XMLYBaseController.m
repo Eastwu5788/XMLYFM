@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.view.backgroundColor = Hex(0xf3f3f3);
 }
 
 - (void)viewWillAppear:(BOOL)animated {

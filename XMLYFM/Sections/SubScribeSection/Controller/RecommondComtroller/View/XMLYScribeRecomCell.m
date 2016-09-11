@@ -33,6 +33,20 @@ static force_inline NSString *XMLYGetFans(NSInteger num) {
 
 @implementation XMLYScribeRecomCell
 
+- (void)setEditRecomModel:(XMLYEditRecomItemModel *)editRecomModel {
+    _editRecomModel = editRecomModel;
+    
+    [self.coverImageView yy_setImageWithURL:[NSURL URLWithString:_editRecomModel.coverLarge] options:YYWebImageOptionSetImageWithFadeAnimation];
+    self.titleLabel.text = _editRecomModel.title;
+    self.titleHeightConstraint.constant = _editRecomModel.titleLabelHeight;
+    
+    self.subTitleLabel.text = _editRecomModel.intro;
+    
+    self.playTimesLabel.text = XMLYGetFans(_editRecomModel.playsCounts);
+    self.albumLabel.text = [NSString stringWithFormat:@"%ld集",(long)_editRecomModel.tracks];
+    
+}
+
 - (void)setModel:(XMLYScribeRecomItemModel *)model {
     _model = model;
     

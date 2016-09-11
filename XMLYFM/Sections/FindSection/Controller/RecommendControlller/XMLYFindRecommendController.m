@@ -19,6 +19,8 @@
 #import "XMLYFindCellStyleMore.h"
 #import "XMLYFindRecommendHelper.h"
 #import "XMLYFindRecomHeader.h"
+#import "XMLYEditRecomController.h"
+#import "XMLYLiveListController.h"
 
 #define kSectionEditCommen  0   //小编推荐
 #define kSectionLive        1   //现场直播
@@ -30,7 +32,7 @@
 #define kSectionMore        7   //更多分类
 
 
-@interface XMLYFindRecommendController () <UITableViewDelegate,UITableViewDataSource>
+@interface XMLYFindRecommendController () <UITableViewDelegate,UITableViewDataSource,XMLYFindCellStyleFeeDelegate,XMLYFindCellStyleLiveDelegate>
 
 @property (nonatomic, weak) UITableView              *tableView;
 
@@ -67,6 +69,30 @@
     [[XMLYFindRecommendHelper helper] destoryAllTimer];
 }
 
+- (void)trans2EidtRecomController {
+    XMLYEditRecomController *editRecom = [[XMLYEditRecomController alloc] init];
+    editRecom.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:editRecom animated:YES];
+}
+
+#pragma makr - XMLYFindCellStyleFeeDelegate
+- (void)findCellStyleFeeCellDidMoreClick:(XMLYFindCellStyleFee *)cell {
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    switch (indexPath.section) {
+        case kSectionEditCommen: {  //小编推荐
+            [self trans2EidtRecomController];
+        } break;
+        default: break;
+    }
+}
+
+#pragma makr - XMLYFindCellStyleLiveDelegate
+- (void)findCellStyleLiveCell:(XMLYFindCellStyleLive *)cell didMoreButtonClick:(XMLYFindLiveModel *)model {
+    XMLYLiveListController *con = [[XMLYLiveListController alloc] init];
+    con.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:con animated:YES];
+}
+
 #pragma mark - UITableViewDelegate/UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -80,6 +106,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.section == kSectionEditCommen) {
         XMLYFindCellStyleFee *editComm = (XMLYFindCellStyleFee *)[XMLYFindCellFactory createCellByFactory:tableView style:XMLYFindCellStyleFeeStyle];
+        editComm.delegate = self;
         editComm.recommendModel = self.viewModel.recommendModel.editorRecommendAlbums;
         editComm.selectionStyle = UITableViewCellSelectionStyleNone;
         return editComm;
@@ -88,6 +115,7 @@
         if(self.viewModel.liveModel.data.count != 0) {
             XMLYFindCellStyleLive *live = (XMLYFindCellStyleLive *)[XMLYFindCellFactory createCellByFactory:tableView style:XMLYFindCellStyleLiveStyle];
             live.liveMoel = self.viewModel.liveModel;
+            live.delegate = self;
             live.selectionStyle = UITableViewCellSelectionStyleNone;
             return live;
         }
