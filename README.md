@@ -5,7 +5,8 @@
 2016.9.8：完成了分类页面和广播页面  
 2016.9.9：完成了榜单页面和主播页面     
 2016.9.10: 良心程序员半夜11点半为您带来今天的更新，完成了订阅听、下载听、我的部分页面。由于时间比较赶，部分页面还需要修改，代码比较不好看，多多包涵    
-2016.9.11：现在开始完成部分二级页面了，目前已经完成了小编推荐、现场直播、免流量服务等页面      
+2016.9.11：现在开始完成部分二级页面了，目前已经完成了小编推荐、现场直播、免流量服务等页面   
+2016.9.12：完成了精品听单和听单详情页面   
 + 更多内容持续更新中...     
 
 ##特色
@@ -41,7 +42,23 @@
 ![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/xiazai.gif)
 
 我的页面   <br/>
-![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/Mine.gif)
+![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/Mine.gif)  
+
+小编推荐页面   
+![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/EditRecom.gif)  
+
+直播现场页面   
+![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/LiveList.gif)  
+
+免流量服务页面  
+![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/WebServer.gif)  
+
+精品听单页面  
+![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/GooList.gif)  
+ 
+听单详情页面  
+![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/ListenDetail.gif)  
+  
 
 更多的效果演示在我的博客中为大家展示:[http://www.jianshu.com/p/3929ec2eeb15](http://www.jianshu.com/p/3929ec2eeb15)
 
