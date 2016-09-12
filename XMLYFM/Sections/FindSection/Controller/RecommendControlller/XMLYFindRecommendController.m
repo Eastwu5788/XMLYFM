@@ -21,6 +21,7 @@
 #import "XMLYFindRecomHeader.h"
 #import "XMLYEditRecomController.h"
 #import "XMLYLiveListController.h"
+#import "XMLYListenListController.h"
 
 #define kSectionEditCommen  0   //小编推荐
 #define kSectionLive        1   //现场直播
@@ -32,7 +33,7 @@
 #define kSectionMore        7   //更多分类
 
 
-@interface XMLYFindRecommendController () <UITableViewDelegate,UITableViewDataSource,XMLYFindCellStyleFeeDelegate,XMLYFindCellStyleLiveDelegate>
+@interface XMLYFindRecommendController () <UITableViewDelegate,UITableViewDataSource,XMLYFindCellStyleFeeDelegate,XMLYFindCellStyleLiveDelegate,XMLYFindCellStyleSpecialDelegate>
 
 @property (nonatomic, weak) UITableView              *tableView;
 
@@ -93,6 +94,13 @@
     [self.navigationController pushViewController:con animated:YES];
 }
 
+#pragma mark - XMLYFindCellStyleSpecialDelegate
+- (void)findCellStyleSpecial:(XMLYFindCellStyleSpecial *)cell didMoreButtonClickWithModel:(XMLYSpecialColumnModel *)model {
+    XMLYListenListController *list = [[XMLYListenListController alloc] init];
+    list.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:list animated:YES];
+}
+
 #pragma mark - UITableViewDelegate/UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -146,7 +154,9 @@
         if(self.viewModel.recommendModel.specialColumn.list != 0) {
             XMLYFindCellStyleSpecial *specialCell = (XMLYFindCellStyleSpecial *)[XMLYFindCellFactory createCellByFactory:tableView style:XMLYFindCellStyleSpecialStyle];
             specialCell.selectionStyle = UITableViewCellSelectionStyleNone;
+            specialCell.delegate = self;
             specialCell.specialModel = self.viewModel.recommendModel.specialColumn;
+            
             return specialCell;
         }else{
             return [[UITableViewCell alloc] init];

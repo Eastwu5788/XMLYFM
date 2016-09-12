@@ -45,13 +45,27 @@
 }
 
 - (void)configSubViews {
-    [self.navigationController.navigationBar addSubview:self.nav];
+    
 
     [self.pageViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view.mas_top);
         make.left.mas_equalTo(self.view.mas_left);
         make.right.mas_equalTo(self.view.mas_right);
         make.bottom.equalTo(self.view.mas_bottom).offset(-49);
+    }];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar addSubview:self.nav];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController.navigationBar.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if([obj isKindOfClass:[XMLYSubScribeNavView class]]) {
+            [obj removeFromSuperview];
+        }
     }];
 }
 

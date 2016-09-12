@@ -13,6 +13,10 @@
 
 @property (nonatomic, strong) XMLYAnchorSectionModel *model;
 
+
 + (instancetype)anchorHeaderView:(UICollectionView *)collectionView atIndexPath:(NSIndexPath *)indexPath;
+
+
+- (void)configHeaderTitle:(NSString *)title showMore:(BOOL)showMore;
 
 @end

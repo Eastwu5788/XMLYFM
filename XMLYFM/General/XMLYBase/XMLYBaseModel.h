@@ -11,7 +11,8 @@
 #import "XRModel.h"
 #import "MJExtension.h"
 
-@interface XMLYBaseModel : NSObject
+@interface XMLYBaseModel : NSObject <NSCopying,NSCoding>
+
 
 
 @end

@@ -55,6 +55,11 @@
 		2B4B0C861D801B75009190D1 /* XMLYFindRadioLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4B0C811D801B75009190D1 /* XMLYFindRadioLiveCell.m */; };
 		2B4B0C871D801B75009190D1 /* XMLYFindRadioLiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B4B0C821D801B75009190D1 /* XMLYFindRadioLiveCell.xib */; };
 		2B4B0C881D801B75009190D1 /* XMLYFindRadioTelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4B0C851D801B75009190D1 /* XMLYFindRadioTelCell.m */; };
+		2B5A10141D864847009314F1 /* XMLYListenListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5A10131D864847009314F1 /* XMLYListenListController.m */; };
+		2B5A101B1D864DD0009314F1 /* XMLYListenListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5A10191D864DD0009314F1 /* XMLYListenListCell.m */; };
+		2B5A101C1D864DD0009314F1 /* XMLYListenListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5A101A1D864DD0009314F1 /* XMLYListenListCell.xib */; };
+		2B5A10201D865874009314F1 /* XMLYListenListAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5A101F1D865874009314F1 /* XMLYListenListAPI.m */; };
+		2B5A10231D865A9B009314F1 /* XMLYListenListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5A10221D865A9B009314F1 /* XMLYListenListModel.m */; };
 		2B5E027A1D83C28F008C5F5E /* SVWebViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B5E02501D83C28F008C5F5E /* SVWebViewController.strings */; };
 		2B5E027B1D83C28F008C5F5E /* MyURLCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E02591D83C28F008C5F5E /* MyURLCache.m */; };
 		2B5E027C1D83C28F008C5F5E /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E025C1D83C28F008C5F5E /* NJKWebViewProgress.m */; };
@@ -91,6 +96,24 @@
 		2B6E0A731D584F30000A8C58 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6E0A721D584F30000A8C58 /* Mine.storyboard */; };
 		2B6E0A761D584F74000A8C58 /* XMLYMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E0A751D584F74000A8C58 /* XMLYMineViewController.m */; };
 		2B6E0A7C1D588481000A8C58 /* XMLYMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6E0A7B1D588481000A8C58 /* XMLYMacro.m */; };
+		2B9224401D866C9E009F615E /* XMLYListenDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B92243F1D866C9E009F615E /* XMLYListenDetailController.m */; };
+		2B9224441D8677E5009F615E /* XMLYListenDetailAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9224431D8677E5009F615E /* XMLYListenDetailAPI.m */; };
+		2B92244A1D86853A009F615E /* XMLYListenDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9224491D86853A009F615E /* XMLYListenDetailModel.m */; };
+		2B9224521D868CB7009F615E /* XMLYListenInfoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9224501D868CB7009F615E /* XMLYListenInfoHeaderView.m */; };
+		2B9224531D868CB7009F615E /* XMLYListenInfoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9224511D868CB7009F615E /* XMLYListenInfoHeaderView.xib */; };
+		2B9224571D868ECF009F615E /* XMLYListenDetailInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9224551D868ECF009F615E /* XMLYListenDetailInfoCell.m */; };
+		2B9224581D868ECF009F615E /* XMLYListenDetailInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9224561D868ECF009F615E /* XMLYListenDetailInfoCell.xib */; };
+		2B9224611D8698FE009F615E /* XMLYListenRecomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B92245F1D8698FE009F615E /* XMLYListenRecomCell.m */; };
+		2B9224621D8698FE009F615E /* XMLYListenRecomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9224601D8698FE009F615E /* XMLYListenRecomCell.xib */; };
+		2B9224661D86A772009F615E /* XMLYListenEditInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9224641D86A772009F615E /* XMLYListenEditInfoCell.m */; };
+		2B9224671D86A772009F615E /* XMLYListenEditInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9224651D86A772009F615E /* XMLYListenEditInfoCell.xib */; };
+		2B92246B1D86B89D009F615E /* XMLYAlbumDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B92246A1D86B89D009F615E /* XMLYAlbumDetailController.m */; };
+		2B92247B1D86BB69009F615E /* XMLYAlbumDetailHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9224761D86BB69009F615E /* XMLYAlbumDetailHeaderCell.m */; };
+		2B92247C1D86BB69009F615E /* XMLYAlbumDetailHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9224771D86BB69009F615E /* XMLYAlbumDetailHeaderCell.xib */; };
+		2B9224801D86C2C6009F615E /* XMLYBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B92247F1D86C2C6009F615E /* XMLYBaseTableViewCell.m */; };
+		2B9224831D86D915009F615E /* XMLYAlbumContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9224821D86D915009F615E /* XMLYAlbumContentCell.m */; };
+		2B9224881D86DE2A009F615E /* XMLYAlbumDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9224871D86DE2A009F615E /* XMLYAlbumDetailView.m */; };
+		2B92248B1D86DE3C009F615E /* XMLYAlbumListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B92248A1D86DE3C009F615E /* XMLYAlbumListView.m */; };
 		2B9920B71D84072400B15067 /* XMLYSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9920B61D84072400B15067 /* XMLYSettingController.m */; };
 		2B9EA3441D803D600090CE58 /* XMLYRadioSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9EA3431D803D600090CE58 /* XMLYRadioSectionHeaderView.m */; };
 		2B9EA3491D8043FE0090CE58 /* XMLYTimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B9EA3481D8043FE0090CE58 /* XMLYTimeHelper.m */; };
@@ -240,6 +263,15 @@
 		2B4B0C821D801B75009190D1 /* XMLYFindRadioLiveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLYFindRadioLiveCell.xib; sourceTree = "<group>"; };
 		2B4B0C841D801B75009190D1 /* XMLYFindRadioTelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindRadioTelCell.h; sourceTree = "<group>"; };
 		2B4B0C851D801B75009190D1 /* XMLYFindRadioTelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindRadioTelCell.m; sourceTree = "<group>"; };
+		2B5A10121D864847009314F1 /* XMLYListenListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYListenListController.h; sourceTree = "<group>"; };
+		2B5A10131D864847009314F1 /* XMLYListenListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYListenListController.m; sourceTree = "<group>"; };
+		2B5A10181D864DD0009314F1 /* XMLYListenListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYListenListCell.h; sourceTree = "<group>"; };
+		2B5A10191D864DD0009314F1 /* XMLYListenListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYListenListCell.m; sourceTree = "<group>"; };
+		2B5A101A1D864DD0009314F1 /* XMLYListenListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLYListenListCell.xib; sourceTree = "<group>"; };
+		2B5A101E1D865874009314F1 /* XMLYListenListAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYListenListAPI.h; sourceTree = "<group>"; };
+		2B5A101F1D865874009314F1 /* XMLYListenListAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYListenListAPI.m; sourceTree = "<group>"; };
+		2B5A10211D865A9B009314F1 /* XMLYListenListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYListenListModel.h; sourceTree = "<group>"; };
+		2B5A10221D865A9B009314F1 /* XMLYListenListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYListenListModel.m; sourceTree = "<group>"; };
 		2B5E02511D83C28F008C5F5E /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
 		2B5E02521D83C28F008C5F5E /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
 		2B5E02531D83C28F008C5F5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SVWebViewController.strings; sourceTree = "<group>"; };
@@ -310,6 +342,37 @@
 		2B6E0A7A1D588481000A8C58 /* XMLYMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYMacro.h; sourceTree = "<group>"; };
 		2B6E0A7B1D588481000A8C58 /* XMLYMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYMacro.m; sourceTree = "<group>"; };
 		2B6E0A7E1D588957000A8C58 /* XMLYFM-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XMLYFM-Prefix.pch"; sourceTree = "<group>"; };
+		2B92243E1D866C9E009F615E /* XMLYListenDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYListenDetailController.h; sourceTree = "<group>"; };
+		2B92243F1D866C9E009F615E /* XMLYListenDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYListenDetailController.m; sourceTree = "<group>"; };
+		2B9224421D8677E5009F615E /* XMLYListenDetailAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYListenDetailAPI.h; sourceTree = "<group>"; };
+		2B9224431D8677E5009F615E /* XMLYListenDetailAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYListenDetailAPI.m; sourceTree = "<group>"; };
+		2B9224481D86853A009F615E /* XMLYListenDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYListenDetailModel.h; sourceTree = "<group>"; };
+		2B9224491D86853A009F615E /* XMLYListenDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYListenDetailModel.m; sourceTree = "<group>"; };
+		2B92244F1D868CB7009F615E /* XMLYListenInfoHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYListenInfoHeaderView.h; sourceTree = "<group>"; };
+		2B9224501D868CB7009F615E /* XMLYListenInfoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYListenInfoHeaderView.m; sourceTree = "<group>"; };
+		2B9224511D868CB7009F615E /* XMLYListenInfoHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLYListenInfoHeaderView.xib; sourceTree = "<group>"; };
+		2B9224541D868ECF009F615E /* XMLYListenDetailInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYListenDetailInfoCell.h; sourceTree = "<group>"; };
+		2B9224551D868ECF009F615E /* XMLYListenDetailInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYListenDetailInfoCell.m; sourceTree = "<group>"; };
+		2B9224561D868ECF009F615E /* XMLYListenDetailInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLYListenDetailInfoCell.xib; sourceTree = "<group>"; };
+		2B92245E1D8698FE009F615E /* XMLYListenRecomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLYListenRecomCell.h; path = ../XMLYListenEditInfoCell/XMLYListenRecomCell.h; sourceTree = "<group>"; };
+		2B92245F1D8698FE009F615E /* XMLYListenRecomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLYListenRecomCell.m; path = ../XMLYListenEditInfoCell/XMLYListenRecomCell.m; sourceTree = "<group>"; };
+		2B9224601D8698FE009F615E /* XMLYListenRecomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XMLYListenRecomCell.xib; path = ../XMLYListenEditInfoCell/XMLYListenRecomCell.xib; sourceTree = "<group>"; };
+		2B9224631D86A772009F615E /* XMLYListenEditInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMLYListenEditInfoCell.h; path = ../XMLYListenRecomCell/XMLYListenEditInfoCell.h; sourceTree = "<group>"; };
+		2B9224641D86A772009F615E /* XMLYListenEditInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMLYListenEditInfoCell.m; path = ../XMLYListenRecomCell/XMLYListenEditInfoCell.m; sourceTree = "<group>"; };
+		2B9224651D86A772009F615E /* XMLYListenEditInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XMLYListenEditInfoCell.xib; path = ../XMLYListenRecomCell/XMLYListenEditInfoCell.xib; sourceTree = "<group>"; };
+		2B9224691D86B89D009F615E /* XMLYAlbumDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYAlbumDetailController.h; sourceTree = "<group>"; };
+		2B92246A1D86B89D009F615E /* XMLYAlbumDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYAlbumDetailController.m; sourceTree = "<group>"; };
+		2B9224751D86BB69009F615E /* XMLYAlbumDetailHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYAlbumDetailHeaderCell.h; sourceTree = "<group>"; };
+		2B9224761D86BB69009F615E /* XMLYAlbumDetailHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYAlbumDetailHeaderCell.m; sourceTree = "<group>"; };
+		2B9224771D86BB69009F615E /* XMLYAlbumDetailHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLYAlbumDetailHeaderCell.xib; sourceTree = "<group>"; };
+		2B92247E1D86C2C6009F615E /* XMLYBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYBaseTableViewCell.h; sourceTree = "<group>"; };
+		2B92247F1D86C2C6009F615E /* XMLYBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYBaseTableViewCell.m; sourceTree = "<group>"; };
+		2B9224811D86D915009F615E /* XMLYAlbumContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYAlbumContentCell.h; sourceTree = "<group>"; };
+		2B9224821D86D915009F615E /* XMLYAlbumContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYAlbumContentCell.m; sourceTree = "<group>"; };
+		2B9224861D86DE2A009F615E /* XMLYAlbumDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYAlbumDetailView.h; sourceTree = "<group>"; };
+		2B9224871D86DE2A009F615E /* XMLYAlbumDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYAlbumDetailView.m; sourceTree = "<group>"; };
+		2B9224891D86DE3C009F615E /* XMLYAlbumListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYAlbumListView.h; sourceTree = "<group>"; };
+		2B92248A1D86DE3C009F615E /* XMLYAlbumListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYAlbumListView.m; sourceTree = "<group>"; };
 		2B9920B51D84072400B15067 /* XMLYSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYSettingController.h; sourceTree = "<group>"; };
 		2B9920B61D84072400B15067 /* XMLYSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYSettingController.m; sourceTree = "<group>"; };
 		2B9EA3421D803D600090CE58 /* XMLYRadioSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYRadioSectionHeaderView.h; sourceTree = "<group>"; };
@@ -663,6 +726,7 @@
 		2B4005C91D59875600605EFB /* XMLYCommenUI */ = {
 			isa = PBXGroup;
 			children = (
+				2B92247D1D86C2B8009F615E /* BaseTableViewCell */,
 				2B4005CD1D59887C00605EFB /* BaseController */,
 				2B4005D01D59887C00605EFB /* BaseNavigationController */,
 			);
@@ -808,6 +872,53 @@
 				2B4B0C851D801B75009190D1 /* XMLYFindRadioTelCell.m */,
 			);
 			path = XMLYFindRadioTeleCell;
+			sourceTree = "<group>";
+		};
+		2B5A10111D864815009314F1 /* SepcialListenListController */ = {
+			isa = PBXGroup;
+			children = (
+				2B5A10121D864847009314F1 /* XMLYListenListController.h */,
+				2B5A10131D864847009314F1 /* XMLYListenListController.m */,
+				2B5A10171D864D84009314F1 /* View */,
+				2B5A10151D864D84009314F1 /* Model */,
+				2B5A10161D864D84009314F1 /* Helper */,
+			);
+			path = SepcialListenListController;
+			sourceTree = "<group>";
+		};
+		2B5A10151D864D84009314F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B5A10211D865A9B009314F1 /* XMLYListenListModel.h */,
+				2B5A10221D865A9B009314F1 /* XMLYListenListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B5A10161D864D84009314F1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2B5A10171D864D84009314F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B5A10181D864DD0009314F1 /* XMLYListenListCell.h */,
+				2B5A10191D864DD0009314F1 /* XMLYListenListCell.m */,
+				2B5A101A1D864DD0009314F1 /* XMLYListenListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B5A101D1D865861009314F1 /* XMLYListenListAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2B5A101E1D865874009314F1 /* XMLYListenListAPI.h */,
+				2B5A101F1D865874009314F1 /* XMLYListenListAPI.m */,
+			);
+			path = XMLYListenListAPI;
 			sourceTree = "<group>";
 		};
 		2B5E024F1D83C28F008C5F5E /* WebView */ = {
@@ -1085,6 +1196,8 @@
 				2B331DD81D5AFF750092AA75 /* RecommendControlller */,
 				2BBDA08F1D85344A00AC0F60 /* EditRecommendController */,
 				2BBDA09D1D85641E00AC0F60 /* LiveController */,
+				2B5A10111D864815009314F1 /* SepcialListenListController */,
+				2B92243D1D866C74009F615E /* ListenDetailController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1117,6 +1230,7 @@
 			children = (
 				2B6E0A591D584C6C000A8C58 /* XMLYSubScribeViewController.h */,
 				2B6E0A5A1D584C6C000A8C58 /* XMLYSubScribeViewController.m */,
+				2B9224681D86B87F009F615E /* AlbumDetailController */,
 				2BAED0D11D82691600CA7114 /* HistoryController */,
 				2BAED0D21D82691600CA7114 /* RecommondComtroller */,
 				2BAED0D31D82691600CA7114 /* SubScribeController */,
@@ -1272,6 +1386,193 @@
 			path = XMLYNotification;
 			sourceTree = "<group>";
 		};
+		2B92243D1D866C74009F615E /* ListenDetailController */ = {
+			isa = PBXGroup;
+			children = (
+				2B92243E1D866C9E009F615E /* XMLYListenDetailController.h */,
+				2B92243F1D866C9E009F615E /* XMLYListenDetailController.m */,
+				2B9224451D868516009F615E /* View */,
+				2B9224461D868516009F615E /* Helper */,
+				2B9224471D868516009F615E /* Model */,
+			);
+			path = ListenDetailController;
+			sourceTree = "<group>";
+		};
+		2B9224411D8677CD009F615E /* XMLYListenDetailAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2B9224421D8677E5009F615E /* XMLYListenDetailAPI.h */,
+				2B9224431D8677E5009F615E /* XMLYListenDetailAPI.m */,
+			);
+			path = XMLYListenDetailAPI;
+			sourceTree = "<group>";
+		};
+		2B9224451D868516009F615E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B92244D1D868C88009F615E /* XMLYListenInfoHeaderView */,
+				2B92244C1D868C88009F615E /* XMLYListenInfoCell */,
+				2B92244B1D868C88009F615E /* XMLYListenEditInfoCell */,
+				2B92244E1D868C88009F615E /* XMLYListenRecomCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B9224461D868516009F615E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2B9224471D868516009F615E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B9224481D86853A009F615E /* XMLYListenDetailModel.h */,
+				2B9224491D86853A009F615E /* XMLYListenDetailModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B92244B1D868C88009F615E /* XMLYListenEditInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B9224631D86A772009F615E /* XMLYListenEditInfoCell.h */,
+				2B9224641D86A772009F615E /* XMLYListenEditInfoCell.m */,
+				2B9224651D86A772009F615E /* XMLYListenEditInfoCell.xib */,
+			);
+			path = XMLYListenEditInfoCell;
+			sourceTree = "<group>";
+		};
+		2B92244C1D868C88009F615E /* XMLYListenInfoCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B9224541D868ECF009F615E /* XMLYListenDetailInfoCell.h */,
+				2B9224551D868ECF009F615E /* XMLYListenDetailInfoCell.m */,
+				2B9224561D868ECF009F615E /* XMLYListenDetailInfoCell.xib */,
+			);
+			path = XMLYListenInfoCell;
+			sourceTree = "<group>";
+		};
+		2B92244D1D868C88009F615E /* XMLYListenInfoHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				2B92244F1D868CB7009F615E /* XMLYListenInfoHeaderView.h */,
+				2B9224501D868CB7009F615E /* XMLYListenInfoHeaderView.m */,
+				2B9224511D868CB7009F615E /* XMLYListenInfoHeaderView.xib */,
+			);
+			path = XMLYListenInfoHeaderView;
+			sourceTree = "<group>";
+		};
+		2B92244E1D868C88009F615E /* XMLYListenRecomCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B92245E1D8698FE009F615E /* XMLYListenRecomCell.h */,
+				2B92245F1D8698FE009F615E /* XMLYListenRecomCell.m */,
+				2B9224601D8698FE009F615E /* XMLYListenRecomCell.xib */,
+			);
+			path = XMLYListenRecomCell;
+			sourceTree = "<group>";
+		};
+		2B9224681D86B87F009F615E /* AlbumDetailController */ = {
+			isa = PBXGroup;
+			children = (
+				2B9224691D86B89D009F615E /* XMLYAlbumDetailController.h */,
+				2B92246A1D86B89D009F615E /* XMLYAlbumDetailController.m */,
+				2B9224711D86BB69009F615E /* Helper */,
+				2B9224721D86BB69009F615E /* Model */,
+				2B9224731D86BB69009F615E /* View */,
+			);
+			path = AlbumDetailController;
+			sourceTree = "<group>";
+		};
+		2B9224711D86BB69009F615E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2B9224721D86BB69009F615E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B9224731D86BB69009F615E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B9224841D86DE0D009F615E /* AlbumDetailView */,
+				2B9224851D86DE0D009F615E /* AlbumListView */,
+				2B9224741D86BB69009F615E /* AlbumDetailHeaderCell */,
+				2B9224781D86BB69009F615E /* AlbumDetailSectionHeaderView */,
+				2B9224791D86BB69009F615E /* AlbumDetailSubViewCell */,
+				2B92247A1D86BB69009F615E /* XMLYComFooterView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B9224741D86BB69009F615E /* AlbumDetailHeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B9224751D86BB69009F615E /* XMLYAlbumDetailHeaderCell.h */,
+				2B9224761D86BB69009F615E /* XMLYAlbumDetailHeaderCell.m */,
+				2B9224771D86BB69009F615E /* XMLYAlbumDetailHeaderCell.xib */,
+			);
+			path = AlbumDetailHeaderCell;
+			sourceTree = "<group>";
+		};
+		2B9224781D86BB69009F615E /* AlbumDetailSectionHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AlbumDetailSectionHeaderView;
+			sourceTree = "<group>";
+		};
+		2B9224791D86BB69009F615E /* AlbumDetailSubViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B9224811D86D915009F615E /* XMLYAlbumContentCell.h */,
+				2B9224821D86D915009F615E /* XMLYAlbumContentCell.m */,
+			);
+			path = AlbumDetailSubViewCell;
+			sourceTree = "<group>";
+		};
+		2B92247A1D86BB69009F615E /* XMLYComFooterView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XMLYComFooterView;
+			sourceTree = "<group>";
+		};
+		2B92247D1D86C2B8009F615E /* BaseTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B92247E1D86C2C6009F615E /* XMLYBaseTableViewCell.h */,
+				2B92247F1D86C2C6009F615E /* XMLYBaseTableViewCell.m */,
+			);
+			path = BaseTableViewCell;
+			sourceTree = "<group>";
+		};
+		2B9224841D86DE0D009F615E /* AlbumDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				2B9224861D86DE2A009F615E /* XMLYAlbumDetailView.h */,
+				2B9224871D86DE2A009F615E /* XMLYAlbumDetailView.m */,
+			);
+			path = AlbumDetailView;
+			sourceTree = "<group>";
+		};
+		2B9224851D86DE0D009F615E /* AlbumListView */ = {
+			isa = PBXGroup;
+			children = (
+				2B9224891D86DE3C009F615E /* XMLYAlbumListView.h */,
+				2B92248A1D86DE3C009F615E /* XMLYAlbumListView.m */,
+			);
+			path = AlbumListView;
+			sourceTree = "<group>";
+		};
 		2B9920B41D84070F00B15067 /* XMLYMineSetViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1412,6 +1713,8 @@
 		2BAED0BC1D825A5600CA7114 /* XMLYFindSectionAPI */ = {
 			isa = PBXGroup;
 			children = (
+				2B9224411D8677CD009F615E /* XMLYListenDetailAPI */,
+				2B5A101D1D865861009314F1 /* XMLYListenListAPI */,
 				2BBDA0A91D8575BB00AC0F60 /* XMLYLiveListAPI */,
 				2BBDA0991D854B1A00AC0F60 /* XMLYEditRecomAPI */,
 				2BAED0BD1D825A5600CA7114 /* XMLYAnchorAPI */,
@@ -1811,6 +2114,7 @@
 			files = (
 				2B4B0C681D7FF0BB009190D1 /* XMLYFindCategoryCell.xib in Resources */,
 				2BA742051D81720E00FAD233 /* XMLYAnchorNormalCell.xib in Resources */,
+				2B9224581D868ECF009F615E /* XMLYListenDetailInfoCell.xib in Resources */,
 				2BBDA0A81D856A8600AC0F60 /* XMLYLiveItemCell.xib in Resources */,
 				2B5E028A1D83C28F008C5F5E /* SVWebViewControllerActivitySafari@2x.png in Resources */,
 				2B5E02811D83C28F008C5F5E /* SVWebViewController.bundle in Resources */,
@@ -1830,10 +2134,15 @@
 				2B5E02841D83C28F008C5F5E /* SVWebViewControllerActivityChrome-iPad@2x.png in Resources */,
 				2B1DF39F1D5D6E5E00C8BC7F /* XMLYFindCellStyleLive.xib in Resources */,
 				2B1DF3911D5D691700C8BC7F /* XMLYFindCellStyleFee.xib in Resources */,
+				2B9224621D8698FE009F615E /* XMLYListenRecomCell.xib in Resources */,
 				2B6E0A4F1D58471C000A8C58 /* Find.storyboard in Resources */,
+				2B9224531D868CB7009F615E /* XMLYListenInfoHeaderView.xib in Resources */,
+				2B92247C1D86BB69009F615E /* XMLYAlbumDetailHeaderCell.xib in Resources */,
 				2B1DF3BB1D5DBA5200C8BC7F /* XMLYFindRecomHeader.xib in Resources */,
 				2B4B0C871D801B75009190D1 /* XMLYFindRadioLiveCell.xib in Resources */,
 				2B5E027A1D83C28F008C5F5E /* SVWebViewController.strings in Resources */,
+				2B9224671D86A772009F615E /* XMLYListenEditInfoCell.xib in Resources */,
+				2B5A101C1D864DD0009314F1 /* XMLYListenListCell.xib in Resources */,
 				2B1DF3C81D5DCC3500C8BC7F /* XMLYHeaderIconView.xib in Resources */,
 				2B5E02861D83C28F008C5F5E /* SVWebViewControllerActivityChrome@2x.png in Resources */,
 				2B6E0A611D584D46000A8C58 /* Play.storyboard in Resources */,
@@ -1914,6 +2223,7 @@
 				2B6E0A641D584E2A000A8C58 /* XMLYPlayViewController.m in Sources */,
 				2BAED0F71D82BC5A00CA7114 /* XMLYDownAlbumController.m in Sources */,
 				2B4005C81D59769600605EFB /* XMLYFindSubTitleView.m in Sources */,
+				2B5A10201D865874009314F1 /* XMLYListenListAPI.m in Sources */,
 				2B6E0A5B1D584C6C000A8C58 /* XMLYSubScribeViewController.m in Sources */,
 				2BBDA0921D85346200AC0F60 /* XMLYEditRecomController.m in Sources */,
 				2B6E09E31D58367D000A8C58 /* main.m in Sources */,
@@ -1930,11 +2240,14 @@
 				2B1DF3C21D5DBF0A00C8BC7F /* UIView+Extension.m in Sources */,
 				2B331DE71D5B01E80092AA75 /* XMLYFindCategoryController.m in Sources */,
 				2BBDA09C1D854B2E00AC0F60 /* XMLYEditRecomAPI.m in Sources */,
+				2B9224441D8677E5009F615E /* XMLYListenDetailAPI.m in Sources */,
+				2B9224831D86D915009F615E /* XMLYAlbumContentCell.m in Sources */,
 				2BAED0CF1D825A5600CA7114 /* XMLYRadioAPI.m in Sources */,
 				2BA7420B1D8175EC00FAD233 /* XMLYAnchorHeaderView.m in Sources */,
 				2B9EA3441D803D600090CE58 /* XMLYRadioSectionHeaderView.m in Sources */,
 				2B4B0C671D7FF0BB009190D1 /* XMLYFindCategoryCell.m in Sources */,
 				2B1DF3901D5D691700C8BC7F /* XMLYFindCellStyleFee.m in Sources */,
+				2B9224521D868CB7009F615E /* XMLYListenInfoHeaderView.m in Sources */,
 				2B4005F51D59ECE100605EFB /* XMLYBaseAPI.m in Sources */,
 				2BBDA0A71D856A8600AC0F60 /* XMLYLiveItemCell.m in Sources */,
 				2B4B0C6F1D800627009190D1 /* XMLYFindRadioViewModel.m in Sources */,
@@ -1948,15 +2261,21 @@
 				2B5E027B1D83C28F008C5F5E /* MyURLCache.m in Sources */,
 				2B6E0A371D58402A000A8C58 /* AppDelegate.m in Sources */,
 				2B5E02851D83C28F008C5F5E /* SVWebViewControllerActivityChrome.m in Sources */,
+				2B9224401D866C9E009F615E /* XMLYListenDetailController.m in Sources */,
 				2B1DF39E1D5D6E5E00C8BC7F /* XMLYFindCellStyleLive.m in Sources */,
+				2B92248B1D86DE3C009F615E /* XMLYAlbumListView.m in Sources */,
+				2B5A10141D864847009314F1 /* XMLYListenListController.m in Sources */,
 				2BBDA08E1D85341900AC0F60 /* XMLYBasePlayController.m in Sources */,
 				2BAED0E31D82776000CA7114 /* XMLYScribeRecomAPI.m in Sources */,
+				2B9224571D868ECF009F615E /* XMLYListenDetailInfoCell.m in Sources */,
 				2B1DF3A51D5D782100C8BC7F /* XMLYFindCellStyleSpecial.m in Sources */,
 				2BAED0FD1D82BC8200CA7114 /* XMLYDownloadingController.m in Sources */,
+				2B9224881D86DE2A009F615E /* XMLYAlbumDetailView.m in Sources */,
 				2B4005D11D59887C00605EFB /* XMLYBaseController.m in Sources */,
 				2B4B0C601D7FE8A4009190D1 /* XRClassInfo.m in Sources */,
 				2BBDA0A01D85643600AC0F60 /* XMLYLiveListController.m in Sources */,
 				2B331DF71D5B0DF50092AA75 /* XMLYFindRecomViewModel.m in Sources */,
+				2B9224611D8698FE009F615E /* XMLYListenRecomCell.m in Sources */,
 				2BAED0ED1D828CF200CA7114 /* XMLYScribeRecomCell.m in Sources */,
 				2BA742101D81760000FAD233 /* XMLYAnchorFooterView.m in Sources */,
 				2BA742141D819E5900FAD233 /* NSString+Extension.m in Sources */,
@@ -1976,16 +2295,19 @@
 				2B4005D41D59889600605EFB /* XMLYBaseNavigationController.m in Sources */,
 				2BA742181D81A95900FAD233 /* XMLYAnchorFlowLayout.m in Sources */,
 				2BA741FF1D81696700FAD233 /* XMLYAnchorSignerCell.m in Sources */,
+				2B5A101B1D864DD0009314F1 /* XMLYListenListCell.m in Sources */,
 				2B5E027E1D83C28F008C5F5E /* NSEtcHosts.m in Sources */,
 				2BAED0DC1D826AAC00CA7114 /* XMLYScribeMeScrController.m in Sources */,
 				2BCA2C241D5C7C6E00F99DB2 /* XMLYFindHotGuessModel.m in Sources */,
 				2B1DF3CF1D5DDDC100C8BC7F /* XMLYSubScribeNavView.m in Sources */,
 				2B6E0A491D5845CF000A8C58 /* XMLYRootViewController.m in Sources */,
 				2BAED0CC1D825A5600CA7114 /* XMLYAnchorAPI.m in Sources */,
+				2B92247B1D86BB69009F615E /* XMLYAlbumDetailHeaderCell.m in Sources */,
 				2B9920B71D84072400B15067 /* XMLYSettingController.m in Sources */,
 				2B331DE41D5B01D50092AA75 /* XMLYFindRadioController.m in Sources */,
 				2B331DFF1D5B20E80092AA75 /* XMLYBaseModel.m in Sources */,
 				2B4B0C631D7FED36009190D1 /* XMLYCategoryFooterModel.m in Sources */,
+				2B9224801D86C2C6009F615E /* XMLYBaseTableViewCell.m in Sources */,
 				2B4B0C881D801B75009190D1 /* XMLYFindRadioTelCell.m in Sources */,
 				2B1DF3941D5D693000C8BC7F /* XMLYFindBaseCell.m in Sources */,
 				2B331E051D5B23EB0092AA75 /* XMLYFindRecommendModel.m in Sources */,
@@ -1993,13 +2315,17 @@
 				2B0613B21D82F94E000E1C74 /* XMLYMineHeaderView.m in Sources */,
 				2B1DF3AB1D5D825100C8BC7F /* XMLYFindCellStyleMore.m in Sources */,
 				2B1DF3981D5D69BC00C8BC7F /* XMLYFindCellFactory.m in Sources */,
+				2B92244A1D86853A009F615E /* XMLYListenDetailModel.m in Sources */,
 				2B4005F01D59E7F700605EFB /* XMLYBaseRequest.m in Sources */,
+				2B92246B1D86B89D009F615E /* XMLYAlbumDetailController.m in Sources */,
 				2BA742041D81720E00FAD233 /* XMLYAnchorNormalCell.m in Sources */,
 				2B331DED1D5B02440092AA75 /* XMLYFindAnchorController.m in Sources */,
 				2B1DF3B01D5DA40F00C8BC7F /* XMLYFindRecommendHelper.m in Sources */,
 				2BAED0E91D82797700CA7114 /* XMLYScribeRecomModel.m in Sources */,
 				2B4B0C861D801B75009190D1 /* XMLYFindRadioLiveCell.m in Sources */,
+				2B9224661D86A772009F615E /* XMLYListenEditInfoCell.m in Sources */,
 				2BBDA0AC1D8575D400AC0F60 /* XMLYLiveListAPI.m in Sources */,
+				2B5A10231D865A9B009314F1 /* XMLYListenListModel.m in Sources */,
 				2BAED0FA1D82BC7000CA7114 /* XMLYDownVoiceController.m in Sources */,
 				2B4B0C581D7FCB22009190D1 /* XMLYCategoryModel.m in Sources */,
 				2B5E02891D83C28F008C5F5E /* SVWebViewControllerActivitySafari.m in Sources */,

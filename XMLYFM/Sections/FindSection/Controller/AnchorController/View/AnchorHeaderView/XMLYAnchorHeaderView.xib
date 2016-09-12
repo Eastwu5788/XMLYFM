@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="XMLYAnchorHeaderView">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="findsection_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Dau-fy-bY8">
@@ -19,40 +19,45 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="情感生活" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwF-yY-mWi">
-                    <rect key="frame" x="23" y="14" width="203" height="23"/>
+                    <rect key="frame" x="23" y="14" width="217" height="23"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="23" id="6G6-zH-JCd"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTN-IP-LZ2">
-                    <rect key="frame" x="276" y="14" width="34" height="22"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R9r-2y-qcq">
+                    <rect key="frame" x="10" y="10" width="300" height="25"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="34" id="Lrb-M9-PSA"/>
-                        <constraint firstAttribute="height" constant="22" id="OvV-il-7FE"/>
+                        <constraint firstAttribute="height" constant="25" id="1ua-SZ-fE1"/>
                     </constraints>
                     <state key="normal" image="liveRadioSectionMore_Normal"/>
+                    <state key="highlighted" image="liveRadioSectionMore_High"/>
+                    <state key="focused" image="liveRadioSectionMore_High"/>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Dau-fy-bY8" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="0Mx-H2-rQc"/>
-                <constraint firstItem="HTN-IP-LZ2" firstAttribute="leading" secondItem="FwF-yY-mWi" secondAttribute="trailing" constant="50" id="CTr-Nz-soo"/>
-                <constraint firstItem="Dau-fy-bY8" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="MfB-Rs-I4K"/>
+                <constraint firstItem="R9r-2y-qcq" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="HLG-tC-Fl2"/>
+                <constraint firstItem="Dau-fy-bY8" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" constant="2.5" id="MfB-Rs-I4K"/>
                 <constraint firstItem="FwF-yY-mWi" firstAttribute="leading" secondItem="Dau-fy-bY8" secondAttribute="trailing" constant="5" id="XBn-p9-tYn"/>
-                <constraint firstAttribute="trailing" secondItem="HTN-IP-LZ2" secondAttribute="trailing" constant="10" id="jry-n6-NzM"/>
-                <constraint firstItem="HTN-IP-LZ2" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="k7o-GU-HFq"/>
-                <constraint firstItem="FwF-yY-mWi" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="z6h-UA-QYu"/>
+                <constraint firstAttribute="trailing" secondItem="FwF-yY-mWi" secondAttribute="trailing" constant="80" id="aN8-IA-knK"/>
+                <constraint firstItem="R9r-2y-qcq" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="10" id="o3m-MK-K5E"/>
+                <constraint firstAttribute="trailing" secondItem="R9r-2y-qcq" secondAttribute="trailing" constant="10" id="oyz-Mo-03A"/>
+                <constraint firstItem="FwF-yY-mWi" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" constant="3" id="z6h-UA-QYu"/>
             </constraints>
             <connections>
+                <outlet property="moreButton" destination="R9r-2y-qcq" id="O1T-7l-alh"/>
                 <outlet property="titleLabel" destination="FwF-yY-mWi" id="6fA-Nh-DCu"/>
             </connections>
+            <point key="canvasLocation" x="526" y="427.5"/>
         </collectionReusableView>
     </objects>
     <resources>
         <image name="findsection_logo" width="8" height="10"/>
+        <image name="liveRadioSectionMore_High" width="34" height="12"/>
         <image name="liveRadioSectionMore_Normal" width="34" height="12"/>
     </resources>
 </document>

@@ -55,6 +55,11 @@
     }
 }
 
+- (IBAction)showMoreButtonClick:(id)sender {
+    if([self.delegate respondsToSelector:@selector(findCellStyleSpecial:didMoreButtonClickWithModel:)]) {
+        [self.delegate findCellStyleSpecial:self didMoreButtonClickWithModel:self.specialModel];
+    }
+}
 
 + (instancetype)findCell:(UITableView *)tableView {
     return [self findCellStyleSpecial:tableView];
