@@ -7,6 +7,7 @@
 2016.9.10: 良心程序员半夜11点半为您带来今天的更新，完成了订阅听、下载听、我的部分页面。由于时间比较赶，部分页面还需要修改，代码比较不好看，多多包涵    
 2016.9.11：现在开始完成部分二级页面了，目前已经完成了小编推荐、现场直播、免流量服务等页面   
 2016.9.12：完成了精品听单和听单详情页面   
+2016.9.13：不加班不是好程序员为您带来今天的更新 今儿事比较多，只完成了专辑详细页面的一部分。又到11点了，不容易啊
 + 更多内容持续更新中...     
 
 ##特色
@@ -57,7 +58,10 @@
 ![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/GooList.gif)  
  
 听单详情页面  
-![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/ListenDetail.gif)  
+![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/ListenDetail.gif)   
+
+专辑详情页面  
+![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/AlbumDetail.gif)
   
 
 更多的效果演示在我的博客中为大家展示:[http://www.jianshu.com/p/3929ec2eeb15](http://www.jianshu.com/p/3929ec2eeb15)
