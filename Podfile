@@ -9,4 +9,5 @@ pod 'YYWebImage'
 pod 'ReactiveCocoa','2.5'
 pod 'MJExtension'
 pod 'DZNEmptyDataSet'
+pod 'YYText'
 end

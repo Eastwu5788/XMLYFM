@@ -13,7 +13,7 @@
 #import "XMLYListenListAPI.h"
 #import "XMLYListenListModel.h"
 #import "XMLYTimeHelper.h"
-#import "ReactiveCocoa/RACEXTScope.h"
+
 #import "XMLYListenDetailController.h"
 
 @interface XMLYListenListController ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
@@ -55,7 +55,7 @@
     } else {
         monthModel = self.dataSource.lastObject;
     }
-    
+     
     for(NSInteger i = 0, max = model.list.count; i < max; i++) {
         XMLYListenItemModel *itemModel = model.list[i];
         NSString *timeStr = [XMLYTimeHelper dataStringFromTimeInterval:itemModel.releasedAt / 1000 dataFormatter:@"MM/YYYY"];

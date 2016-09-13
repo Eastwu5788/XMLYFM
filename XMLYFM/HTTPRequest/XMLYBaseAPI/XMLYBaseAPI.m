@@ -12,6 +12,7 @@
 
 + (NSMutableDictionary *)params {
     NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+    [dic setObject:@"iPhone" forKey:@"device"];
     return dic;
 }
 

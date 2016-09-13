@@ -64,7 +64,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    XMLYScribeRecomItemModel *itemModel = [self.model.list objectAtIndex:indexPath.row];
     XMLYAlbumDetailController *album = [[XMLYAlbumDetailController alloc] init];
+    album.albumId = itemModel.albumId;
     album.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:album animated:YES];
 }

@@ -10,4 +10,7 @@
 
 @interface XMLYAlbumDetailController : XMLYBasePlayController
 
+@property (nonatomic, assign) NSInteger albumId; // 相册id
+@property (nonatomic, assign) NSInteger trackId; //trackid
+
 @end
