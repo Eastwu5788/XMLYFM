@@ -101,6 +101,7 @@
     [self.navigationController pushViewController:list animated:YES];
 }
 
+
 #pragma mark - UITableViewDelegate/UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -183,6 +184,8 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [self.viewModel heightForRowAtIndex:indexPath];
 }
+
+
 
 
 #pragma mark - UITableView

@@ -11,6 +11,8 @@
 #import "XMLYLiveListAPI.h"
 #import "XMLYLiveListModel.h"
 #import "XMLYLiveItemCell.h"
+#import "XMLYBaseNavigationController.h"
+#import "XMLYLiveDetailController.h"
 
 @interface XMLYLiveListController () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -92,6 +94,14 @@
     return nil;
 }
 
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    XMLYLiveListItemModel *model = self.model.data[indexPath.section];
+    XMLYLiveDetailController *detail = [[XMLYLiveDetailController alloc] init];
+    detail.liveID = model.cid;
+    XMLYBaseNavigationController *nav = [[XMLYBaseNavigationController alloc] initWithRootViewController:detail];
+    [self presentViewController:nav animated:YES completion:nil];
+}
 
 
 #pragma mark - UICollectionView 

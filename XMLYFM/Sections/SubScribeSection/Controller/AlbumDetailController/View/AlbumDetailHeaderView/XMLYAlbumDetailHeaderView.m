@@ -7,6 +7,7 @@
 //
 
 #import "XMLYAlbumDetailHeaderView.h"
+#import "YYText.h"
 
 static force_inline NSString *XMLYGetPlyCount(NSInteger num) {
     if(num < 10000) {
@@ -23,9 +24,9 @@ static force_inline NSString *XMLYGetPlyCount(NSInteger num) {
 @property (nonatomic, weak) UIImageView *bgImageView;           //cover的封面
 @property (nonatomic, weak) UIImageView *coverImageView;        //封面
 @property (nonatomic, weak) UILabel     *titleLabel;            //标题
-@property (nonatomic, weak) UILabel     *anchorLabel;           //主播
+@property (nonatomic, weak) YYLabel     *anchorLabel;           //主播
 @property (nonatomic, weak) UILabel     *playCountsLabel;       //播放量
-@property (nonatomic, weak) UILabel     *cateLabel;             //类别
+@property (nonatomic, weak) YYLabel     *cateLabel;             //类别
 
 @property (nonatomic, weak) UIButton    *albumButton;           //订阅专辑按钮
 @property (nonatomic, weak) UIButton    *downButton;            //批量下载按钮
@@ -66,12 +67,29 @@ static force_inline NSString *XMLYGetPlyCount(NSInteger num) {
     
     self.titleLabel.text = _albumModel.title;
     
-    self.anchorLabel.text = [NSString stringWithFormat:@"主播：%@",_albumModel.nickname];
+    NSString *str = [NSString stringWithFormat:@"主播：%@",_albumModel.nickname];
+    NSMutableAttributedString *attStr = [self configAnchorLabel:str];
+    self.anchorLabel.attributedText = attStr;
     
     self.playCountsLabel.text = [NSString stringWithFormat:@"播放：%@",XMLYGetPlyCount(_albumModel.playTimes)];
     
-    self.cateLabel.text = [NSString stringWithFormat:@"分类：%@",_albumModel.categoryName];
+    str = [NSString stringWithFormat:@"分类：%@",_albumModel.categoryName];
+    NSMutableAttributedString *cate = [self configAnchorLabel:str];
+    self.cateLabel.attributedText = cate;
 }
+
+
+- (NSMutableAttributedString *)configAnchorLabel:(NSString *)string {
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:string];
+    text.yy_color = [UIColor colorWithRed:0.58f green:0.59f blue:0.59f alpha:1.00f];
+    NSRange range = NSMakeRange(3, string.length - 3);
+    [text yy_setTextHighlightRange:range color:Hex(0x5680B9) backgroundColor:[UIColor clearColor] tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+        NSLog(@"taptext:%@",text.string);
+    }];
+    return text;
+}
+
+
 
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -109,6 +127,9 @@ static force_inline NSString *XMLYGetPlyCount(NSInteger num) {
     self.sepView.frame = CGRectMake(0, self.bottom - 10, self.width, 10);
 }
 
+- (void)downButtonClick:(UIButton *)btn {
+    NSLog(@"批量下载按钮被点击");
+}
 
 #pragma mark - getter
 
@@ -132,6 +153,7 @@ static force_inline NSString *XMLYGetPlyCount(NSInteger num) {
         btn.layer.cornerRadius = 3.0f;
         btn.layer.borderColor = Hex(0xE07456).CGColor;
         btn.layer.borderWidth = 0.5f;
+        [btn addTarget:self action:@selector(downButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [btn setImage:[UIImage imageNamed:@"me_setting_favAlbum"] forState:UIControlStateNormal];
         [self addSubview:btn];
         _downButton = btn;
@@ -157,12 +179,11 @@ static force_inline NSString *XMLYGetPlyCount(NSInteger num) {
 }
 
 //类别标签
-- (UILabel *)cateLabel {
+- (YYLabel *)cateLabel {
     if(!_cateLabel) {
-        UILabel *lab = [[UILabel alloc] init];
+        YYLabel *lab = [YYLabel new];
         lab.textAlignment = NSTextAlignmentLeft;
         lab.font = [UIFont systemFontOfSize:12];
-        lab.textColor = [UIColor colorWithRed:0.58f green:0.59f blue:0.59f alpha:1.00f];
         [self addSubview:lab];
         _cateLabel = lab;
     }
@@ -183,12 +204,12 @@ static force_inline NSString *XMLYGetPlyCount(NSInteger num) {
 }
 
 //主播标签
-- (UILabel *)anchorLabel {
+- (YYLabel *)anchorLabel {
     if(!_anchorLabel) {
-        UILabel *lab = [[UILabel alloc] init];
+        YYLabel *lab = [YYLabel new];
         lab.textAlignment = NSTextAlignmentLeft;
         lab.font = [UIFont systemFontOfSize:12];
-        lab.textColor = [UIColor colorWithRed:0.58f green:0.59f blue:0.59f alpha:1.00f];
+        lab.userInteractionEnabled = YES;
         [self addSubview:lab];
         _anchorLabel = lab;
     }

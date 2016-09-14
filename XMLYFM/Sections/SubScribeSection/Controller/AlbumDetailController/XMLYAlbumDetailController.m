@@ -16,6 +16,8 @@
 #import "XMLYAlbumDetailCell.h"
 #import "XMLYAlbumEditIntroCell.h"
 #import "XMLYAlbumAboutRecomCell.h"
+#import "XMLYDetaillistHeaderCell.h"
+#import "XMLYDetialItemCell.h"
 
 @interface XMLYAlbumDetailController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -42,6 +44,8 @@
 - (void)changeDetailStyle:(XMLYAlbumDetailStyle)style {
     if(self.style == style) return;
     self.style = style;
+    
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 
@@ -109,7 +113,7 @@
     if(self.style == XMLYAlbumDetailStyleDetail) {
         return 3;  //详情
     } else {
-        return self.listModel.tracks.list.count;  //节目列表
+        return self.listModel.tracks.list.count + 1;  //节目列表
     }
 }
 
@@ -156,8 +160,19 @@
             cell.recsModel = self.detailModel.recs;
             return cell;
         }
+    } else {
+        if(indexPath.row == 0) {
+            XMLYDetaillistHeaderCell *cell = [XMLYDetaillistHeaderCell cellFromNib:tableView];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.albumModel = self.listModel.album;
+            return cell;
+        } else {
+            XMLYDetialItemCell *cell = [XMLYDetialItemCell cellFromNib:tableView];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.itemModel = self.listModel.tracks.list[indexPath.row - 1];
+            return cell;
+        }
     }
-    return nil;
 }
 
 
@@ -186,8 +201,10 @@
         tab.delegate = self;
         tab.dataSource = self;
         tab.tableHeaderView = self.headerView;
+        tab.separatorStyle = UITableViewCellSeparatorStyleNone;
         tab.backgroundColor = Hex(0xf3f3f3);
         [self.view addSubview:tab];
+        [self.view bringSubviewToFront:self.playView];
         _tableView = tab;
     }
     return _tableView;
