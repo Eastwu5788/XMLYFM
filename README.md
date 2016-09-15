@@ -64,7 +64,7 @@
 专辑详情页面  
 ![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/AlbumDetail.gif)    
    
-直播详情页面
+直播详情页面    
 ![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/LiveDetail.gif)     
   
 
