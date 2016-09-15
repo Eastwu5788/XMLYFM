@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="N44-gY-SbK" customClass="XMLYLiveDetailEditCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MyU-w1-Ht8">
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="DNt-EL-vzg"/>
+                            <constraint firstAttribute="height" constant="45" id="VOR-Iv-Avj"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="喜马拉雅直播君" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y7u-z1-b2e">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="113" id="tvG-88-EgO"/>
+                            <constraint firstAttribute="height" constant="18" id="zM9-Qj-kba"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已被1.7万人关注" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69x-6U-GEe">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="GUo-tk-Mvv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.67450980392156867" green="0.67843137254901964" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMm-bQ-fRE">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="4JH-rs-L4c"/>
+                            <constraint firstAttribute="width" constant="23" id="zTO-0k-uZ4"/>
+                        </constraints>
+                        <state key="normal" image="np_headview_nofollow_n"/>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me_fans_verifylogo" translatesAutoresizingMaskIntoConstraints="NO" id="rQK-kv-JXN">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="iCD-AW-r52"/>
+                            <constraint firstAttribute="height" constant="15" id="oR7-hV-8uN"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="OMm-bQ-fRE" firstAttribute="leading" secondItem="69x-6U-GEe" secondAttribute="trailing" constant="20" id="8ht-sj-eBv"/>
+                <constraint firstItem="rQK-kv-JXN" firstAttribute="centerY" secondItem="Y7u-z1-b2e" secondAttribute="centerY" id="9oD-ua-gOP"/>
+                <constraint firstItem="69x-6U-GEe" firstAttribute="leading" secondItem="MyU-w1-Ht8" secondAttribute="trailing" constant="5" id="JTT-wC-Opf"/>
+                <constraint firstItem="MyU-w1-Ht8" firstAttribute="centerY" secondItem="N44-gY-SbK" secondAttribute="centerY" id="U0R-Lu-lYZ"/>
+                <constraint firstItem="Y7u-z1-b2e" firstAttribute="top" secondItem="MyU-w1-Ht8" secondAttribute="top" id="WCz-U1-YC7"/>
+                <constraint firstItem="Y7u-z1-b2e" firstAttribute="leading" secondItem="MyU-w1-Ht8" secondAttribute="trailing" constant="5" id="nDk-eD-bdE"/>
+                <constraint firstItem="MyU-w1-Ht8" firstAttribute="leading" secondItem="N44-gY-SbK" secondAttribute="leading" constant="12" id="q73-Fa-NO2"/>
+                <constraint firstAttribute="trailing" secondItem="OMm-bQ-fRE" secondAttribute="trailing" constant="13" id="qei-eN-Vws"/>
+                <constraint firstItem="69x-6U-GEe" firstAttribute="bottom" secondItem="MyU-w1-Ht8" secondAttribute="bottom" id="t0Y-dg-o1b"/>
+                <constraint firstItem="rQK-kv-JXN" firstAttribute="leading" secondItem="Y7u-z1-b2e" secondAttribute="trailing" constant="5" id="tT1-8w-aiy"/>
+                <constraint firstItem="OMm-bQ-fRE" firstAttribute="centerY" secondItem="N44-gY-SbK" secondAttribute="centerY" id="w5W-K2-ySY"/>
+            </constraints>
+            <size key="customSize" width="431" height="108"/>
+            <connections>
+                <outlet property="attentionButton" destination="OMm-bQ-fRE" id="dtJ-VJ-eXr"/>
+                <outlet property="attentionLabel" destination="69x-6U-GEe" id="PoH-LD-WAl"/>
+                <outlet property="avatarImageView" destination="MyU-w1-Ht8" id="ovU-M1-uOc"/>
+                <outlet property="nicknameLabel" destination="Y7u-z1-b2e" id="XOm-Ad-XWg"/>
+                <outlet property="nicknameWidthConstraint" destination="tvG-88-EgO" id="xWh-lm-ki3"/>
+                <outlet property="vipImageView" destination="rQK-kv-JXN" id="D49-Gr-wzD"/>
+            </connections>
+            <point key="canvasLocation" x="107" y="-85.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="me_fans_verifylogo" width="16" height="16"/>
+        <image name="np_headview_nofollow_n" width="23" height="36"/>
+    </resources>
+</document>

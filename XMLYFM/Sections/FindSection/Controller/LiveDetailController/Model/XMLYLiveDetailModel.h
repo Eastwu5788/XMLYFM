@@ -45,6 +45,10 @@
 @property (nonatomic, assign) NSInteger trackId;
 @property (nonatomic, assign) NSInteger uid;
 
+@property (nonatomic, assign) CGFloat  cellHeight;
+
+- (void)calculateFrameForCell;
+
 @end
 
 @interface XMLYAnchorInfo : XMLYBaseModel
@@ -58,6 +62,10 @@
 @property (nonatomic, copy) NSString    *nickname;
 @property (nonatomic, assign) NSInteger trackCount;
 @property (nonatomic, assign) NSInteger uid;
+
+@property (nonatomic, assign) CGFloat   nicknamewidth;
+
+- (void)calculateFrameForCell;
 
 @end
 
@@ -79,5 +87,7 @@
 @property (nonatomic, strong) XMLYLiveDetailActivity *activityDetail;
 @property (nonatomic, strong) XMLYAnchorInfo   *anchorInfo;
 @property (nonatomic, strong) NSMutableArray<XMLYActivitySchedules *> *activitySchedules;
+
+- (void)calculateFrameForCell;
 
 @end

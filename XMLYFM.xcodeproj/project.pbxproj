@@ -151,6 +151,11 @@
 		2BAED0F71D82BC5A00CA7114 /* XMLYDownAlbumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAED0F61D82BC5A00CA7114 /* XMLYDownAlbumController.m */; };
 		2BAED0FA1D82BC7000CA7114 /* XMLYDownVoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAED0F91D82BC7000CA7114 /* XMLYDownVoiceController.m */; };
 		2BAED0FD1D82BC8200CA7114 /* XMLYDownloadingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BAED0FC1D82BC8200CA7114 /* XMLYDownloadingController.m */; };
+		2BB1028E1D8A7AA900D7C033 /* XMLYBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1028D1D8A7AA900D7C033 /* XMLYBaseCollectionViewCell.m */; };
+		2BB102951D8A7C5C00D7C033 /* XMLYLiveDetailIntroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB102941D8A7C5C00D7C033 /* XMLYLiveDetailIntroCell.m */; };
+		2BB102991D8A80E100D7C033 /* XMLYLiveDetailEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB102981D8A80E100D7C033 /* XMLYLiveDetailEditCell.m */; };
+		2BB1029B1D8A819500D7C033 /* XMLYLiveDetailEditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BB1029A1D8A819500D7C033 /* XMLYLiveDetailEditCell.xib */; };
+		2BB1029F1D8A86AD00D7C033 /* XMLYLiveDetailListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1029E1D8A86AD00D7C033 /* XMLYLiveDetailListCell.m */; };
 		2BBDA08E1D85341900AC0F60 /* XMLYBasePlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBDA08D1D85341900AC0F60 /* XMLYBasePlayController.m */; };
 		2BBDA0921D85346200AC0F60 /* XMLYEditRecomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBDA0911D85346200AC0F60 /* XMLYEditRecomController.m */; };
 		2BBDA0981D85495500AC0F60 /* XMLYEditRecomModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBDA0971D85495500AC0F60 /* XMLYEditRecomModel.m */; };
@@ -457,6 +462,15 @@
 		2BAED0F91D82BC7000CA7114 /* XMLYDownVoiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYDownVoiceController.m; sourceTree = "<group>"; };
 		2BAED0FB1D82BC8200CA7114 /* XMLYDownloadingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYDownloadingController.h; sourceTree = "<group>"; };
 		2BAED0FC1D82BC8200CA7114 /* XMLYDownloadingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYDownloadingController.m; sourceTree = "<group>"; };
+		2BB1028C1D8A7AA900D7C033 /* XMLYBaseCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYBaseCollectionViewCell.h; sourceTree = "<group>"; };
+		2BB1028D1D8A7AA900D7C033 /* XMLYBaseCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYBaseCollectionViewCell.m; sourceTree = "<group>"; };
+		2BB102931D8A7C5C00D7C033 /* XMLYLiveDetailIntroCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYLiveDetailIntroCell.h; sourceTree = "<group>"; };
+		2BB102941D8A7C5C00D7C033 /* XMLYLiveDetailIntroCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYLiveDetailIntroCell.m; sourceTree = "<group>"; };
+		2BB102971D8A80E100D7C033 /* XMLYLiveDetailEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYLiveDetailEditCell.h; sourceTree = "<group>"; };
+		2BB102981D8A80E100D7C033 /* XMLYLiveDetailEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYLiveDetailEditCell.m; sourceTree = "<group>"; };
+		2BB1029A1D8A819500D7C033 /* XMLYLiveDetailEditCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLYLiveDetailEditCell.xib; sourceTree = "<group>"; };
+		2BB1029D1D8A86AD00D7C033 /* XMLYLiveDetailListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYLiveDetailListCell.h; sourceTree = "<group>"; };
+		2BB1029E1D8A86AD00D7C033 /* XMLYLiveDetailListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYLiveDetailListCell.m; sourceTree = "<group>"; };
 		2BBDA08C1D85341900AC0F60 /* XMLYBasePlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYBasePlayController.h; sourceTree = "<group>"; };
 		2BBDA08D1D85341900AC0F60 /* XMLYBasePlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYBasePlayController.m; sourceTree = "<group>"; };
 		2BBDA0901D85346200AC0F60 /* XMLYEditRecomController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYEditRecomController.h; sourceTree = "<group>"; };
@@ -789,6 +803,7 @@
 		2B4005C91D59875600605EFB /* XMLYCommenUI */ = {
 			isa = PBXGroup;
 			children = (
+				2BB1028B1D8A7A6F00D7C033 /* BaseCollectionViewCell */,
 				2B9A808A1D8936A70021396F /* BaseSectionHeaderView */,
 				2B9A80861D8936630021396F /* ComonSectionHeaderView */,
 				2B92247D1D86C2B8009F615E /* BaseTableViewCell */,
@@ -1635,6 +1650,9 @@
 		2B9A80811D892C220021396F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BB1029C1D8A869000D7C033 /* LiveDetailListCell */,
+				2BB102961D8A80CF00D7C033 /* LiveEditUserCell */,
+				2BB102921D8A7C5C00D7C033 /* LiveDetailIntroCell */,
 				2B9A808E1D8939590021396F /* XMLYLiveDetailHeaderView.h */,
 				2B9A808F1D8939590021396F /* XMLYLiveDetailHeaderView.m */,
 			);
@@ -1976,6 +1994,43 @@
 			path = DownVoiceController;
 			sourceTree = "<group>";
 		};
+		2BB1028B1D8A7A6F00D7C033 /* BaseCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2BB1028C1D8A7AA900D7C033 /* XMLYBaseCollectionViewCell.h */,
+				2BB1028D1D8A7AA900D7C033 /* XMLYBaseCollectionViewCell.m */,
+			);
+			path = BaseCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		2BB102921D8A7C5C00D7C033 /* LiveDetailIntroCell */ = {
+			isa = PBXGroup;
+			children = (
+				2BB102931D8A7C5C00D7C033 /* XMLYLiveDetailIntroCell.h */,
+				2BB102941D8A7C5C00D7C033 /* XMLYLiveDetailIntroCell.m */,
+			);
+			path = LiveDetailIntroCell;
+			sourceTree = "<group>";
+		};
+		2BB102961D8A80CF00D7C033 /* LiveEditUserCell */ = {
+			isa = PBXGroup;
+			children = (
+				2BB102971D8A80E100D7C033 /* XMLYLiveDetailEditCell.h */,
+				2BB102981D8A80E100D7C033 /* XMLYLiveDetailEditCell.m */,
+				2BB1029A1D8A819500D7C033 /* XMLYLiveDetailEditCell.xib */,
+			);
+			path = LiveEditUserCell;
+			sourceTree = "<group>";
+		};
+		2BB1029C1D8A869000D7C033 /* LiveDetailListCell */ = {
+			isa = PBXGroup;
+			children = (
+				2BB1029D1D8A86AD00D7C033 /* XMLYLiveDetailListCell.h */,
+				2BB1029E1D8A86AD00D7C033 /* XMLYLiveDetailListCell.m */,
+			);
+			path = LiveDetailListCell;
+			sourceTree = "<group>";
+		};
 		2BBDA08F1D85344A00AC0F60 /* EditRecommendController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2204,7 +2259,7 @@
 		2B6E09D61D58367D000A8C58 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = East_wu;
 				TargetAttributes = {
 					2B6E09DD1D58367D000A8C58 = {
@@ -2291,6 +2346,7 @@
 				2B1DF3C81D5DCC3500C8BC7F /* XMLYHeaderIconView.xib in Resources */,
 				2B5E02861D83C28F008C5F5E /* SVWebViewControllerActivityChrome@2x.png in Resources */,
 				2B6E0A611D584D46000A8C58 /* Play.storyboard in Resources */,
+				2BB1029B1D8A819500D7C033 /* XMLYLiveDetailEditCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2370,6 +2426,7 @@
 				2B4005C81D59769600605EFB /* XMLYFindSubTitleView.m in Sources */,
 				2B5A10201D865874009314F1 /* XMLYListenListAPI.m in Sources */,
 				2B6E0A5B1D584C6C000A8C58 /* XMLYSubScribeViewController.m in Sources */,
+				2BB102951D8A7C5C00D7C033 /* XMLYLiveDetailIntroCell.m in Sources */,
 				2BBDA0921D85346200AC0F60 /* XMLYEditRecomController.m in Sources */,
 				2B6E09E31D58367D000A8C58 /* main.m in Sources */,
 				2B9A80891D89367E0021396F /* XMLYSecHeaStyleTitle.m in Sources */,
@@ -2399,6 +2456,7 @@
 				2BBDA0A71D856A8600AC0F60 /* XMLYLiveItemCell.m in Sources */,
 				2B4B0C6F1D800627009190D1 /* XMLYFindRadioViewModel.m in Sources */,
 				2BC4F55A1D87B51D004EDF08 /* XMLYAlbumDetailSectionView.m in Sources */,
+				2BB1028E1D8A7AA900D7C033 /* XMLYBaseCollectionViewCell.m in Sources */,
 				2B6E0A761D584F74000A8C58 /* XMLYMineViewController.m in Sources */,
 				2B331DDE1D5B00230092AA75 /* XMLYSubFindFactory.m in Sources */,
 				2BAED0D01D825A5600CA7114 /* XMLYRankAPI.m in Sources */,
@@ -2437,6 +2495,7 @@
 				2BC4F55E1D87C29F004EDF08 /* XMLYAlbumDetailAPI.m in Sources */,
 				2B4B0C761D800E7B009190D1 /* XMLYFindRadioModel.m in Sources */,
 				2BAED0D91D826A8400CA7114 /* XMLYScribeRecomController.m in Sources */,
+				2BB102991D8A80E100D7C033 /* XMLYLiveDetailEditCell.m in Sources */,
 				2B1DF3B71D5DB8AE00C8BC7F /* XMLYFindRecomHeader.m in Sources */,
 				2B5E027C1D83C28F008C5F5E /* NJKWebViewProgress.m in Sources */,
 				2B1DF3B31D5DA63300C8BC7F /* XMLYNotification.m in Sources */,
@@ -2484,6 +2543,7 @@
 				2B9224661D86A772009F615E /* XMLYListenEditInfoCell.m in Sources */,
 				2BBDA0AC1D8575D400AC0F60 /* XMLYLiveListAPI.m in Sources */,
 				2B5A10231D865A9B009314F1 /* XMLYListenListModel.m in Sources */,
+				2BB1029F1D8A86AD00D7C033 /* XMLYLiveDetailListCell.m in Sources */,
 				2BAED0FA1D82BC7000CA7114 /* XMLYDownVoiceController.m in Sources */,
 				2B4B0C581D7FCB22009190D1 /* XMLYCategoryModel.m in Sources */,
 				2B5E02891D83C28F008C5F5E /* SVWebViewControllerActivitySafari.m in Sources */,
@@ -2547,6 +2607,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -2557,8 +2618,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: shuping wu (CKJ6F942H8)";
@@ -2594,6 +2657,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -2604,8 +2668,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: shuping wu (CKJ6F942H8)";

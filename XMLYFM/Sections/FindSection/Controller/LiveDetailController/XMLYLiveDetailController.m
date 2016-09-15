@@ -12,6 +12,13 @@
 #import "XMLYAnchorFooterView.h"
 #import "XMLYSecHeaStyleTitle.h"
 #import "XMLYLiveDetailHeaderView.h"
+#import "XMLYLiveDetailIntroCell.h"
+#import "XMLYLiveDetailEditCell.h"
+#import "XMLYLiveDetailListCell.h"
+
+static NSInteger const kSectionIntro = 0;
+static NSInteger const kSectionEdit  = 1;
+static NSInteger const kSectionList  = 2;
 
 @interface XMLYLiveDetailController () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -31,19 +38,21 @@
 
 - (void)setLiveID:(NSInteger)liveID {
     _liveID = liveID;
-    //[self requestLiveDetail:_liveID];
+    [self requestLiveDetail:_liveID];
 }
 
 #pragma mark - Private 
 - (void)configNavigationBar {
     UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    leftButton.frame = CGRectMake(0, 0, 64, 44);
+    leftButton.frame = CGRectMake(0, 0, 44, 44);
+    leftButton.imageEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
     [leftButton addTarget:self action:@selector(backButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [leftButton setImage:[UIImage imageNamed:@"navidrop_arrow_down_h"] forState:UIControlStateNormal];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
 
     UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    rightButton.frame = CGRectMake(0, 0, 64, 44);
+    rightButton.frame = CGRectMake(0, 0, 44, 44);
+    rightButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -20);
     [rightButton setImage:[UIImage imageNamed:@"icon_share_h"] forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightButton];
 }
@@ -58,6 +67,9 @@
     [XMLYLiveDetailAPI requestLiveDetail:liveID completion:^(id response, NSString *message, BOOL success) {
         if(success && [response isKindOfClass:[NSDictionary class]]) {
             self.detailModel = [XMLYLiveDetailModel xr_modelWithJSON:response[@"data"]];
+            [self.detailModel calculateFrameForCell];
+            self.title = self.detailModel.activityDetail.name;
+            self.headerView.activityModel = self.detailModel.activityDetail;
             [self.collectionView reloadData];
         }
     }];
@@ -69,16 +81,16 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    if(section == 2) {
+    if(section == kSectionList) {
         return self.detailModel.activitySchedules.count;
     }
     return 1;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    if(indexPath.section == 0) {
-    
-    }else if(indexPath.section == 1) {
+    if(indexPath.section == kSectionIntro) {
+        return CGSizeMake(kScreenWidth, self.detailModel.activityDetail.cellHeight);
+    }else if(indexPath.section == kSectionEdit) {
         return CGSizeMake(kScreenWidth, 63.0f);
     }
     return CGSizeMake(kScreenWidth, 52.0f);
@@ -89,7 +101,7 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-    if(section == 0) {
+    if(section == kSectionIntro) {
         return CGSizeZero;
     }
     return CGSizeMake(kScreenWidth, 40);
@@ -97,7 +109,18 @@
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    if(indexPath.section == kSectionIntro) {
+        XMLYLiveDetailIntroCell *cell = [XMLYLiveDetailIntroCell collectionViewCellFromClass:collectionView atIndexPath:indexPath];
+        cell.activityModel = self.detailModel.activityDetail;
+        return cell;
+    }else if(indexPath.section == kSectionEdit) {
+        XMLYLiveDetailEditCell *cell = [XMLYLiveDetailEditCell collectionViewCellFromNib:collectionView atIndexPath:indexPath];
+        cell.anchorInfo = self.detailModel.anchorInfo;
+        return cell;
+    }
+    XMLYLiveDetailListCell *cell = [XMLYLiveDetailListCell collectionViewCellFromClass:collectionView atIndexPath:indexPath];
+    cell.itemModel = self.detailModel.activitySchedules[indexPath.row];
+    return cell;
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
@@ -106,6 +129,7 @@
         return footer;
     }else{
         XMLYSecHeaStyleTitle *header = [XMLYSecHeaStyleTitle sectionHeaderAwakeFromClass:collectionView atIndexPath:indexPath];
+        header.backgroundColor = [UIColor whiteColor];
         header.title = indexPath.section == 1 ? @"主播信息" : @"直播列表";
         return header;
     }
@@ -121,9 +145,10 @@
         layout.minimumLineSpacing = 0;
         layout.minimumInteritemSpacing = 0;
         
-        UICollectionView *view = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight - 64) collectionViewLayout:layout];
+        UICollectionView *view = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 120, kScreenWidth, kScreenHeight - 184) collectionViewLayout:layout];
         view.delegate = self;
         view.dataSource = self;
+        view.backgroundColor = Hex(0xf3f3f3);
         [self.view addSubview:view];
         _collectionView = view;
     }

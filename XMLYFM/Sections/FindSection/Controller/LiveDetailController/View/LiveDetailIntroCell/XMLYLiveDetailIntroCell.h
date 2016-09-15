@@ -1,17 +1,17 @@
 //
-//  XMLYLiveDetailHeaderView.h
+//  XMLYLiveDetailIntroCell.h
 //  XMLYFM
 //
-//  Created by East_wu on 16/9/14.
+//  Created by East_wu on 16/9/15.
 //  Copyright © 2016年 East_wu. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XMLYBaseCollectionViewCell.h"
 #import "XMLYLiveDetailModel.h"
 
-
-@interface XMLYLiveDetailHeaderView : UIView
+@interface XMLYLiveDetailIntroCell : XMLYBaseCollectionViewCell
 
 @property (nonatomic, strong) XMLYLiveDetailActivity *activityModel;
+
 
 @end
