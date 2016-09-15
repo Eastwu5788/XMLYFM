@@ -6,8 +6,12 @@
 //  Copyright © 2016年 East_wu. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XMLYBaseController.h"
 
-@interface XMLYPlayViewController : UIViewController
+@interface XMLYPlayViewController : XMLYBaseController
+
++ (instancetype)playViewController;
+
+- (void)startPlayWithAlbumID:(NSInteger)albumID trackID:(NSInteger)trackID;
 
 @end

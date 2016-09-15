@@ -175,6 +175,9 @@
 		2BD078461D87F5AA005EEFAC /* XMLYAlbumEditIntroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD078451D87F5AA005EEFAC /* XMLYAlbumEditIntroCell.m */; };
 		2BD078481D87F63F005EEFAC /* XMLYAlbumEditIntroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD078471D87F63F005EEFAC /* XMLYAlbumEditIntroCell.xib */; };
 		2BD0784C1D880508005EEFAC /* XMLYAlbumAboutRecomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0784B1D880508005EEFAC /* XMLYAlbumAboutRecomCell.m */; };
+		2BD76DA21D8AD89100DE5A48 /* XMLYPlayAlbumTrackAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD76DA11D8AD89100DE5A48 /* XMLYPlayAlbumTrackAPI.m */; };
+		2BD76DA51D8AD9BA00DE5A48 /* XMLYPlayPageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD76DA41D8AD9BA00DE5A48 /* XMLYPlayPageModel.m */; };
+		2BD76DAE1D8AEC9C00DE5A48 /* XMLYPlayHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BD76DAD1D8AEC9C00DE5A48 /* XMLYPlayHeaderView.m */; };
 		DE6862F7B22BC967779F6B89 /* libPods-XMLYFM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D832EE11D9F3816A4F52F6 /* libPods-XMLYFM.a */; };
 /* End PBXBuildFile section */
 
@@ -507,6 +510,12 @@
 		2BD078471D87F63F005EEFAC /* XMLYAlbumEditIntroCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLYAlbumEditIntroCell.xib; sourceTree = "<group>"; };
 		2BD0784A1D880508005EEFAC /* XMLYAlbumAboutRecomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYAlbumAboutRecomCell.h; sourceTree = "<group>"; };
 		2BD0784B1D880508005EEFAC /* XMLYAlbumAboutRecomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYAlbumAboutRecomCell.m; sourceTree = "<group>"; };
+		2BD76DA01D8AD89100DE5A48 /* XMLYPlayAlbumTrackAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYPlayAlbumTrackAPI.h; sourceTree = "<group>"; };
+		2BD76DA11D8AD89100DE5A48 /* XMLYPlayAlbumTrackAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYPlayAlbumTrackAPI.m; sourceTree = "<group>"; };
+		2BD76DA31D8AD9BA00DE5A48 /* XMLYPlayPageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYPlayPageModel.h; sourceTree = "<group>"; };
+		2BD76DA41D8AD9BA00DE5A48 /* XMLYPlayPageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYPlayPageModel.m; sourceTree = "<group>"; };
+		2BD76DAC1D8AEC9C00DE5A48 /* XMLYPlayHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYPlayHeaderView.h; sourceTree = "<group>"; };
+		2BD76DAD1D8AEC9C00DE5A48 /* XMLYPlayHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYPlayHeaderView.m; sourceTree = "<group>"; };
 		74D832EE11D9F3816A4F52F6 /* libPods-XMLYFM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XMLYFM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B7040AA7CAB90D071FCA8D3 /* Pods-XMLYFM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMLYFM.release.xcconfig"; path = "Pods/Target Support Files/Pods-XMLYFM/Pods-XMLYFM.release.xcconfig"; sourceTree = "<group>"; };
 		D0485ABDEC5652D66D70C0F1 /* Pods-XMLYFM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XMLYFM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XMLYFM/Pods-XMLYFM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1239,6 +1248,7 @@
 		2B6E0A431D58415A000A8C58 /* HTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
+				2BD76D9F1D8AD86B00DE5A48 /* XMLYPlaySectionAPI */,
 				2BAED0DD1D82770D00CA7114 /* XMLYSubScribeSectionAPI */,
 				2BAED0BC1D825A5600CA7114 /* XMLYFindSectionAPI */,
 				2B4005F11D59ECD500605EFB /* XMLYBaseAPI */,
@@ -1355,6 +1365,8 @@
 		2B6E0A5D1D584D2F000A8C58 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2BD76DA31D8AD9BA00DE5A48 /* XMLYPlayPageModel.h */,
+				2BD76DA41D8AD9BA00DE5A48 /* XMLYPlayPageModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1370,6 +1382,12 @@
 		2B6E0A5F1D584D2F000A8C58 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2BD76DAA1D8AEC8300DE5A48 /* XMLYPlayHeaderView */,
+				2BD76DA61D8AEC8300DE5A48 /* XMLYCollMoreCell */,
+				2BD76DA71D8AEC8300DE5A48 /* XMLYPlayCommentCell */,
+				2BD76DA81D8AEC8300DE5A48 /* XMLYPlayEditHeaderView */,
+				2BD76DA91D8AEC8300DE5A48 /* XMLYPlayEditRewardCell */,
+				2BD76DAB1D8AEC8300DE5A48 /* XMLYPlayIntroCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2177,6 +2195,59 @@
 			path = AlbumAboutRecom;
 			sourceTree = "<group>";
 		};
+		2BD76D9F1D8AD86B00DE5A48 /* XMLYPlaySectionAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2BD76DA01D8AD89100DE5A48 /* XMLYPlayAlbumTrackAPI.h */,
+				2BD76DA11D8AD89100DE5A48 /* XMLYPlayAlbumTrackAPI.m */,
+			);
+			path = XMLYPlaySectionAPI;
+			sourceTree = "<group>";
+		};
+		2BD76DA61D8AEC8300DE5A48 /* XMLYCollMoreCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XMLYCollMoreCell;
+			sourceTree = "<group>";
+		};
+		2BD76DA71D8AEC8300DE5A48 /* XMLYPlayCommentCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XMLYPlayCommentCell;
+			sourceTree = "<group>";
+		};
+		2BD76DA81D8AEC8300DE5A48 /* XMLYPlayEditHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XMLYPlayEditHeaderView;
+			sourceTree = "<group>";
+		};
+		2BD76DA91D8AEC8300DE5A48 /* XMLYPlayEditRewardCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XMLYPlayEditRewardCell;
+			sourceTree = "<group>";
+		};
+		2BD76DAA1D8AEC8300DE5A48 /* XMLYPlayHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				2BD76DAC1D8AEC9C00DE5A48 /* XMLYPlayHeaderView.h */,
+				2BD76DAD1D8AEC9C00DE5A48 /* XMLYPlayHeaderView.m */,
+			);
+			path = XMLYPlayHeaderView;
+			sourceTree = "<group>";
+		};
+		2BD76DAB1D8AEC8300DE5A48 /* XMLYPlayIntroCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XMLYPlayIntroCell;
+			sourceTree = "<group>";
+		};
 		A5A39674C437B4106C96A8EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2476,6 +2547,7 @@
 				2B9224571D868ECF009F615E /* XMLYListenDetailInfoCell.m in Sources */,
 				2B1DF3A51D5D782100C8BC7F /* XMLYFindCellStyleSpecial.m in Sources */,
 				2BAED0FD1D82BC8200CA7114 /* XMLYDownloadingController.m in Sources */,
+				2BD76DA21D8AD89100DE5A48 /* XMLYPlayAlbumTrackAPI.m in Sources */,
 				2B4005D11D59887C00605EFB /* XMLYBaseController.m in Sources */,
 				2BD078461D87F5AA005EEFAC /* XMLYAlbumEditIntroCell.m in Sources */,
 				2B4B0C601D7FE8A4009190D1 /* XRClassInfo.m in Sources */,
@@ -2524,6 +2596,8 @@
 				2B1DF3941D5D693000C8BC7F /* XMLYFindBaseCell.m in Sources */,
 				2B331E051D5B23EB0092AA75 /* XMLYFindRecommendModel.m in Sources */,
 				2BAED0D61D826A6100CA7114 /* XMLYScribeHistoryController.m in Sources */,
+				2BD76DAE1D8AEC9C00DE5A48 /* XMLYPlayHeaderView.m in Sources */,
+				2BD76DA51D8AD9BA00DE5A48 /* XMLYPlayPageModel.m in Sources */,
 				2B0613B21D82F94E000E1C74 /* XMLYMineHeaderView.m in Sources */,
 				2B1DF3AB1D5D825100C8BC7F /* XMLYFindCellStyleMore.m in Sources */,
 				2B1DF3981D5D69BC00C8BC7F /* XMLYFindCellFactory.m in Sources */,
