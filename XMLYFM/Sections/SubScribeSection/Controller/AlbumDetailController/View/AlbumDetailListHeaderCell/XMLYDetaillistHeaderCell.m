@@ -21,7 +21,7 @@
 - (void)setAlbumModel:(XMLYAlbumModel *)albumModel {
     _albumModel = albumModel;
     
-    self.titleLabel.text = [NSString stringWithFormat:@"共%ld集",_albumModel.tracks];
+    self.titleLabel.text = [NSString stringWithFormat:@"共%ld集",(long)_albumModel.tracks];
 }
 
 - (IBAction)albumButtonClick:(id)sender {

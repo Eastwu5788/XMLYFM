@@ -16,7 +16,7 @@ static NSString *const kListenDetailAPI = @"http://mobile.ximalaya.com/m/subject
     NSMutableDictionary *params = [self params];
     [params setObject:@(cid) forKey:@"id"];
     [params setObject:@"iPhone" forKey:@"device"];
-    [params setObject:[NSString stringWithFormat:@"pageview/subject@%ld",cid] forKey:@"statEvent"];
+    [params setObject:[NSString stringWithFormat:@"pageview/subject@%ld",(long)cid] forKey:@"statEvent"];
     [params setObject:@"subjectlist@精品听单" forKey:@"statPage"];
     [params setObject:@(1) forKey:@"statPosition"];
     [params setObject:@"精品听单" forKey:@"statModule"];

@@ -49,7 +49,7 @@
 - (void)setAlbumModel:(XMLYAlbumModel *)albumModel {
     _albumModel = albumModel;
     
-    [self.listButton setTitle:[NSString stringWithFormat:@"节目(%ld)",_albumModel.tracks] forState:UIControlStateNormal];
+    [self.listButton setTitle:[NSString stringWithFormat:@"节目(%ld)",(long)_albumModel.tracks] forState:UIControlStateNormal];
 }
 
 - (void)layoutSubviews {

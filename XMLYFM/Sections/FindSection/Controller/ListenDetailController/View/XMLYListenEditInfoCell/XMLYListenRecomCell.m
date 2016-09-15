@@ -47,7 +47,7 @@ static force_inline NSString *XMLYGetPlyCount(NSInteger num) {
     
     self.playCountLabel.text = XMLYGetPlyCount(_itemModel.playsCounts);
     
-    self.commentLabel.text = [NSString stringWithFormat:@"%ld",_itemModel.commentsCounts];
+    self.commentLabel.text = [NSString stringWithFormat:@"%ld",(long)_itemModel.commentsCounts];
     
     self.timeLabel.text = [XMLYTimeHelper dataStringWithTimeInterval:_itemModel.createdAt / 1000];
     

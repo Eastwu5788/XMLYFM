@@ -9,6 +9,97 @@
 #import "XMLYLiveDetailHeaderView.h"
 #import "YYText.h"
 
+@interface XMLYTimeDownItemView : UIView
+
+@property (nonatomic, weak) UILabel *timeLabel;
+@property (nonatomic, weak) UILabel *introLabel;
+
+
+@end
+
+
+@implementation XMLYTimeDownItemView
+
+
+//55 * 38
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    //时间标签
+    self.timeLabel.frame = CGRectMake(5, 0, 31, self.height);
+    
+    //天数介绍
+    self.introLabel.frame = CGRectMake(self.width - 18, 0, 18, self.height);
+}
+
+#pragma mark - getter
+
+- (UILabel *)introLabel {
+    if(!_introLabel) {
+        UILabel *lab = [[UILabel alloc] init];
+        lab.font = [UIFont systemFontOfSize:11];
+        lab.textAlignment = NSTextAlignmentRight;
+        lab.textColor = [UIColor whiteColor];
+        lab.text = @"天";
+        [self addSubview:lab];
+        _introLabel = lab;
+    }
+    return _introLabel;
+}
+
+- (UILabel *)timeLabel {
+    if(!_timeLabel) {
+        UILabel *lab = [[UILabel alloc] init];
+        lab.font = [UIFont boldSystemFontOfSize:15.0f];
+        lab.textColor = [UIColor whiteColor];
+        lab.text = @"00";
+        lab.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.35];
+        lab.layer.cornerRadius = 3.0f;
+        lab.layer.borderWidth = 1.0f;
+        lab.layer.borderColor = [[UIColor whiteColor] colorWithAlphaComponent:0.3].CGColor;
+        [self addSubview:lab];
+        _timeLabel = lab;
+    }
+    return _timeLabel;
+}
+
+@end
+
+
+@interface XMLYTimeDownView : UIView
+
+@property (nonatomic, weak) UILabel *firstLabel;
+@property (nonatomic, weak) XMLYTimeDownItemView *dayView;
+@property (nonatomic, weak) XMLYTimeDownItemView *hourView;
+@property (nonatomic, weak) XMLYTimeDownItemView *minutesView;
+@property (nonatomic, weak) XMLYTimeDownItemView *secondView;
+
+@end
+
+@implementation XMLYTimeDownView
+
+#pragma mark - getter
+
+
+
+- (UILabel *)firstLabel {
+    if(!_firstLabel) {
+        UILabel *lab = [[UILabel alloc] init];
+        lab.textAlignment = NSTextAlignmentLeft;
+        lab.font = [UIFont systemFontOfSize:11];
+        lab.text = @"还有";
+        lab.textColor = [UIColor whiteColor];
+        [self addSubview:lab];
+        _firstLabel = lab;
+    }
+    return _firstLabel;
+}
+
+@end
+
+
+
+
 @interface XMLYLiveDetailHeaderView ()
 
 @property (nonatomic, weak) UIImageView  *bgImageView;
@@ -18,7 +109,7 @@
 @property (nonatomic, weak) UIButton     *appointButton;
 
 @property (nonatomic, strong) NSArray *specialRangeArr;
-@property (nonatomic, strong) NSArray *charSpaceArr;
+
 
 @end
 
@@ -27,7 +118,7 @@
 - (instancetype)init {
     self = [super init];
     self.backgroundColor = [UIColor redColor];
-    [self configTimeDownLabelText:@"还有00天22时53分08秒"];
+    [self configTimeDownLabelText:@"还有 00 天 22 时 53 分 08 秒"];
     return self;
 }
 
@@ -40,10 +131,6 @@
     [mutStr setYy_color:[UIColor whiteColor]];
     
     
-    for(NSString *rangeStr in self.charSpaceArr) {
-        NSRange range = NSRangeFromString(rangeStr);
-        [mutStr yy_setKern:[NSNumber numberWithInteger:5] range:range];
-    }
    
     
     //特殊变大字体
@@ -81,29 +168,25 @@
     return _timeDownLabel;
 }
 
-- (NSArray *)charSpaceArr {
-    if(!_charSpaceArr) {
-        _charSpaceArr = @[NSStringFromRange(NSMakeRange(1, 1)),
-                          NSStringFromRange(NSMakeRange(3, 1)),
-                          NSStringFromRange(NSMakeRange(4, 1)),
-                          NSStringFromRange(NSMakeRange(6, 1)),
-                          NSStringFromRange(NSMakeRange(7, 1)),
-                          NSStringFromRange(NSMakeRange(9, 1)),
-                          NSStringFromRange(NSMakeRange(10, 1)),
-                          NSStringFromRange(NSMakeRange(12, 1))];
-    }
-    return _charSpaceArr;
-}
+
 
 
 - (NSArray *)specialRangeArr {
     if(!_specialRangeArr) {
-        _specialRangeArr = @[NSStringFromRange(NSMakeRange(2, 2)),
-                             NSStringFromRange(NSMakeRange(5, 2)),
+        _specialRangeArr = @[NSStringFromRange(NSMakeRange(3, 2)),
                              NSStringFromRange(NSMakeRange(8, 2)),
-                             NSStringFromRange(NSMakeRange(11, 2))];
+                             NSStringFromRange(NSMakeRange(13, 2)),
+                             NSStringFromRange(NSMakeRange(18, 2))];
     }
     return _specialRangeArr;
 }
 
 @end
+
+
+
+
+
+
+
+

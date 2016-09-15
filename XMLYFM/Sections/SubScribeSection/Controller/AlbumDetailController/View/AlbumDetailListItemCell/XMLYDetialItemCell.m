@@ -32,7 +32,7 @@
     
     [self.playCountsButton setTitle:[XMLYCountHelper countStringFromNSInter:_itemModel.playtimes] forState:UIControlStateNormal];
     
-    [self.commentCountButton setTitle:[NSString stringWithFormat:@"%ld",_itemModel.comments] forState:UIControlStateNormal];
+    [self.commentCountButton setTitle:[NSString stringWithFormat:@"%ld",(long)_itemModel.comments] forState:UIControlStateNormal];
     
     [self.playDurationButton setTitle:@"12:30" forState:UIControlStateNormal];
     

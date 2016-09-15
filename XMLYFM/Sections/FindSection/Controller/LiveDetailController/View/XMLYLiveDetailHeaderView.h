@@ -9,12 +9,9 @@
 #import <UIKit/UIKit.h>
 
 
-@interface XMLYTimeDownView : UIView
-
-@property (nonatomic, weak) UILabel *hourLab;
 
 
-@end
+
 
 
 @interface XMLYLiveDetailHeaderView : UIView

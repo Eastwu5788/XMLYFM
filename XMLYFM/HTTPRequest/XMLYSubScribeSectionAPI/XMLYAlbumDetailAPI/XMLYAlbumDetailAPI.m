@@ -24,7 +24,7 @@ static NSString *const kAlbumListAPI = @"http://mobile.ximalaya.com/mobile/v1/al
 + (void)requestAlbumDetail:(NSInteger)albumId tab:(NSString *)tab stat:(NSString *)stat position:(NSInteger)position completion:(XMLYBaseAPICompletion)completion {
     NSMutableDictionary *params = [self params];
     [params setObject:@(albumId) forKey:@"albumId"];
-    [params setObject:[NSString stringWithFormat:@"pageview/album@%ld",albumId] forKey:@"statEvent"];
+    [params setObject:[NSString stringWithFormat:@"pageview/album@%ld",(long)albumId] forKey:@"statEvent"];
     [params setObject:stat forKey:@"statModule"];
     [params setObject:[NSString stringWithFormat:@"tab@%@_%@",tab,stat] forKey:@"statPage"];
     [params setObject:@(position) forKey:@"statPosition"];
@@ -50,7 +50,7 @@ static NSString *const kAlbumListAPI = @"http://mobile.ximalaya.com/mobile/v1/al
     [params setObject:@(20) forKey:@"pageSize"];
     [params setObject:@(0) forKey:@"source"];
     [params setObject:@(trackId) forKey:@"trackId"];
-    [params setObject:[NSString stringWithFormat:@"pageview/album@%ld",albumID] forKey:@"statEvent"];
+    [params setObject:[NSString stringWithFormat:@"pageview/album@%ld",(long)albumID] forKey:@"statEvent"];
     [params setObject:stat forKey:@"statModule"];
     [params setObject:[NSString stringWithFormat:@"tab@%@_%@",tab,stat] forKey:@"statPage"];
     [params setObject:@(position) forKey:@"statPosition"];

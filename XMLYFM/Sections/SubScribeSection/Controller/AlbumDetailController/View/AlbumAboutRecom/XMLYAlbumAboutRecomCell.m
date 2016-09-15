@@ -133,7 +133,7 @@ static force_inline NSString *XMLYGetPlyCount(NSInteger num) {
     [self.playCountButton setTitle:XMLYGetPlyCount(_itemModel.playsCounts) forState:UIControlStateNormal];
     
     self.albumButton.frame = _itemModel.albumButtonFrame;
-    [self.albumButton setTitle:[NSString stringWithFormat:@"%ld集",_itemModel.tracks] forState:UIControlStateNormal];
+    [self.albumButton setTitle:[NSString stringWithFormat:@"%ld集",(long)_itemModel.tracks] forState:UIControlStateNormal];
 
     self.arrowImageView.frame = _itemModel.arrowImageViewFrame;
 }
