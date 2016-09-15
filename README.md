@@ -62,10 +62,10 @@
 ![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/ListenDetail.gif)   
 
 专辑详情页面  
-![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/AlbumDetail.gif)  
-
+![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/AlbumDetail.gif)    
+   
 直播详情页面
-![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/LiveDetail.gif)  
+![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/LiveDetail.gif)     
   
 
 更多的效果演示在我的博客中为大家展示:[http://www.jianshu.com/p/3929ec2eeb15](http://www.jianshu.com/p/3929ec2eeb15)
