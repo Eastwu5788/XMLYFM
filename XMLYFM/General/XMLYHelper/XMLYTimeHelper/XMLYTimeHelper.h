@@ -19,4 +19,7 @@
 
 + (NSString *)dataStringWithTimeInterval:(NSTimeInterval)time;
 
+//
++ (NSString *)timeFromTimeInterval:(NSTimeInterval)timeInterval;
+
 @end

@@ -8,7 +8,7 @@
 
 #import "XMLYPlayAlbumTrackAPI.h"
 
-static NSString *kPlayAlbumTrackAPI = @"http://mobile.ximalaya.com/v1/track/ca/playpage/18556415";
+static NSString *kPlayAlbumTrackAPI = @"http://mobile.ximalaya.com/v1/track/ca/playpage";
 
 @implementation XMLYPlayAlbumTrackAPI
 
@@ -20,7 +20,8 @@ static NSString *kPlayAlbumTrackAPI = @"http://mobile.ximalaya.com/v1/track/ca/p
     [params setObject:@(albumID) forKey:@"albumId"];
     [params setObject:@(trackID) forKey:@"trackUid"];
     
-    XMLYBaseRequest *request = [XMLYBaseRequest requestWithURL:kPlayAlbumTrackAPI];
+    NSString *url = [NSString stringWithFormat:@"%@/%ld",kPlayAlbumTrackAPI,trackID];
+    XMLYBaseRequest *request = [XMLYBaseRequest requestWithURL:url];
     [request startWithMethod:XMLYHTTPTypeGET params:params completion:^(id responseObject, NSString *message, BOOL success) {
         if(completion) {
             completion(responseObject,message,success);

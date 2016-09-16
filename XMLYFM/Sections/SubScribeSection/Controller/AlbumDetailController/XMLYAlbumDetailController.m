@@ -18,6 +18,8 @@
 #import "XMLYAlbumAboutRecomCell.h"
 #import "XMLYDetaillistHeaderCell.h"
 #import "XMLYDetialItemCell.h"
+#import "XMLYPlayViewController.h"
+#import "XMLYBaseNavigationController.h"
 
 @interface XMLYAlbumDetailController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -188,6 +190,16 @@
         [self changeDetailStyle:style];
     };
     return view;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(self.style == XMLYAlbumDetailStyleList) {
+        XMLYAlbumTrackItemModel *itemModel = self.listModel.tracks.list[indexPath.row - 1];
+        XMLYPlayViewController *ply = [XMLYPlayViewController playViewController];
+        [ply startPlayWithAlbumID:itemModel.albumId trackID:itemModel.trackId];
+        XMLYBaseNavigationController *nav = [[XMLYBaseNavigationController alloc] initWithRootViewController:ply];
+        [self presentViewController:nav animated:YES completion:nil];
+    }
 }
 
 

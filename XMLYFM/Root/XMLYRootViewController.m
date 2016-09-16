@@ -8,6 +8,7 @@
 
 #import "XMLYRootViewController.h"
 #import "XMLYBaseNavigationController.h"
+#import "XMLYPlayViewController.h"
 
 #define kStoryBoardFind         @"Find"
 #define kStoryBoardSubScribe    @"SubScribe"
@@ -76,16 +77,21 @@
 
 
 - (void)tabBarItemSelected:(UIButton *)btn {
-    btn.selected = YES;
-    self.selectedIndex = btn.tag - 100;
-    btn.userInteractionEnabled = NO;
-    for(UIButton *sbtn in self.bgImageView.subviews) {
-        if(sbtn.tag == btn.tag) {
-            continue;
-        }
-        sbtn.selected = NO;
-        sbtn.userInteractionEnabled = YES;
-    }
+   btn.selected = YES;
+   btn.userInteractionEnabled = NO;
+   for(UIButton *sbtn in self.bgImageView.subviews) {
+      if(sbtn.tag == btn.tag) {
+         continue;
+      }
+      sbtn.selected = NO;
+      sbtn.userInteractionEnabled = YES;
+   }
+   if([self versionTabBarSelectedIndex:btn.tag - 100]) {
+      self.selectedIndex = btn.tag - 100;
+   }else{
+      btn.selected = NO;
+      btn.userInteractionEnabled = YES;
+   }
 }
 
 
@@ -114,6 +120,16 @@
 #pragma mark - UITabBarControllerDelegate
 
 
+
+- (BOOL)versionTabBarSelectedIndex:(NSInteger)index {
+   if(index == 2) {
+      XMLYPlayViewController *con = [XMLYPlayViewController playViewController];
+      XMLYBaseNavigationController *navi = [[XMLYBaseNavigationController alloc] initWithRootViewController:con];
+      [self presentViewController:navi animated:YES completion:nil];
+      return NO;
+   }
+   return YES;
+}
 
 - (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (viewController.hidesBottomBarWhenPushed) {

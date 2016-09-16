@@ -88,4 +88,10 @@ static force_inline NSDateFormatter *XMLYDateFormatter(NSString *string) {
     return result;
 }
 
++ (NSString *)timeFromTimeInterval:(NSTimeInterval)timeInterval {
+    NSString *minutes = [NSString stringWithFormat:@"%02ld",(NSInteger)timeInterval / 60];
+    NSString *seconds = [NSString stringWithFormat:@"%02ld",(NSInteger)timeInterval % 60];
+    return [NSString stringWithFormat:@"%@:%@",minutes,seconds];
+}
+
 @end
