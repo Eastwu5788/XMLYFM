@@ -42,10 +42,12 @@
 //代理
 @property (nonatomic, weak) __weak id<XMLYAudioHelperDelegate>delegate;
 
+@property (nonatomic, assign) NSInteger oriProgress;
+
 + (instancetype)helper;
 
 // 播放某一个音频 播放下一个、上一个音频 传入该audio的item即可
-- (void)startPlayAudioWithItem:(XMLYAudioItem *)item;
+- (void)startPlayAudioWithItem:(XMLYAudioItem *)item  withProgress:(NSInteger)progress;
 
 // 暂停、播放 根据当前状态自动判断
 - (void)actionPlayPaush;
@@ -58,5 +60,9 @@
 
 // 销毁当前音频流
 - (void)destoryAudioStream;
+
+- (CGFloat)audioProgress;
+
+- (NSString *)cachePath;
 
 @end

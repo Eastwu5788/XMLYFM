@@ -196,7 +196,7 @@
     if(self.style == XMLYAlbumDetailStyleList) {
         XMLYAlbumTrackItemModel *itemModel = self.listModel.tracks.list[indexPath.row - 1];
         XMLYPlayViewController *ply = [XMLYPlayViewController playViewController];
-        [ply startPlayWithAlbumID:itemModel.albumId trackID:itemModel.trackId];
+        [ply startPlayWithAlbumID:itemModel.albumId trackID:itemModel.trackId cachePath:nil];
         XMLYBaseNavigationController *nav = [[XMLYBaseNavigationController alloc] initWithRootViewController:ply];
         [self presentViewController:nav animated:YES completion:nil];
     }

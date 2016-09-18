@@ -8,7 +8,6 @@
 
 #import "XMLYPlayViewController.h"
 #import "XMLYPlayAlbumTrackAPI.h"
-#import "XMLYPlayPageModel.h"
 #import "XMLYAnchorFooterView.h"
 #import "XMLYPlayHeaderView.h"
 #import "XMLYPlayIntroCell.h"
@@ -18,7 +17,6 @@
 #import "XMLYPlayEditRewardCell.h"
 #import "XMLYAnchorHeaderView.h"
 #import "XMLYPlayDBHelper.h"
-#import "XMLYAudioHelper.h"
 #import "XMLYAudioItem.h"
 
 static  NSInteger const kSectionIntro   = 0; //介绍
@@ -27,10 +25,10 @@ static  NSInteger const kSectionRecom   = 2; //推荐
 static  NSInteger const kSectionComment = 3; //点评
 
 
-@interface XMLYPlayViewController () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,XMLYAudioHelperDelegate>
+@interface XMLYPlayViewController () <UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,XMLYAudioHelperDelegate,XMLYPlayHeaderViewDelegate>
 
 @property (nonatomic, weak) UICollectionView *collectionView;
-@property (nonatomic, strong) XMLYPlayPageModel *model;
+
 @property (nonatomic, strong) XMLYPlayHeaderView    *headerView;
 @property (nonatomic, strong) XMLYAudioHelper       *helper;
 
@@ -43,6 +41,12 @@ static  NSInteger const kSectionComment = 3; //点评
     [self configNavigationBar];
 }
 
+- (void)dealloc {
+    NSTimeInterval duration = [self.helper audioProgress];
+    [self.helper destoryAudioStream];
+    [[XMLYPlayDBHelper dbHelper] updateLastPlayingRecordWithDuration:duration];
+}
+
 + (instancetype)playViewController {
     static XMLYPlayViewController *play = nil;
     static dispatch_once_t onceToken;
@@ -53,29 +57,37 @@ static  NSInteger const kSectionComment = 3; //点评
 }
 
 #pragma mark - HTTP
-- (void)startPlayWithAlbumID:(NSInteger)albumID trackID:(NSInteger)trackID {
+- (void)startPlayWithAlbumID:(NSInteger)albumID trackID:(NSInteger)trackID cachePath:(NSString *)cachePath{
     @weakify(self);
     [XMLYPlayAlbumTrackAPI requestPlayAlbumTrackDetailWithAblumID:albumID trackUID:trackID completion:^(id response, NSString *message, BOOL success) {
         @strongify(self);
         if(success) {
             //模型转换
             self.model = [XMLYPlayPageModel xr_modelWithJSON:response];
-            //保存当前播放信息
-            [[XMLYPlayDBHelper dbHelper] saveCurrentPlayAudioInfo:self.model];
             //刷新UICollectionView
             [self.collectionView reloadData];
             //播放音频
-            [self startPlayAudioWithAudioURL:self.model.trackInfo.playPathAacv164 localPath:nil];
+            [self startPlayAudioWithAudioURL:self.model.trackInfo.playPathAacv164 localPath:cachePath];
         }
     }];
 }
 
-- (void)startPlayAudioWithAudioURL:(NSString *)url localPath:(NSString *)localPath {    
+- (void)startPlayAudioWithAudioURL:(NSString *)url localPath:(NSString *)localPath {
     XMLYAudioItem *item = [[XMLYAudioItem alloc] init];
     item.audioFileURL = [NSURL URLWithString:url];
-    
+
     //开始播放音频
-    [self.helper startPlayAudioWithItem:item];
+    [self.helper startPlayAudioWithItem:item withProgress:self.progress];
+    
+    //保存当前播放信息
+    [[XMLYPlayDBHelper dbHelper] saveCurrentPlayAudioInfo:self.model cachePath:self.helper.cachePath];
+}
+
+- (void)saveCurrentPlayHistory {
+    if(_helper) {
+        CGFloat progress = [self.helper audioProgress];
+        [[XMLYPlayDBHelper dbHelper] updateLastPlayingRecordWithDuration:progress];
+    }
 }
 
 #pragma mark - private
@@ -96,6 +108,19 @@ static  NSInteger const kSectionComment = 3; //点评
 
 - (void)backButtonClick:(UIButton *)btn {
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - XMLYPlayHeaderViewDelegate
+- (void)playHeaderView:(XMLYPlayHeaderView *)view didStatuButtonClick:(UIButton *)btn {
+    [self.helper actionPlayPaush];
+}
+
+- (void)playHeaderView:(XMLYPlayHeaderView *)view didPreButtonClick:(UIButton *)btn {
+    
+}
+
+- (void)playHeaderView:(XMLYPlayHeaderView *)view didNextButtonClick:(UIButton *)btn {
+
 }
 
 #pragma mark - UICollectionViewDelegate/UICollectionViewDataSource
@@ -165,6 +190,7 @@ static  NSInteger const kSectionComment = 3; //点评
             if(!self.headerView) {
                 self.headerView = [XMLYPlayHeaderView sectionHeaderAwakeFromClass:collectionView atIndexPath:indexPath];
                 self.headerView.model = self.model;
+                self.headerView.delegate = self;
                 return self.headerView;
             } else {
                 return self.headerView;
@@ -189,6 +215,10 @@ static  NSInteger const kSectionComment = 3; //点评
 
 #pragma mark - XMLYAudioHelper
 - (void)audioHelperStatuChange:(DOUAudioStreamerStatus)status {
+    self.status = status;
+    if(self.playViewControllerStatusChangeBlock) {
+        self.playViewControllerStatusChangeBlock(self.status);
+    }
     [self.headerView audioStatusChanged:status];
 }
 

@@ -34,12 +34,13 @@ static void *kAudioBufferingRatioKVOKey = &kAudioBufferingRatioKVOKey;
 
 #pragma mark - public
 // 播放某一段音频
-- (void)startPlayAudioWithItem:(XMLYAudioItem *)item {
-    [self resetStreamerWithItem:item];
+- (void)startPlayAudioWithItem:(XMLYAudioItem *)item withProgress:(NSInteger)progress{
+    [self resetStreamerWithItem:item withProgress:progress];
 }
 
 // 暂停、播放
 - (void)actionPlayPaush {
+    self.oriProgress = 0;
     if([self.streamer status] == DOUAudioStreamerPaused || [self.streamer status] == DOUAudioStreamerIdle) {
         [self.streamer play];
     } else {
@@ -64,7 +65,13 @@ static void *kAudioBufferingRatioKVOKey = &kAudioBufferingRatioKVOKey;
     [self cancelStreamer];
 }
 
+- (CGFloat)audioProgress {
+    return [self.streamer currentTime];
+}
 
+- (NSString *)cachePath {
+    return [self.streamer cachedPath];
+}
 
 #pragma mark - getter
 
@@ -88,7 +95,10 @@ static void *kAudioBufferingRatioKVOKey = &kAudioBufferingRatioKVOKey;
 }
 
 //重置音频流
-- (void)resetStreamerWithItem:(XMLYAudioItem *)item {
+- (void)resetStreamerWithItem:(XMLYAudioItem *)item withProgress:(NSInteger)progress{
+    
+    self.oriProgress = progress;
+    
     //取消音频流
     [self cancelStreamer];
     
@@ -102,6 +112,8 @@ static void *kAudioBufferingRatioKVOKey = &kAudioBufferingRatioKVOKey;
     
     //播放音频
     [self.streamer play];
+    
+   
     [self timer];
 }
 
@@ -113,6 +125,9 @@ static void *kAudioBufferingRatioKVOKey = &kAudioBufferingRatioKVOKey;
             NSLog(@"error:%@",self.streamer.error);
         }
         [self.delegate audioHelperStatuChange:[self.streamer status]];
+    }
+    if(self.streamer.status == DOUAudioStreamerPlaying && self.oriProgress > 0) {
+        [self.streamer setCurrentTime:self.oriProgress];
     }
 }
 
@@ -133,6 +148,28 @@ static void *kAudioBufferingRatioKVOKey = &kAudioBufferingRatioKVOKey;
     
     if([self.delegate respondsToSelector:@selector(audioHelperBufferStatusChange:expectedLength:downloadSpeed:)]) {
         [self.delegate audioHelperBufferStatusChange:[self.streamer receivedLength] expectedLength:[self.streamer expectedLength] downloadSpeed:[self.streamer downloadSpeed]];
+    }
+    
+    //缓冲全部完成
+//    if([self.streamer receivedLength] == [self.streamer expectedLength]) {
+//        [self cacheAudio];
+//    }
+    //NSLog(@"-----%@",self.streamer.cachedPath);
+}
+
+
+- (void)cacheAudio {
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSString *path =[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"audioCache"];
+    if(![manager fileExistsAtPath:path]) {
+        [manager createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    NSError *err = nil;
+    [manager moveItemAtPath:self.streamer.cachedPath toPath:[path stringByAppendingPathComponent:[self.streamer.cachedPath lastPathComponent]] error:&err];
+    if(err) {
+        NSLog(@"error:%@",err);
+    }else{
+        NSLog(@"缓存地址:%@",path);
     }
 }
 

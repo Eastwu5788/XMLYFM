@@ -8,18 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "XMLYPlayPageModel.h"
-
+#import "XMLYBaseAudioModel.h"
 
 //数据库表结构
-
 
 @interface XMLYPlayDBHelper : NSObject
 
 + (instancetype)dbHelper;
 
-- (void)saveCurrentPlayAudioInfo:(XMLYPlayPageModel *)playModel;
+- (void)saveCurrentPlayAudioInfo:(XMLYPlayPageModel *)playModel cachePath:(NSString *)path;
 
 /* 更新上一次的播放数据 设置为未播放*/
-- (void)updateLastPlayingRecord;
+- (void)updateLastPlayingRecordWithDuration:(NSInteger)time;
+
+- (XMLYBaseAudioModel *)queryPlayingAudio;
 
 @end

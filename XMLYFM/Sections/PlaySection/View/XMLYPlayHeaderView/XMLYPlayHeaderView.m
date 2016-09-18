@@ -10,6 +10,9 @@
 #import "XMLYCountHelper.h"
 #import "XMLYTimeHelper.h"
 
+
+@class XMLYPlayControlView;
+
 //头部的介绍 icon、标题、订阅
 @interface XMLYPlayHeaderIntroView : UIView
 
@@ -250,6 +253,19 @@
 
 @end
 
+@protocol XMLYPlayControlDelegate <NSObject>
+
+// 播放、暂停按钮点击事件回调
+- (void)playControlView:(XMLYPlayControlView *)view didStatusButtonClick:(UIButton *)btn;
+
+// 上一个按钮点击事件
+- (void)playControlView:(XMLYPlayControlView *)view didPreButtonClick:(UIButton *)btn;
+
+// 下一个按钮点击事件
+- (void)playControlView:(XMLYPlayControlView *)view didNextButtonClick:(UIButton *)btn;
+
+@end
+
 //控制器view
 @interface XMLYPlayControlView : UIView
 
@@ -258,6 +274,8 @@
 @property (nonatomic, weak) UIButton    *stateBtn;
 @property (nonatomic, weak) UIButton    *goForwardBtn;
 @property (nonatomic, weak) UIButton    *timingBtn;
+
+@property (nonatomic, weak) __weak id<XMLYPlayControlDelegate> delegate;
 
 @property (nonatomic, strong) XMLYPlayPageModel *model;
 
@@ -270,11 +288,16 @@
 //状态变化
 - (void)audioStatusChanged:(DOUAudioStreamerStatus)status {
     if(status == DOUAudioStreamerPlaying) {
-        [self.stateBtn setImage:[UIImage imageNamed:@"toolbar_pause_n_p"] forState:UIControlStateNormal];
+//        self.stateBtn
+//        [self.stateBtn setImage:[UIImage imageNamed:@"toolbar_pause_n_p"] forState:UIControlStateNormal];
+        self.stateBtn.selected = YES;
     }else if(status == DOUAudioStreamerPaused) {
-        [self.stateBtn setImage:[UIImage imageNamed:@"tabbar_np_playnon"] forState:UIControlStateNormal];
+        self.stateBtn.selected = NO;
+       // [self.stateBtn setImage:[UIImage imageNamed:@"tabbar_np_playnon"] forState:UIControlStateNormal];
     }
 }
+
+#pragma mark - sys
 
 - (void)layoutSubviews {
     [super layoutSubviews];
@@ -289,6 +312,31 @@
     
     self.timingBtn.frame = CGRectMake(kScreenWidth - 48, self.playListBtn.top, self.playListBtn.width,self.playListBtn.height);
 }
+
+#pragma mark - private
+
+- (void)statusButtonClick:(UIButton *)btn {
+    if([self.delegate respondsToSelector:@selector(playControlView:didStatusButtonClick:)]) {
+        [self.delegate playControlView:self didStatusButtonClick:btn];
+    }
+}
+
+
+- (void)preButtonClick:(UIButton *)btn {
+    if([self.delegate respondsToSelector:@selector(playControlView:didPreButtonClick:)]) {
+        [self.delegate playControlView:self didPreButtonClick:btn];
+    }
+}
+
+
+- (void)nextButtonClick:(UIButton *)btn {
+    if([self.delegate respondsToSelector:@selector(playControlView:didNextButtonClick:)]) {
+        [self.delegate playControlView:self didNextButtonClick:btn];
+    }
+}
+
+
+#pragma mark - getter
 
 //定时关闭按钮
 - (UIButton *)timingBtn {
@@ -306,6 +354,7 @@
     if(!_goForwardBtn) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setImage:[UIImage imageNamed:@"toolbar_next_n_p"] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(nextButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:btn];
         _goForwardBtn = btn;
     }
@@ -317,6 +366,8 @@
     if(!_stateBtn) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setImage:[UIImage imageNamed:@"tabbar_np_playnon"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"toolbar_pause_n_p"] forState:UIControlStateSelected];
+        [btn addTarget:self action:@selector(statusButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:btn];
         _stateBtn = btn;
     }
@@ -327,6 +378,7 @@
     if(!_goBackBtn) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         [btn setImage:[UIImage imageNamed:@"toolbar_prev_n_p"] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(preButtonClick:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:btn];
         _goBackBtn = btn;
     }
@@ -346,7 +398,7 @@
 
 @end
 
-@interface XMLYPlayHeaderView ()
+@interface XMLYPlayHeaderView () <XMLYPlayControlDelegate>
 
 @property (nonatomic, weak) XMLYPlayHeaderIntroView *introView;
 @property (nonatomic, weak) XMLYPlayStateView       *stateView;
@@ -367,7 +419,7 @@
 
 #pragma mark - setter
 - (void)audioStatusChanged:(DOUAudioStreamerStatus)status {
-    
+    [self.controlView audioStatusChanged:status];
 }
 
 - (void)audioDurationChange:(NSTimeInterval)currentTime duration:(NSTimeInterval)duration {
@@ -376,6 +428,27 @@
 
 - (void)audioBufferStatusChange:(NSUInteger)receivedLength expectedLength:(NSUInteger)expectedLength downloadSpeed:(NSUInteger)downloadSpeed {
     [self.stateView audioBufferStatusChange:receivedLength expectedLength:expectedLength downloadSpeed:downloadSpeed];
+}
+
+#pragma mark - XMLYPlayControlDelegate
+
+- (void)playControlView:(XMLYPlayControlView *)view didStatusButtonClick:(UIButton *)btn {
+    if([self.delegate respondsToSelector:@selector(playHeaderView:didStatuButtonClick:)]) {
+        [self.delegate playHeaderView:self didStatuButtonClick:btn];
+    }
+}
+
+
+- (void)playControlView:(XMLYPlayControlView *)view didNextButtonClick:(UIButton *)btn {
+    if([self.delegate respondsToSelector:@selector(playHeaderView:didNextButtonClick:)]) {
+        [self.delegate playHeaderView:self didNextButtonClick:btn];
+    }
+}
+
+- (void)playControlView:(XMLYPlayControlView *)view didPreButtonClick:(UIButton *)btn {
+    if([self.delegate respondsToSelector:@selector(playHeaderView:didPreButtonClick:)]) {
+        [self.delegate playHeaderView:self didPreButtonClick:btn];
+    }
 }
 
 #pragma mark - getter
@@ -397,6 +470,7 @@
     if(!_controlView) {
         XMLYPlayControlView *view = [[XMLYPlayControlView alloc] init];
         view.frame = CGRectMake(0, self.stateView.bottom, kScreenWidth, 66);
+        view.delegate = self;
         [self addSubview:view];
         _controlView = view;
     }

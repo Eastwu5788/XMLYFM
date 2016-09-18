@@ -7,11 +7,22 @@
 //
 
 #import "XMLYBaseController.h"
+#import "XMLYPlayPageModel.h"
+#import "XMLYAudioHelper.h"
 
 @interface XMLYPlayViewController : XMLYBaseController
 
+@property (nonatomic, strong) XMLYPlayPageModel *model;
+@property (nonatomic, assign) DOUAudioStreamerStatus status;
+
+@property (nonatomic, assign) NSInteger    progress;
+
+@property (nonatomic, copy) void(^playViewControllerStatusChangeBlock)(DOUAudioStreamerStatus status);
+
 + (instancetype)playViewController;
 
-- (void)startPlayWithAlbumID:(NSInteger)albumID trackID:(NSInteger)trackID;
+- (void)startPlayWithAlbumID:(NSInteger)albumID trackID:(NSInteger)trackID cachePath:(NSString *)cachePath;
+
+- (void)saveCurrentPlayHistory;
 
 @end
