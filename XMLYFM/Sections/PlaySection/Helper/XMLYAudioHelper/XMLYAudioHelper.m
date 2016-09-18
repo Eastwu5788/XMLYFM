@@ -149,12 +149,6 @@ static void *kAudioBufferingRatioKVOKey = &kAudioBufferingRatioKVOKey;
     if([self.delegate respondsToSelector:@selector(audioHelperBufferStatusChange:expectedLength:downloadSpeed:)]) {
         [self.delegate audioHelperBufferStatusChange:[self.streamer receivedLength] expectedLength:[self.streamer expectedLength] downloadSpeed:[self.streamer downloadSpeed]];
     }
-    
-    //缓冲全部完成
-//    if([self.streamer receivedLength] == [self.streamer expectedLength]) {
-//        [self cacheAudio];
-//    }
-    //NSLog(@"-----%@",self.streamer.cachedPath);
 }
 
 

@@ -7,7 +7,10 @@
 //
 
 #import "XMLYBaseCollectionViewCell.h"
+#import "XMLYPlayPageModel.h"
 
 @interface XMLYPlayEditRewardCell : XMLYBaseCollectionViewCell
+
+@property (nonatomic, strong) XMLYTrackRewardInfoModel *model;
 
 @end

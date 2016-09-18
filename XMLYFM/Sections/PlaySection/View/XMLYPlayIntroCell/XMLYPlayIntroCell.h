@@ -7,9 +7,10 @@
 //
 
 #import "XMLYBaseCollectionViewCell.h"
+#import "XMLYPlayPageModel.h"
 
 @interface XMLYPlayIntroCell : XMLYBaseCollectionViewCell
 
-
+@property (nonatomic, strong) XMLYPlayPageModel *model;
 
 @end

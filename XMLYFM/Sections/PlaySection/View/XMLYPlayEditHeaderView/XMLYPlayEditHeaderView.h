@@ -7,7 +7,10 @@
 //
 
 #import "XMLYBaseSecHeaderView.h"
+#import "XMLYPlayPageModel.h"
 
 @interface XMLYPlayEditHeaderView : XMLYBaseSecHeaderView
+
+@property (nonatomic, strong) XMLYAlbumUserInfoModel *model;
 
 @end

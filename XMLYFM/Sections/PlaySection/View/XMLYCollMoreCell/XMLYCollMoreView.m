@@ -8,14 +8,31 @@
 
 #import "XMLYCollMoreView.h"
 
+@interface XMLYCollMoreView ()
+
+@property (nonatomic, weak) UIButton    *btn;
+
+@end
+
 @implementation XMLYCollMoreView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.btn.frame = CGRectMake(0, 0, self.width, self.height);
 }
-*/
+
+#pragma mark - getter
+- (UIButton *)btn {
+    if(!_btn) {
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.backgroundColor = Hex(0xF9FAFB);
+        [btn setTitleColor:Hex(0x98999A) forState:UIControlStateNormal];
+        [btn setTitle:@"查看更多推荐" forState:UIControlStateNormal];
+        btn.titleLabel.font = [UIFont systemFontOfSize:13];
+        [self addSubview:btn];
+        _btn = btn;
+    }
+    return _btn;
+}
 
 @end

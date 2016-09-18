@@ -7,7 +7,10 @@
 //
 
 #import "XMLYBaseCollectionViewCell.h"
+#import "XMLYPlayPageModel.h"
 
 @interface XMLYPlayCommentCell : XMLYBaseCollectionViewCell
+
+@property (nonatomic, strong) XMLYComentInfoItemModel *model;
 
 @end

@@ -39,6 +39,13 @@
 @property (nonatomic, copy)   NSString   *playPathHq;
 @property (nonatomic, copy)   NSString   *shortRichIntro;
 
+@property (nonatomic, assign) CGFloat titleHeight;
+@property (nonatomic, assign) CGFloat contentHeight;
+
+@property (nonatomic, assign) CGFloat headerHeight;
+
+- (void)calculateHeaderCellHeight;
+
 @end
 
 @interface XMLYAlbumInfoModel : XMLYBaseModel
@@ -81,6 +88,12 @@
 @property (nonatomic, copy)   NSString   *intro;
 @property (nonatomic, assign) BOOL       isPaid;
 
+@property (nonatomic, assign) CGFloat titleHight;
+@property (nonatomic, assign) CGFloat subTitleHeight;
+@property (nonatomic, assign) CGFloat cellHeight;
+
+- (void)calculateHeightFroCell;
+
 @end
 
 
@@ -93,6 +106,10 @@
 @property (nonatomic, assign) NSInteger  followers;
 @property (nonatomic, assign) NSInteger  tracks;
 @property (nonatomic, assign) NSInteger  albums;
+
+@property (nonatomic, assign) CGFloat nicknameWidth;
+
+- (void)calculateFrameForUser;
 
 @end
 
@@ -109,6 +126,11 @@
 @property (nonatomic, assign) NSInteger  parentId;
 @property (nonatomic, assign) NSInteger  likes;
 
+@property (nonatomic, assign) CGFloat contentHeight;
+@property (nonatomic, assign) CGFloat cellHeight;
+
+- (void)calculateFrameForCell;
+
 @end
 
 @interface XMLYCommentInfoModel : XMLYBaseModel
@@ -118,6 +140,8 @@
 @property (nonatomic, assign) NSInteger  pageSize;
 @property (nonatomic, assign) NSInteger  maxPageId;
 @property (nonatomic, assign) NSInteger  totalCount;
+
+- (void)calculateFrameForCell;
 
 @end
 
@@ -154,5 +178,7 @@
 @property (nonatomic, strong) XMLYCommentInfoModel       *commentInfo;
 @property (nonatomic, strong) XMLYTrackRewardInfoModel  *trackRewardInfo;
 @property (nonatomic, strong) NSMutableDictionary       *countInfo;
+
+- (void)calculateFrameForCell;
 
 @end

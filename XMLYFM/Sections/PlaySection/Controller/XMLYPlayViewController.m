@@ -17,7 +17,10 @@
 #import "XMLYPlayEditRewardCell.h"
 #import "XMLYAnchorHeaderView.h"
 #import "XMLYPlayDBHelper.h"
+#import "XMLYPlayAboutRecomCell.h"
 #import "XMLYAudioItem.h"
+#import "XMLYCollMoreView.h"
+#import "XMLYPlayCommentCell.h"
 
 static  NSInteger const kSectionIntro   = 0; //介绍
 static  NSInteger const kSectionEditor  = 1; //编辑
@@ -64,6 +67,7 @@ static  NSInteger const kSectionComment = 3; //点评
         if(success) {
             //模型转换
             self.model = [XMLYPlayPageModel xr_modelWithJSON:response];
+            [self.model calculateFrameForCell];
             //刷新UICollectionView
             [self.collectionView reloadData];
             //播放音频
@@ -132,22 +136,32 @@ static  NSInteger const kSectionComment = 3; //点评
     if(section == kSectionIntro || section == kSectionEditor) {
         return 1;
     }else if(section == kSectionRecom) {
-        return 4;
+        return self.model.associationAlbumsInfo.count + 1;
     }else if(section == kSectionComment) {
-        return 4;
+        return self.model.commentInfo.list.count + 1;
     }
     return 0;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.section == kSectionIntro) {
-        return CGSizeMake(kScreenWidth, 277.0f);
+        return CGSizeMake(kScreenWidth, self.model.trackInfo.headerHeight);
     }else if(indexPath.section == kSectionEditor) {
         return CGSizeMake(kScreenWidth, 170.0f);
     }else if(indexPath.section == kSectionRecom) {
-        return CGSizeMake(kScreenWidth, 119.0f);
+        if(indexPath.row < self.model.associationAlbumsInfo.count) {
+            XMLYAssociationAlbumsInfoModel *model = self.model.associationAlbumsInfo[indexPath.row];
+            return CGSizeMake(kScreenWidth, model.cellHeight);
+        }else{
+            return CGSizeMake(kScreenWidth, 44.0f);
+        }
     }else if(indexPath.section == kSectionComment) {
-        return CGSizeMake(kScreenWidth, 94.0f);
+        if(indexPath.row < self.model.commentInfo.list.count) {
+            XMLYComentInfoItemModel *model = self.model.commentInfo.list[indexPath.row];
+            return CGSizeMake(kScreenWidth, model.cellHeight);
+        }else{
+            return CGSizeMake(kScreenWidth, 44.0f);
+        }
     }
     return CGSizeZero;
 }
@@ -170,16 +184,33 @@ static  NSInteger const kSectionComment = 3; //点评
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.section == kSectionIntro) {
         XMLYPlayIntroCell *cell = [XMLYPlayIntroCell collectionViewCellFromClass:collectionView atIndexPath:indexPath];
+        cell.model = self.model;
         return cell;
     }else if(indexPath.section == kSectionEditor) {
         XMLYPlayEditRewardCell *cell = [XMLYPlayEditRewardCell collectionViewCellFromClass:collectionView atIndexPath:indexPath];
+        cell.model = self.model.trackRewardInfo;
         return cell;
     }else if(indexPath.section == kSectionRecom) {
-        XMLYPlayCommentCell *cell = [XMLYPlayCommentCell collectionViewCellFromClass:collectionView atIndexPath:indexPath];
-        return cell;
-    }else{
-        XMLYPlayCommentCell *cell = [XMLYPlayCommentCell collectionViewCellFromClass:collectionView atIndexPath:indexPath];
-        return cell;
+        if(indexPath.row < self.model.associationAlbumsInfo.count) {
+            XMLYAssociationAlbumsInfoModel *model = self.model.associationAlbumsInfo[indexPath.row];
+            XMLYPlayAboutRecomCell *cell = [XMLYPlayAboutRecomCell collectionViewCellFromNib:collectionView atIndexPath:indexPath];
+            cell.model = model;
+            cell.showSep = indexPath.row != self.model.associationAlbumsInfo.count - 1;
+            return cell;
+        }else{
+            XMLYCollMoreView *moreView = [XMLYCollMoreView collectionViewCellFromClass:collectionView atIndexPath:indexPath];
+            return moreView;
+        }
+    }else if(indexPath.section == kSectionComment){
+        if(indexPath.row < self.model.commentInfo.list.count) {
+            XMLYComentInfoItemModel *model = self.model.commentInfo.list[indexPath.row];
+            XMLYPlayCommentCell *cell = [XMLYPlayCommentCell collectionViewCellFromNib:collectionView atIndexPath:indexPath];
+            cell.model = model;
+            return cell;
+        }else{
+            XMLYCollMoreView *moreView = [XMLYCollMoreView collectionViewCellFromClass:collectionView atIndexPath:indexPath];
+            return moreView;
+        }
     }
     return nil;
 }
@@ -197,6 +228,7 @@ static  NSInteger const kSectionComment = 3; //点评
             }
         }else if(indexPath.section == kSectionEditor) {
             XMLYPlayEditHeaderView *header = [XMLYPlayEditHeaderView sectionHeaderAwakeFromClass:collectionView atIndexPath:indexPath];
+            header.model = self.model.userInfo;
             return header;
         }else if(indexPath.section == kSectionRecom) {
             XMLYAnchorHeaderView *header = [XMLYAnchorHeaderView anchorHeaderView:collectionView atIndexPath:indexPath];
@@ -204,7 +236,8 @@ static  NSInteger const kSectionComment = 3; //点评
             return header;
         }else{
             XMLYAnchorHeaderView *header = [XMLYAnchorHeaderView anchorHeaderView:collectionView atIndexPath:indexPath];
-            [header configHeaderTitle:@"评论" showMore:NO];
+            NSString *str = [NSString stringWithFormat:@"听众点评（%ld）",self.model.commentInfo.totalCount];
+            [header configHeaderTitle:str showMore:NO];
             return header;
         }
     } else {
