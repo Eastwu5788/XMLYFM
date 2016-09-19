@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="NO">
     <dependencies>
         <deployment identifier="iOS"/>
+        <development version="7000" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,12 +16,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qaE-gb-5EH">
+                        <rect key="frame" x="10" y="10" width="44" height="44"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="O3s-4z-hEA"/>
                             <constraint firstAttribute="width" constant="44" id="cGK-wr-mIj"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暗夜的伯爵" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdK-zZ-W9G">
+                        <rect key="frame" x="64" y="16" width="139" height="14"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="14" id="rdt-rG-GNz"/>
                         </constraints>
@@ -30,46 +32,51 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2个月前" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCI-71-qnr">
+                        <rect key="frame" x="211" y="17" width="45" height="12"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="45" id="7aG-mf-MJa"/>
                             <constraint firstAttribute="height" constant="12" id="a6Z-ua-EKk"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <color key="textColor" red="0.61176470588235299" green="0.61568627450980395" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.67469108104705811" green="0.67834395170211792" blue="0.68180596828460693" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p55-IY-XRr">
+                        <rect key="frame" x="259" y="17" width="30" height="12"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="Hwy-wz-tNo"/>
                             <constraint firstAttribute="height" constant="12" id="Sht-sD-4OP"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <color key="textColor" red="0.5725490196078431" green="0.57647058823529407" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.63931536674499512" green="0.64302802085876465" blue="0.64654791355133057" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGC-rZ-hCd">
+                        <rect key="frame" x="294" y="8" width="16" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="16" id="d33-iJ-jbh"/>
                         </constraints>
                         <state key="normal" image="comment_unlike"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="飞机偶尔发发诶哦企鹅阿飞安吉尔法尔奇偶发街法界佛阿尔艾尔发噢诶" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roW-fN-r5f">
+                        <rect key="frame" x="64" y="40" width="236" height="32"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="32" id="nXj-La-HY8"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" red="0.43137254901960786" green="0.43529411764705883" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.50646024942398071" green="0.51044034957885742" blue="0.51421719789505005" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pic-28-YD7">
-                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="64" y="81" width="256" height="1"/>
+                        <color key="backgroundColor" red="0.95310121774673462" green="0.95312350988388062" blue="0.95311146974563599" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="rN5-yR-Sf8"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="qaE-gb-5EH" firstAttribute="top" secondItem="Mi2-Ca-Qdl" secondAttribute="top" constant="10" id="0BK-Ym-QK9"/>
                 <constraint firstItem="GCI-71-qnr" firstAttribute="leading" secondItem="cdK-zZ-W9G" secondAttribute="trailing" constant="8" id="1cn-K9-Voi"/>
@@ -108,6 +115,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

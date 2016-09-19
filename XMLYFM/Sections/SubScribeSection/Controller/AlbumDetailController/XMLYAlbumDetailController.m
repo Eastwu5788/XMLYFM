@@ -20,6 +20,8 @@
 #import "XMLYDetialItemCell.h"
 #import "XMLYPlayViewController.h"
 #import "XMLYBaseNavigationController.h"
+#import "XMLYDownloadManager.h"
+#import "XMLYDownTaskModel.h"
 
 @interface XMLYAlbumDetailController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -172,11 +174,25 @@
             XMLYDetialItemCell *cell = [XMLYDetialItemCell cellFromNib:tableView];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             cell.itemModel = self.listModel.tracks.list[indexPath.row - 1];
+            @weakify(self);
+            cell.downloadButtonClick = ^(XMLYDetialItemCell *cell, XMLYAlbumTrackItemModel *itemModel) {
+                @strongify(self);
+                [self cellDownloadButtonClick:itemModel];
+            };
             return cell;
         }
     }
 }
 
+- (void)cellDownloadButtonClick:(XMLYAlbumTrackItemModel *)itemModel {
+    XMLYDownTaskModel *model =[[XMLYDownTaskModel alloc] init];
+    model.albumModel = self.listModel.album;
+    model.trackModel = itemModel;
+    
+    [[XMLYDownloadManager manager] addDownloadTask:model completion:^(BOOL success, XMLYDownloadError error) {
+        
+    }];
+}
 
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {

@@ -39,6 +39,14 @@
     self.releaseAtLabel.text = [XMLYTimeHelper dataStringFromTimeInterval:_itemModel.createdAt / 1000 dataFormatter:@"YYYY-MM"];
 }
 
+
+- (IBAction)downloadButtonClick:(id)sender {
+    if(self.downloadButtonClick) {
+        self.downloadButtonClick(self,self.itemModel);
+    }
+}
+
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.avatarImageView.layer.cornerRadius = 19.0f;

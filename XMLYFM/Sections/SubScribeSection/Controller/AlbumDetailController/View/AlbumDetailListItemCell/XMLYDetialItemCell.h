@@ -13,4 +13,6 @@
 
 @property (nonatomic, strong) XMLYAlbumTrackItemModel *itemModel;
 
+@property (nonatomic, copy) void(^downloadButtonClick)(XMLYDetialItemCell *cell, XMLYAlbumTrackItemModel *itemModel);
+
 @end
