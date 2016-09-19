@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="130" id="zvC-pp-0Y2" customClass="XMLYAudioHistoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="103"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zvC-pp-0Y2" id="1m7-ee-SzK">
+                <frame key="frameInset" width="320" height="102"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newAblum_cover_free_320" translatesAutoresizingMaskIntoConstraints="NO" id="vdl-vM-FDK">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="LVQ-MB-t5R"/>
+                            <constraint firstAttribute="height" constant="70" id="O5K-qv-zTw"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cyF-X5-NeW">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="52" id="0Fy-uZ-7KU"/>
+                            <constraint firstAttribute="height" constant="52" id="g2W-nv-kch"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="糗事播报2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QN9-ZY-QZX">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="idp-fe-DwX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="糗事播报之少年我们结个亲家可好--李小妹呐" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTN-Yf-anG">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="854-QJ-7vO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.53333333333333333" green="0.53725490196078429" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上次播放至：00分01秒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJo-yv-sZ3">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="G2J-By-9wn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.51372549019607838" green="0.51764705882352946" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2b-PL-kpl">
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="bt6-Fb-sOq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QN9-ZY-QZX" firstAttribute="leading" secondItem="vdl-vM-FDK" secondAttribute="trailing" constant="5" id="1ou-M4-hg0"/>
+                    <constraint firstItem="cyF-X5-NeW" firstAttribute="centerY" secondItem="vdl-vM-FDK" secondAttribute="centerY" id="1ou-ca-j8u"/>
+                    <constraint firstItem="vdl-vM-FDK" firstAttribute="top" secondItem="1m7-ee-SzK" secondAttribute="top" constant="7" id="2lI-qI-kFO"/>
+                    <constraint firstItem="oTN-Yf-anG" firstAttribute="top" secondItem="QN9-ZY-QZX" secondAttribute="bottom" constant="6" id="6il-be-kM4"/>
+                    <constraint firstAttribute="bottom" secondItem="R2b-PL-kpl" secondAttribute="bottom" id="8IE-py-AB2"/>
+                    <constraint firstItem="oTN-Yf-anG" firstAttribute="leading" secondItem="vdl-vM-FDK" secondAttribute="trailing" constant="5" id="PgM-OI-nXc"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="QN9-ZY-QZX" secondAttribute="trailing" constant="10" id="Vta-S6-vec"/>
+                    <constraint firstItem="sJo-yv-sZ3" firstAttribute="top" secondItem="oTN-Yf-anG" secondAttribute="bottom" constant="1" id="YOf-rt-Mlu"/>
+                    <constraint firstItem="sJo-yv-sZ3" firstAttribute="leading" secondItem="oTN-Yf-anG" secondAttribute="leading" id="jG7-Oy-yNW"/>
+                    <constraint firstItem="cyF-X5-NeW" firstAttribute="centerX" secondItem="vdl-vM-FDK" secondAttribute="centerX" id="jTY-G6-f77"/>
+                    <constraint firstItem="R2b-PL-kpl" firstAttribute="leading" secondItem="sJo-yv-sZ3" secondAttribute="leading" id="qoh-cI-eZj"/>
+                    <constraint firstItem="sJo-yv-sZ3" firstAttribute="trailing" secondItem="oTN-Yf-anG" secondAttribute="trailing" id="tHG-Z5-IHp"/>
+                    <constraint firstItem="QN9-ZY-QZX" firstAttribute="top" secondItem="1m7-ee-SzK" secondAttribute="topMargin" constant="8" id="vWw-bP-RpD"/>
+                    <constraint firstItem="vdl-vM-FDK" firstAttribute="leading" secondItem="1m7-ee-SzK" secondAttribute="leading" constant="7" id="vpI-rg-Gsp"/>
+                    <constraint firstAttribute="trailing" secondItem="R2b-PL-kpl" secondAttribute="trailing" id="wRw-5h-JjX"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="oTN-Yf-anG" secondAttribute="trailing" constant="4" id="xuq-yd-lTf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="cyF-X5-NeW" id="MmK-KZ-Yzy"/>
+                <outlet property="subTitleLabel" destination="oTN-Yf-anG" id="sRy-tf-8hs"/>
+                <outlet property="timeLabel" destination="sJo-yv-sZ3" id="y3T-IF-qTy"/>
+                <outlet property="titleLabel" destination="QN9-ZY-QZX" id="pNg-89-mfx"/>
+            </connections>
+            <point key="canvasLocation" x="45" y="96.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="newAblum_cover_free_320" width="120" height="120"/>
+    </resources>
+</document>

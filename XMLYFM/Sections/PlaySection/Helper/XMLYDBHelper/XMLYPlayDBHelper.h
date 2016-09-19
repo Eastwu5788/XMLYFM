@@ -23,4 +23,6 @@
 
 - (XMLYBaseAudioModel *)queryPlayingAudio;
 
+- (NSMutableArray<XMLYBaseAudioModel *> *)queryPlayHistory;
+
 @end

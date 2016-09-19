@@ -170,7 +170,7 @@ static void *kAudioBufferingRatioKVOKey = &kAudioBufferingRatioKVOKey;
 
 
 #pragma mark - KVO
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if(context == kAudioStatusKVOKey) {
         [self performSelector:@selector(updateStatus) onThread:[NSThread mainThread] withObject:nil waitUntilDone:NO];
     }else if(context == kAudioDurationKVOKey) {

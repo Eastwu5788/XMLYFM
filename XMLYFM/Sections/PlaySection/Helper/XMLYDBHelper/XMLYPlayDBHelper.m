@@ -46,6 +46,21 @@ static NSString *const kDBSqlCreateTable = @"create table if not exists xmly_pla
     return audioModel;
 }
 
+//批量查询历史记录
+- (NSMutableArray<XMLYBaseAudioModel *> *)queryPlayHistory {
+    //sql语句
+    NSString *querySql = [NSString stringWithFormat:@"select * from xmly_play_history_cache order by update_time desc;"];
+    //打开数据库
+    [self.dataBase open];
+    //执行sql语句
+    FMResultSet *set = [self.dataBase executeQuery:querySql];
+    //结果转换
+    NSMutableArray *results = [self transQueryResult2ModelArray:set];
+    //关闭数据库
+    [self.dataBase close];
+    return results;
+}
+
 #pragma mark - 保存当前播放的数据
 - (void)saveCurrentPlayAudioInfo:(XMLYPlayPageModel *)playModel cachePath:(NSString *)path{
     int timestamp = (int)time(NULL);
@@ -99,6 +114,24 @@ static NSString *const kDBSqlCreateTable = @"create table if not exists xmly_pla
         return model;
     }
     return nil;
+}
+
+- (NSMutableArray *)transQueryResult2ModelArray:(FMResultSet *)result {
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
+    while (result.next) {
+        XMLYBaseAudioModel *model = [[XMLYBaseAudioModel alloc] init];
+        model.cid = [result intForColumn:@"id"];
+        model.album_id = [result intForColumn:@"album_id"];
+        model.track_id = [result intForColumn:@"track_id"];
+        model.album_title = [result stringForColumn:@"album_title"];
+        model.track_title = [result stringForColumn:@"track_title"];
+        model.coverSmall = [result stringForColumn:@"coverSmall"];
+        model.time_history = [result intForColumn:@"time_history"];
+        model.isPlaying = [result intForColumn:@"isPlaying"];
+        model.cachePath = [result stringForColumn:@"cache_path"];
+        [arr addObject:model];
+    }
+    return arr;
 }
 
 #pragma mark - 初始化

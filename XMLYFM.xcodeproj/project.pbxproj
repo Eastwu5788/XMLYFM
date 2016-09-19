@@ -43,6 +43,9 @@
 		2B372CF21D88F8A60076AB72 /* XMLYDetialItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B372CF11D88F8A60076AB72 /* XMLYDetialItemCell.m */; };
 		2B372CF41D88F8B80076AB72 /* XMLYDetialItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B372CF31D88F8B80076AB72 /* XMLYDetialItemCell.xib */; };
 		2B372CF71D8901730076AB72 /* XMLYCountHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B372CF61D8901730076AB72 /* XMLYCountHelper.m */; };
+		2B38BE981D8F89790030BCDD /* XMLYAudioHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B38BE951D8F89790030BCDD /* XMLYAudioHistoryCell.m */; };
+		2B38BE991D8F89790030BCDD /* XMLYAudioHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B38BE961D8F89790030BCDD /* XMLYAudioHistoryCell.xib */; };
+		2B38BE9C1D8F89910030BCDD /* XMLYAudioHistoryHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B38BE9B1D8F89910030BCDD /* XMLYAudioHistoryHeaderView.m */; };
 		2B4005C81D59769600605EFB /* XMLYFindSubTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005C71D59769600605EFB /* XMLYFindSubTitleView.m */; };
 		2B4005D11D59887C00605EFB /* XMLYBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005CF1D59887C00605EFB /* XMLYBaseController.m */; };
 		2B4005D41D59889600605EFB /* XMLYBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4005D31D59889600605EFB /* XMLYBaseNavigationController.m */; };
@@ -291,6 +294,11 @@
 		2B372CF31D88F8B80076AB72 /* XMLYDetialItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLYDetialItemCell.xib; sourceTree = "<group>"; };
 		2B372CF51D8901730076AB72 /* XMLYCountHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYCountHelper.h; sourceTree = "<group>"; };
 		2B372CF61D8901730076AB72 /* XMLYCountHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYCountHelper.m; sourceTree = "<group>"; };
+		2B38BE941D8F89790030BCDD /* XMLYAudioHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYAudioHistoryCell.h; sourceTree = "<group>"; };
+		2B38BE951D8F89790030BCDD /* XMLYAudioHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYAudioHistoryCell.m; sourceTree = "<group>"; };
+		2B38BE961D8F89790030BCDD /* XMLYAudioHistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMLYAudioHistoryCell.xib; sourceTree = "<group>"; };
+		2B38BE9A1D8F89910030BCDD /* XMLYAudioHistoryHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYAudioHistoryHeaderView.h; sourceTree = "<group>"; };
+		2B38BE9B1D8F89910030BCDD /* XMLYAudioHistoryHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYAudioHistoryHeaderView.m; sourceTree = "<group>"; };
 		2B4005C61D59769600605EFB /* XMLYFindSubTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYFindSubTitleView.h; sourceTree = "<group>"; };
 		2B4005C71D59769600605EFB /* XMLYFindSubTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLYFindSubTitleView.m; sourceTree = "<group>"; };
 		2B4005CE1D59887C00605EFB /* XMLYBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLYBaseController.h; sourceTree = "<group>"; };
@@ -892,6 +900,48 @@
 				2B372CF31D88F8B80076AB72 /* XMLYDetialItemCell.xib */,
 			);
 			path = AlbumDetailListItemCell;
+			sourceTree = "<group>";
+		};
+		2B38BE8B1D8F82530030BCDD /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2B38BE8C1D8F82530030BCDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B38BE8D1D8F82530030BCDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B38BE931D8F89790030BCDD /* XMLYAudioHistoryCell */,
+				2B38BE971D8F89790030BCDD /* XMLYAudioHistoryHeaderView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B38BE931D8F89790030BCDD /* XMLYAudioHistoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B38BE941D8F89790030BCDD /* XMLYAudioHistoryCell.h */,
+				2B38BE951D8F89790030BCDD /* XMLYAudioHistoryCell.m */,
+				2B38BE961D8F89790030BCDD /* XMLYAudioHistoryCell.xib */,
+			);
+			path = XMLYAudioHistoryCell;
+			sourceTree = "<group>";
+		};
+		2B38BE971D8F89790030BCDD /* XMLYAudioHistoryHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				2B38BE9A1D8F89910030BCDD /* XMLYAudioHistoryHeaderView.h */,
+				2B38BE9B1D8F89910030BCDD /* XMLYAudioHistoryHeaderView.m */,
+			);
+			path = XMLYAudioHistoryHeaderView;
 			sourceTree = "<group>";
 		};
 		2B4005C51D59767B00605EFB /* SubTitleView */ = {
@@ -2006,6 +2056,9 @@
 			children = (
 				2BAED0D41D826A6100CA7114 /* XMLYScribeHistoryController.h */,
 				2BAED0D51D826A6100CA7114 /* XMLYScribeHistoryController.m */,
+				2B38BE8D1D8F82530030BCDD /* View */,
+				2B38BE8B1D8F82530030BCDD /* Helper */,
+				2B38BE8C1D8F82530030BCDD /* Model */,
 			);
 			path = HistoryController;
 			sourceTree = "<group>";
@@ -2591,6 +2644,7 @@
 				2BFD11151D8EB68F00079A13 /* XMLYPlayCommentCell.xib in Resources */,
 				2B6E0A581D584BF6000A8C58 /* SubScribe.storyboard in Resources */,
 				2B5E02831D83C28F008C5F5E /* SVWebViewControllerActivityChrome-iPad.png in Resources */,
+				2B38BE991D8F89790030BCDD /* XMLYAudioHistoryCell.xib in Resources */,
 				2B1DF3AC1D5D825100C8BC7F /* XMLYFindCellStyleMore.xib in Resources */,
 				2BAED0EE1D828CF200CA7114 /* XMLYScribeRecomCell.xib in Resources */,
 				2BA742001D81696700FAD233 /* XMLYAnchorSignerCell.xib in Resources */,
@@ -2800,6 +2854,7 @@
 				2B8DD8BC1D8BD12000D1D15B /* XMLYPlayIntroCell.m in Sources */,
 				2BCF527B1D8C1D7700E7BD13 /* DOUAudioAnalyzer+Default.m in Sources */,
 				2BCF528C1D8C1D7700E7BD13 /* NSData+DOUMappedFile.m in Sources */,
+				2B38BE9C1D8F89910030BCDD /* XMLYAudioHistoryHeaderView.m in Sources */,
 				2B5E027E1D83C28F008C5F5E /* NSEtcHosts.m in Sources */,
 				2BCF52891D8C1D7700E7BD13 /* DOUEAGLView.m in Sources */,
 				2BAED0DC1D826AAC00CA7114 /* XMLYScribeMeScrController.m in Sources */,
@@ -2814,6 +2869,7 @@
 				2B8DD8C81D8BD48400D1D15B /* XMLYCollMoreView.m in Sources */,
 				2B4B0C631D7FED36009190D1 /* XMLYCategoryFooterModel.m in Sources */,
 				2B9224801D86C2C6009F615E /* XMLYBaseTableViewCell.m in Sources */,
+				2B38BE981D8F89790030BCDD /* XMLYAudioHistoryCell.m in Sources */,
 				2B9A808D1D8936C20021396F /* XMLYBaseSecHeaderView.m in Sources */,
 				2B4B0C881D801B75009190D1 /* XMLYFindRadioTelCell.m in Sources */,
 				2B1DF3941D5D693000C8BC7F /* XMLYFindBaseCell.m in Sources */,

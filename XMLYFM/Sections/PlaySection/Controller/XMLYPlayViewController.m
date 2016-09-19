@@ -45,9 +45,9 @@ static  NSInteger const kSectionComment = 3; //点评
 }
 
 - (void)dealloc {
-    NSTimeInterval duration = [self.helper audioProgress];
-    [self.helper destoryAudioStream];
-    [[XMLYPlayDBHelper dbHelper] updateLastPlayingRecordWithDuration:duration];
+//    NSTimeInterval duration = [self.helper audioProgress];
+//    [self.helper destoryAudioStream];
+//    [[XMLYPlayDBHelper dbHelper] updateLastPlayingRecordWithDuration:duration];
 }
 
 + (instancetype)playViewController {
@@ -79,10 +79,15 @@ static  NSInteger const kSectionComment = 3; //点评
 - (void)startPlayAudioWithAudioURL:(NSString *)url localPath:(NSString *)localPath {
     XMLYAudioItem *item = [[XMLYAudioItem alloc] init];
     item.audioFileURL = [NSURL URLWithString:url];
-
+    
+    // 先将上一次播放数据置为已播放
+    if(_helper) {
+        NSTimeInterval duration = [self.helper audioProgress];
+        [[XMLYPlayDBHelper dbHelper] updateLastPlayingRecordWithDuration:duration];
+    }
+    
     //开始播放音频
     [self.helper startPlayAudioWithItem:item withProgress:self.progress];
-    
     //保存当前播放信息
     [[XMLYPlayDBHelper dbHelper] saveCurrentPlayAudioInfo:self.model cachePath:self.helper.cachePath];
 }
