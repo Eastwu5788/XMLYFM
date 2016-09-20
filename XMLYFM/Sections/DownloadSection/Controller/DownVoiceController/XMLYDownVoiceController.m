@@ -29,12 +29,16 @@
     self.view.backgroundColor = Hex(0xf3f3f3);
     
     [self configEmptyStatus];
-    [self loadDownloadVoiceHistory];
 }
 
 - (void)configEmptyStatus {
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self loadDownloadVoiceHistory];
 }
 
 - (void)loadDownloadVoiceHistory {

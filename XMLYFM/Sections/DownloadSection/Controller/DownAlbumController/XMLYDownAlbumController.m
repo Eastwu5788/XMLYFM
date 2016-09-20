@@ -26,6 +26,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = Hex(0xf3f3f3);
     [self configEmptyStatus];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self loadDataSourceFromDB];
 }
 

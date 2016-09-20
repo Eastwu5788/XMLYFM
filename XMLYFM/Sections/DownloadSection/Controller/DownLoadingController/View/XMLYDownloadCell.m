@@ -64,7 +64,7 @@
 }
 
 - (void)refreshProgress:(NSInteger)download expected:(NSInteger)expected {
-    CGFloat proGress = download / expected;
+    CGFloat proGress =  [NSNumber numberWithInteger:download].floatValue / [NSNumber numberWithInteger:expected].floatValue;
     NSLog(@"proGress:%f",proGress);
     [self.progressView setProgress:proGress animated:YES];
     
