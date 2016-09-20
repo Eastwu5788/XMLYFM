@@ -12,15 +12,10 @@
 @implementation XMLYDownTaskModel
 
 - (NSString *)destinationLocaoPath {
-    NSString *str = [NSString stringWithFormat:@"xmly_audio_path_%ld_%ld",self.trackModel.trackId,self.trackModel.albumId];
-    NSString *localPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
-    localPath = [localPath stringByAppendingPathComponent:@"XMLYAudioPathCache"];
-    NSError *erro = nil;
-    if(![[NSFileManager defaultManager] fileExistsAtPath:localPath]) {
-        [[NSFileManager defaultManager] createDirectoryAtPath:localPath withIntermediateDirectories:YES attributes:nil error:&erro];
+    if(!_destinationLocaoPath) {
+        _destinationLocaoPath = self.trackModel.destinationLocaoPath;
     }
-    localPath = [localPath stringByAppendingPathComponent:[str md5String]];
-    return localPath;
+    return _destinationLocaoPath;
 }
 
 @end

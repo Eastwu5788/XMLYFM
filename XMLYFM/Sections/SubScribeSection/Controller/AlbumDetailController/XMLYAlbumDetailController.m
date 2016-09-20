@@ -189,9 +189,18 @@
     model.albumModel = self.listModel.album;
     model.trackModel = itemModel;
     
-    [[XMLYDownloadManager manager] addDownloadTask:model completion:^(BOOL success, XMLYDownloadError error) {
-        
-    }];
+    
+    //为了有时间能跳转到下载中页面，特意延迟5秒开始下载，方便观察
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[XMLYDownloadManager manager] addDownloadTask:model completion:^(BOOL success, XMLYDownloadError error) {
+            if(success) {
+                NSLog(@"开始下载");
+            }else{
+                NSLog(@"下载任务出错:%ld",error);
+            }
+        }];
+    });
+   
 }
 
 

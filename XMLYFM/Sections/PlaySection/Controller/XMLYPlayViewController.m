@@ -76,6 +76,37 @@ static  NSInteger const kSectionComment = 3; //点评
     }];
 }
 
+- (void)startPlayLocalAudioWithTrackModel:(XMLYAlbumTrackItemModel *)trackModel {
+    @weakify(self);
+    [XMLYPlayAlbumTrackAPI requestPlayAlbumTrackDetailWithAblumID:trackModel.albumId trackUID:trackModel.trackId completion:^(id response, NSString *message, BOOL success) {
+        @strongify(self);
+        if(success) {
+            //模型转换
+            self.model = [XMLYPlayPageModel xr_modelWithJSON:response];
+            [self.model calculateFrameForCell];
+            //刷新UICollectionView
+            [self.collectionView reloadData];
+            [self startPlayLocalAudioWithURL:trackModel.destinationLocaoPath];
+        }
+    }];
+}
+
+- (void)startPlayLocalAudioWithURL:(NSString *)url {
+    XMLYAudioItem *item = [[XMLYAudioItem alloc] init];
+    item.audioFileURL = [NSURL fileURLWithPath:url];
+    
+    // 先将上一次播放数据置为已播放
+    if(_helper) {
+        NSTimeInterval duration = [self.helper audioProgress];
+        [[XMLYPlayDBHelper dbHelper] updateLastPlayingRecordWithDuration:duration];
+    }
+    
+    //开始播放音频
+    [self.helper startPlayAudioWithItem:item withProgress:self.progress];
+    //保存当前播放信息
+    [[XMLYPlayDBHelper dbHelper] saveCurrentPlayAudioInfo:self.model cachePath:self.helper.cachePath];
+}
+
 - (void)startPlayAudioWithAudioURL:(NSString *)url localPath:(NSString *)localPath {
     XMLYAudioItem *item = [[XMLYAudioItem alloc] init];
     item.audioFileURL = [NSURL URLWithString:url];

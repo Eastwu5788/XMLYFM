@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UP6-ym-Z3A" customClass="XMLYDownAlbumCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UP6-ym-Z3A" id="kDI-L6-NbS">
+                <frame key="frameInset" width="320" height="84"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newAblum_cover_free_320" translatesAutoresizingMaskIntoConstraints="NO" id="Hgz-Fj-LWX">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="gDf-WM-anO"/>
+                            <constraint firstAttribute="height" constant="70" id="y86-hv-kTL"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qsE-LB-PCf">
+                        <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="52" id="58q-72-Oji"/>
+                            <constraint firstAttribute="width" constant="52" id="sVf-AV-aCy"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="段子来了" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQH-vj-leu">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="AwL-k3-Nxa"/>
+                            <constraint firstAttribute="width" constant="175" id="SaM-ty-1jI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by 段子来了" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TX2-LM-Kgv">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="UcP-vF-oDf"/>
+                            <constraint firstAttribute="width" constant="175" id="lH3-JT-GFE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.53333333333333333" green="0.53725490196078429" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVK-no-Kur">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="dcX-F6-KlP"/>
+                            <constraint firstAttribute="height" constant="14" id="v70-ZY-UOl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <inset key="titleEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="1集" image="album_tracks">
+                            <color key="titleColor" red="0.54509803921568623" green="0.5490196078431373" blue="0.55686274509803924" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdN-5A-F7k">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="57" id="Foa-ja-cKc"/>
+                            <constraint firstAttribute="height" constant="14" id="Uar-R7-NbR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <inset key="titleEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="0.0M" image="sound_sizes">
+                            <color key="titleColor" red="0.5450980392" green="0.54901960780000003" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE8-34-qjj">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="4U9-IA-4Zl"/>
+                            <constraint firstAttribute="width" constant="25" id="d9T-l7-Pjb"/>
+                        </constraints>
+                        <state key="normal" image="deleteCell_h"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jQH-vj-leu" firstAttribute="top" secondItem="kDI-L6-NbS" secondAttribute="topMargin" constant="6" id="5W1-5U-hXQ"/>
+                    <constraint firstItem="qsE-LB-PCf" firstAttribute="centerX" secondItem="Hgz-Fj-LWX" secondAttribute="centerX" id="8Ny-yq-2vb"/>
+                    <constraint firstItem="jQH-vj-leu" firstAttribute="leading" secondItem="Hgz-Fj-LWX" secondAttribute="trailing" constant="5" id="CYR-6g-iqo"/>
+                    <constraint firstItem="zdN-5A-F7k" firstAttribute="leading" secondItem="HVK-no-Kur" secondAttribute="trailing" constant="5" id="KTQ-hE-aF7"/>
+                    <constraint firstItem="HVK-no-Kur" firstAttribute="top" secondItem="TX2-LM-Kgv" secondAttribute="bottom" constant="8" id="T5T-AL-rgy"/>
+                    <constraint firstItem="Hgz-Fj-LWX" firstAttribute="leading" secondItem="kDI-L6-NbS" secondAttribute="leading" constant="5" id="XDT-df-eI8"/>
+                    <constraint firstItem="Hgz-Fj-LWX" firstAttribute="top" secondItem="kDI-L6-NbS" secondAttribute="top" constant="5" id="Z2g-uD-K39"/>
+                    <constraint firstItem="qsE-LB-PCf" firstAttribute="centerY" secondItem="Hgz-Fj-LWX" secondAttribute="centerY" id="dq2-Lj-hp0"/>
+                    <constraint firstItem="qsE-LB-PCf" firstAttribute="centerX" secondItem="Hgz-Fj-LWX" secondAttribute="centerX" id="gyv-TP-iIw"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="CE8-34-qjj" secondAttribute="trailing" constant="10" id="joo-fs-SWC"/>
+                    <constraint firstItem="CE8-34-qjj" firstAttribute="centerY" secondItem="kDI-L6-NbS" secondAttribute="centerY" id="lQU-P1-NW9"/>
+                    <constraint firstItem="TX2-LM-Kgv" firstAttribute="leading" secondItem="Hgz-Fj-LWX" secondAttribute="trailing" constant="5" id="lUh-aY-iYU"/>
+                    <constraint firstItem="HVK-no-Kur" firstAttribute="leading" secondItem="Hgz-Fj-LWX" secondAttribute="trailing" constant="5" id="rZI-jD-eYg"/>
+                    <constraint firstItem="zdN-5A-F7k" firstAttribute="top" secondItem="TX2-LM-Kgv" secondAttribute="bottom" constant="8" id="saR-3p-epN"/>
+                    <constraint firstItem="qsE-LB-PCf" firstAttribute="centerY" secondItem="Hgz-Fj-LWX" secondAttribute="centerY" id="xHy-nZ-CGZ"/>
+                    <constraint firstItem="TX2-LM-Kgv" firstAttribute="top" secondItem="jQH-vj-leu" secondAttribute="bottom" constant="8" id="y1Y-Nj-OS5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="albumCounts" destination="HVK-no-Kur" id="IFD-ty-Edv"/>
+                <outlet property="albumSize" destination="zdN-5A-F7k" id="OYk-Bx-J4t"/>
+                <outlet property="authorLabel" destination="TX2-LM-Kgv" id="j2m-WX-7Ul"/>
+                <outlet property="coverImageView" destination="qsE-LB-PCf" id="kck-aA-JXG"/>
+                <outlet property="titleLabel" destination="jQH-vj-leu" id="bm5-80-vco"/>
+            </connections>
+            <point key="canvasLocation" x="-169" y="98.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="album_tracks" width="10" height="10"/>
+        <image name="deleteCell_h" width="22" height="22"/>
+        <image name="newAblum_cover_free_320" width="120" height="120"/>
+        <image name="sound_sizes" width="10" height="10"/>
+    </resources>
+</document>

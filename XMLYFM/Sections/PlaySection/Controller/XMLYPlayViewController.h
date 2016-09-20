@@ -9,6 +9,7 @@
 #import "XMLYBaseController.h"
 #import "XMLYPlayPageModel.h"
 #import "XMLYAudioHelper.h"
+#import "XMLYAlbumListModel.h"
 
 @interface XMLYPlayViewController : XMLYBaseController
 
@@ -22,6 +23,8 @@
 + (instancetype)playViewController;
 
 - (void)startPlayWithAlbumID:(NSInteger)albumID trackID:(NSInteger)trackID cachePath:(NSString *)cachePath;
+
+- (void)startPlayLocalAudioWithTrackModel:(XMLYAlbumTrackItemModel *)trackModel;
 
 - (void)saveCurrentPlayHistory;
 

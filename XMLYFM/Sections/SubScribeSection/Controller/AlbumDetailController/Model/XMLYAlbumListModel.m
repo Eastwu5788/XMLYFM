@@ -10,6 +10,35 @@
 
 @implementation XMLYAlbumTrackItemModel
 
+
+- (int64_t)trackSize {
+    NSString *path = self.destinationLocaoPath;
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSError *error;
+    NSDictionary *dic = [manager attributesOfItemAtPath:path error:&error];
+    int64_t size = [[dic objectForKey:NSFileSize] longLongValue];
+    return size;
+}
+
+
+- (NSString *)destinationLocaoPath {
+    NSString *localPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    localPath = [localPath stringByAppendingPathComponent:@"XMLYAudioPathCache"];
+    NSError *erro = nil;
+    if(![[NSFileManager defaultManager] fileExistsAtPath:localPath]) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:localPath withIntermediateDirectories:YES attributes:nil error:&erro];
+    }
+    NSArray *downloadPath = [self.playPathAacv224 componentsSeparatedByString:@"/"];
+    NSString *path = nil;
+    if(downloadPath.count) {
+        path = downloadPath.lastObject;
+    }
+    localPath = [localPath stringByAppendingPathComponent:path];
+    return localPath;
+}
+
+
+
 @end
 
 @implementation XMLYAlbumTracksModel

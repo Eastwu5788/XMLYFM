@@ -8,14 +8,18 @@
 
 #import "XMLYDownloadingController.h"
 #import "UIScrollView+EmptyDataSet.h"
+#import "XMLYDownloadManager.h"
+#import "XMLYDownloadCell.h"
 #import "Masonry.h"
 
-@interface XMLYDownloadingController () <UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
+@interface XMLYDownloadingController () <UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate,XMLYDownloadManagerDelegate>
 
 @property (nonatomic, weak) UITableView *tableView;
-
+@property (nonatomic, strong) NSMutableArray *dataSource;
 
 @end
+
+
 @implementation XMLYDownloadingController
 
 - (void)viewDidLoad {
@@ -23,6 +27,12 @@
     self.view.backgroundColor = Hex(0xf3f3f3);
     
     [self configEmptyStatus];
+    [XMLYDownloadManager manager].delegate = self;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.dataSource = [[XMLYDownloadManager manager] downloadTasks];
     [self.tableView reloadData];
 }
 
@@ -59,17 +69,33 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.dataSource.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 10;
+    return 147.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    XMLYDownTaskModel *model = self.dataSource[indexPath.row];
+    XMLYDownloadCell *cell = [XMLYDownloadCell cellFromNib:tableView];
+    cell.model = model;
     return cell;
+}
+
+#pragma mark - XMLYDownloadManagerDelegate
+
+// 下载进度发生变化的回调
+- (void)downloadProgress:(NSInteger)downloaded expected:(NSInteger)expected trackID:(NSInteger)track_id albumID:(NSInteger)album_id {
+    NSLog(@"---%ld album_id:%ld downloaded:%ld",track_id,album_id,downloaded);
+    [self.dataSource enumerateObjectsUsingBlock:^(XMLYDownTaskModel  *model, NSUInteger idx, BOOL * _Nonnull stop) {
+        if(model.trackModel.trackId == track_id) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                XMLYDownloadCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:idx inSection:0]];
+                [cell refreshProgress:downloaded expected:expected];
+            });
+        }
+    }];
 }
 
 #pragma mark - UITableView

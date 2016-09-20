@@ -39,6 +39,12 @@
 @property (nonatomic, assign) NSInteger shares;
 @property (nonatomic, assign) NSInteger status;
 
+//@property (nonatomic, assign) int64_t   trackSize;
+//@property (nonatomic, copy)   NSString  *destinationLocaoPath;
+
+- (int64_t)trackSize;
+- (NSString *)destinationLocaoPath;
+
 @end
 
 @interface XMLYAlbumTracksModel : XMLYBaseModel
@@ -86,6 +92,8 @@
 @property (nonatomic, assign) BOOL      isPaid;
 @property (nonatomic, copy)   NSString  *other_title;
 @property (nonatomic, copy)   NSString  *detailCoverPath;
+
+@property (nonatomic, assign) int64_t downloadSize;
 
 @end
 

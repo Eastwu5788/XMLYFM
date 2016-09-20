@@ -15,7 +15,17 @@ typedef NS_ENUM(NSInteger, XMLYDownloadError) {
     XMLYDownloadErrorDefined      = 1,  //当前不允许下载
     XMLYDownloadErrorMemoryNeed   = 2,  //内存不足
     XMLYDownloadErrorUnknown      = 3,  //未知错误
+    XMLYDownloadErrorNone         = 4,  //未出错
 };
+
+@protocol XMLYDownloadManagerDelegate <NSObject>
+
+/*
+ * 下载进度发生变化的回调
+ */
+- (void)downloadProgress:(NSInteger)downloaded expected:(NSInteger)expected trackID:(NSInteger)track_id albumID:(NSInteger)album_id;
+
+@end
 
 @interface XMLYDownloadManager : NSObject
 
@@ -26,6 +36,11 @@ typedef NS_ENUM(NSInteger, XMLYDownloadError) {
  * 默认是2条
  */
 @property (nonatomic, assign) NSInteger maxDownloadCount;
+
+/*
+ * 代理
+ */
+@property (nonatomic, weak) __weak id<XMLYDownloadManagerDelegate> delegate;
 
 /* 
  * 新增一个下载任务
@@ -38,5 +53,15 @@ typedef NS_ENUM(NSInteger, XMLYDownloadError) {
  * 查询当前正在进行的所有下载任务
  */
 - (NSMutableArray<XMLYDownTaskModel *> *)downloadTasks;
+
+/*
+ * 查询album_id 获取albumModel
+ */
+- (XMLYAlbumModel *)taskModelAlbumFromAlbumID:(NSInteger)album_id;
+
+/*
+ * 根据track_id 获取trackModel
+ */
+- (XMLYAlbumTrackItemModel *)taskModelTrackFromAlbumID:(NSInteger)track_id;
 
 @end

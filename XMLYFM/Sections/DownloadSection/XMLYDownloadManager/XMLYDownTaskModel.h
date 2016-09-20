@@ -14,9 +14,13 @@
 @property (nonatomic, strong) XMLYAlbumModel *albumModel;
 @property (nonatomic, strong) XMLYAlbumTrackItemModel *trackModel;
 
-@property (nonatomic, copy) void(^downloadTaskDownloadProgress)(NSInteger downloadedCount,NSInteger expectedCount);
-@property (nonatomic, copy) void(^downloadTaskCompletion)(NSURLResponse *response, NSURL *filePath, NSError *error);
+@property (nonatomic, strong) NSURLSessionDownloadTask *downloadTask;
 
-- (NSString *)destinationLocaoPath;
+@property (nonatomic, copy)   NSString  *destinationLocaoPath;
+
+//@property (nonatomic, copy) void(^downloadTaskDownloadProgress)(NSInteger downloadedCount,NSInteger expectedCount);
+//@property (nonatomic, copy) void(^downloadTaskCompletion)(NSURLResponse *response, NSURL *filePath, NSError *error);
+
+
 
 @end

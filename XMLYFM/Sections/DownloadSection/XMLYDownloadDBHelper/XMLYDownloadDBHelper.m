@@ -52,6 +52,62 @@ static NSString *kDBTableCreateSQL = @"create table if not exists xmly_download_
     return result.next;
 }
 
+/*
+ * 查询专辑数据
+ */
+- (NSArray *)queryAlbumsFromDownloadHistory {
+    NSString *sql = [NSString stringWithFormat:@"select album_id from xmly_download_history_cache"];
+    [self.dataBase open];
+    FMResultSet *result = [self.dataBase executeQuery:sql];
+    NSMutableArray *arr = [NSMutableArray new];
+    while (result.next) {
+        NSInteger result_id = [result intForColumn:@"album_id"];
+        NSPredicate *pre = [NSPredicate predicateWithFormat:@"integerValue == %ld",result_id];
+        NSArray *result = [arr filteredArrayUsingPredicate:pre];
+        if(result.count == 0) {
+            [arr addObject:@(result_id)];
+        }
+    }
+    [self.dataBase close];
+    return arr;
+}
+
+
+/*
+ * 更具album_id查询track_id;
+ */
+- (NSArray *)queryTrackByAlbumFromDownloadHistory:(NSInteger)album_id {
+    NSString *sql = [NSString stringWithFormat:@"select track_id from xmly_download_history_cache where album_id = %ld",album_id];
+    [self.dataBase open];
+    FMResultSet *result = [self.dataBase executeQuery:sql];
+    NSMutableArray *arr = [NSMutableArray new];
+    while (result.next) {
+        NSInteger result_id = [result intForColumn:@"track_id"];
+        [arr addObject:@(result_id)];
+    }
+    return arr;
+}
+
+/*
+ * 查询声音id
+ */
+- (NSArray *)queryTracksFromDownloadHistory {
+    NSString *sql = [NSString stringWithFormat:@"select track_id from xmly_download_history_cache where status = 2"];
+    [self.dataBase open];
+    FMResultSet *result = [self.dataBase executeQuery:sql];
+    NSMutableArray *arr = [NSMutableArray new];
+    while (result.next) {
+        NSInteger result_id = [result intForColumn:@"track_id"];
+        NSPredicate *pre = [NSPredicate predicateWithFormat:@"integerValue == %ld",result_id];
+        NSArray *result = [arr filteredArrayUsingPredicate:pre];
+        if(result.count == 0) {
+            [arr addObject:@(result_id)];
+        }
+    }
+    [self.dataBase close];
+    return arr;
+}
+
 #pragma mark - 插入记录
 /*
  * 插入一条新的下载记录

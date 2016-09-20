@@ -8,12 +8,15 @@
 
 #import "XMLYDownAlbumController.h"
 #import "UIScrollView+EmptyDataSet.h"
+#import "XMLYDownloadDBHelper.h"
+#import "XMLYDownloadManager.h"
+#import "XMLYDownAlbumCell.h"
 #import "Masonry.h"
 
 @interface XMLYDownAlbumController () <UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
 
 @property (nonatomic, weak) UITableView *tableView;
-
+@property (nonatomic, strong) NSMutableArray    *dataSource;
 
 @end
 
@@ -22,9 +25,32 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = Hex(0xf3f3f3);
-
     [self configEmptyStatus];
+    [self loadDataSourceFromDB];
+}
+
+- (void)loadDataSourceFromDB {
+    NSArray *arr = [[XMLYDownloadDBHelper helper] queryAlbumsFromDownloadHistory];
+    self.dataSource = [[NSMutableArray alloc] init];
+    for(NSNumber *number in arr) {
+        XMLYAlbumModel *model = [[XMLYDownloadManager manager] taskModelAlbumFromAlbumID:number.integerValue];
+        model.downloadSize = [self totalSizeOfAlbum:model.albumId];
+        [self.dataSource addObject:model];
+    }
     [self.tableView reloadData];
+}
+
+/*
+ * 从album中计算所有的下载的track的大小
+ */
+- (int64_t)totalSizeOfAlbum:(NSInteger)album_id {
+    NSArray *track_idArr = [[XMLYDownloadDBHelper helper] queryTrackByAlbumFromDownloadHistory:album_id];
+    int64_t size = 0;
+    for(NSNumber *number in track_idArr) {
+        XMLYAlbumTrackItemModel *model = [[XMLYDownloadManager manager] taskModelTrackFromAlbumID:number.integerValue];
+        size += model.trackSize;
+    }
+    return size;
 }
 
 - (void)configEmptyStatus {
@@ -60,16 +86,16 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.dataSource.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 10;
+    return 85.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    XMLYDownAlbumCell *cell = [XMLYDownAlbumCell cellFromNib:tableView];
+    cell.albumModel = self.dataSource[indexPath.row];
     return cell;
 }
 

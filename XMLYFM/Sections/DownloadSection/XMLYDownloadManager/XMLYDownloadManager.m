@@ -161,6 +161,10 @@
     
     // 5.检查是否需要开启新的下载任务
     [self checkStartDownloadTask];
+    
+    if(completion) {
+        completion(YES,XMLYDownloadErrorNone);
+    }
 }
 
 
@@ -169,23 +173,61 @@
  * 查询当前正在进行的所有下载任务
  */
 - (NSMutableArray<XMLYDownTaskModel *> *)downloadTasks {
-    return nil;
+    NSMutableArray *arr = [NSMutableArray new];
+    [self.downloadingCache enumerateKeysAndObjectsUsingBlock:^(NSString *key, XMLYDownTaskModel  *obj, BOOL * _Nonnull stop) {
+        [arr addObject:obj];
+    }];
+    return arr;
 }
+
+/*
+ * 查询album_id 获取albumModel
+ */
+- (XMLYAlbumModel *)taskModelAlbumFromAlbumID:(NSInteger)album_id {
+    //2.获取存储的专辑信息
+    XMLYAlbumModel *model = (XMLYAlbumModel *)[self.cache objectForKey:[NSString stringWithFormat:@"download_album_id_%ld",album_id]];
+    return model;
+}
+
+/*
+ * 根据track_id 获取trackModel
+ */
+- (XMLYAlbumTrackItemModel *)taskModelTrackFromAlbumID:(NSInteger)track_id {
+    //1.获取存储的专辑中的某一条声音
+    XMLYAlbumTrackItemModel *model = (XMLYAlbumTrackItemModel *)[self.cache objectForKey:[NSString stringWithFormat:@"download_track_id_%ld",track_id]];
+    return model;
+}
+
 
 #pragma mark - private
 
 - (void)downloadTaskByAFNetworkding:(XMLYDownTaskModel *)model {
-    [XMLYDownloadRequest requestDownloadFromURL:model.trackModel.playPathAacv224 progress:^(NSInteger completedUnitCount, NSInteger totalUnitCount) {
-        if(model.downloadTaskDownloadProgress) {
-            model.downloadTaskDownloadProgress(completedUnitCount,totalUnitCount);
-        }
-        NSLog(@"complted:%ld total:%ld",completedUnitCount,totalUnitCount);
+    
+    @weakify(self);
+    NSURLSessionDownloadTask *task = [XMLYDownloadRequest requestDownloadFromURL:model.trackModel.playPathAacv224 progress:^(NSInteger completedUnitCount, NSInteger totalUnitCount) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.delegate downloadProgress:completedUnitCount expected:totalUnitCount trackID:model.trackModel.trackId albumID:model.trackModel.albumId];
+        });
     } destination:[model destinationLocaoPath] completion:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
-        if(model.downloadTaskCompletion) {
-            model.downloadTaskCompletion(response,filePath,error);
-        }
-        NSLog(@"filePath:%@ error:%@",filePath,error);
+        @strongify(self);
+        NSLog(@"filePath:%@ 下载完成error:%@",filePath,error);
+        
+        [self updateDownloadTaskStatus:error destinationFile:filePath taskModel:model];
+        [self.downloadingCache removeObjectForKey:[NSString stringWithFormat:@"%ld",model.trackModel.trackId]];
     }];
+    
+    model.downloadTask = task;
+}
+
+// 更新下载数据
+- (void)updateDownloadTaskStatus:(NSError *)error destinationFile:(NSURL *)filePath taskModel:(XMLYDownTaskModel *)model {
+    if(error) {
+        // 下载失败数据更新
+        [[XMLYDownloadDBHelper helper] updateDownloadTask:model.trackModel.trackId albumID:model.trackModel.albumId status:3];
+    }else{
+        // 下载完成数据更新
+        [[XMLYDownloadDBHelper helper] updateDownloadTask:model.trackModel.trackId albumID:model.trackModel.albumId status:2];
+    }
 }
 
 #pragma mark - Cache
@@ -250,6 +292,8 @@
 
 
 #pragma mark - getter
+
+
 - (YYCache *)cache {
     if(!_cache) {
         _cache = [YYCache cacheWithName:@"xmly_cache_download_history_model"];

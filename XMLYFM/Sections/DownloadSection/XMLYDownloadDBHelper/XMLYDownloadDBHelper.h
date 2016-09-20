@@ -27,4 +27,19 @@
  */
 - (void)updateDownloadTask:(NSInteger)track_id albumID:(NSInteger)album_id status:(NSInteger)status;
 
+/*
+ * 查询专辑数据
+ */
+- (NSArray *)queryAlbumsFromDownloadHistory;
+
+/*
+ * 查询声音id
+ */
+- (NSArray *)queryTracksFromDownloadHistory;
+
+/*
+ * 更具album_id查询track_id;
+ */
+- (NSArray *)queryTrackByAlbumFromDownloadHistory:(NSInteger)album_id;
+
 @end
