@@ -16,6 +16,7 @@
 2016.9.14：明天就是中秋节啦，祝愿大家节日快乐。今天公司提前下班聚餐到9点多，所以没办法更新很多，今天抽空把专辑详情完善了一下，放假这几天没事，可以给大家多更新一点。音频播放这块也会在这几天完成。  
 2016.9.16：部分完善了网络音频播放功能...使用了豆瓣的开源音频流引擎  
 2016.9.17：增加了断点续播功能，完善了网络音频播放页面  
+2016.9.20：完成了本地音频下载和播放功能  
 + 更多内容持续更新中...     
 
 ##特色
@@ -26,7 +27,10 @@
 1.具体的代码分析可以看我的简书博客:[http://www.jianshu.com/p/3f48a1dccf52](http://www.jianshu.com/p/3f48a1dccf52)  
 2.之前的博客比较长了，现在写了第二弹继续介绍这个项目:[http://www.jianshu.com/p/3929ec2eeb15](http://www.jianshu.com/p/3929ec2eeb15)   
 欢迎大家点赞
-##效果演示
+##效果演示  
+
+音频本地下载、播放演示   
+![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/LocalDownload.gif)
 
 音频播放页面   
 ![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/PlayDetail.gif)     
