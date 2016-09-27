@@ -10,6 +10,7 @@
 #import "XMLYScribeRecomModel.h"
 #import "XMLYScribeRecomAPI.h"
 #import "XMLYScribeREcomCell.h"
+#import "XMLYAlbumDetailController.h"
 #import "Masonry.h"
 
 @interface XMLYScribeRecomController () <UITableViewDelegate,UITableViewDataSource>
@@ -60,6 +61,14 @@
     XMLYScribeRecomCell *cell = [XMLYScribeRecomCell scribeRecomCell:tableView];
     cell.model = itemModel;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    XMLYScribeRecomItemModel *itemModel = [self.model.list objectAtIndex:indexPath.row];
+    XMLYAlbumDetailController *album = [[XMLYAlbumDetailController alloc] init];
+    album.albumId = itemModel.albumId;
+    album.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:album animated:YES];
 }
 
 #pragma mark - UITableVeiw 

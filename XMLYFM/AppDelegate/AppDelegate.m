@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "XMLYRootViewController.h"
+#import "XMLYPlayViewController.h"
 
 @interface AppDelegate ()
 
@@ -35,6 +36,7 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+    [[XMLYPlayViewController playViewController] saveCurrentPlayHistory];
 }
 
 

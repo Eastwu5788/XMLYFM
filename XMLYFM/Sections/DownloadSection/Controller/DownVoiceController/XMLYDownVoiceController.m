@@ -8,12 +8,17 @@
 
 #import "XMLYDownVoiceController.h"
 #import "UIScrollView+EmptyDataSet.h"
+#import "XMLYDownloadDBHelper.h"
+#import "XMLYDownloadManager.h"
+#import "XMLYDownloadCell.h"
+#import "XMLYBaseNavigationController.h"
+#import "XMLYPlayViewController.h"
 #import "Masonry.h"
 
 @interface XMLYDownVoiceController () <UITableViewDelegate,UITableViewDataSource,DZNEmptyDataSetSource,DZNEmptyDataSetDelegate>
 
 @property (nonatomic, weak) UITableView *tableView;
-
+@property (nonatomic, strong) NSMutableArray *dataSource;
 
 @end
 
@@ -24,12 +29,26 @@
     self.view.backgroundColor = Hex(0xf3f3f3);
     
     [self configEmptyStatus];
-    [self.tableView reloadData];
 }
 
 - (void)configEmptyStatus {
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self loadDownloadVoiceHistory];
+}
+
+- (void)loadDownloadVoiceHistory {
+    NSArray *tracks = [[XMLYDownloadDBHelper helper] queryTracksFromDownloadHistory];
+    self.dataSource = [[NSMutableArray alloc] init];
+    for(NSNumber *number in tracks){
+        XMLYAlbumTrackItemModel *model = [[XMLYDownloadManager manager] taskModelTrackFromAlbumID:number.integerValue];
+        [self.dataSource addObject:model];
+    }
+    [self.tableView reloadData];
 }
 
 
@@ -60,17 +79,29 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.dataSource.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 10;
+    return 117.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    XMLYDownloadCell *cell = [XMLYDownloadCell cellFromNib:tableView];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.trackModel = self.dataSource[indexPath.row];
+    [cell hideProgressView];
     return cell;
+}
+
+
+// 播放本地音频
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    XMLYAlbumTrackItemModel *model = self.dataSource[indexPath.row];
+    XMLYPlayViewController *view = [XMLYPlayViewController playViewController];
+    XMLYBaseNavigationController *nav = [[XMLYBaseNavigationController alloc] initWithRootViewController:view];
+    [view startPlayLocalAudioWithTrackModel:model];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 #pragma mark - UITableView

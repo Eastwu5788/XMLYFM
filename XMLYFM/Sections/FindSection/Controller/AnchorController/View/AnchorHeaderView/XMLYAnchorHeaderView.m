@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *moreButton;
 
 @end
 
@@ -20,6 +21,11 @@
 - (void)setModel:(XMLYAnchorSectionModel *)model {
     _model = model;
     self.titleLabel.text = _model.title;
+}
+
+- (void)configHeaderTitle:(NSString *)title showMore:(BOOL)showMore {
+    self.titleLabel.text = title;
+    self.moreButton.hidden = !showMore;
 }
 
 + (instancetype)anchorHeaderView:(UICollectionView *)collectionView atIndexPath:(NSIndexPath *)indexPath {

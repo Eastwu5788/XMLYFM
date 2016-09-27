@@ -10,7 +10,7 @@
 
 @implementation XMLYBaseModel
 
-MJCodingImplementation
+
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{
@@ -24,7 +24,17 @@ MJCodingImplementation
 
 
 
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [self xr_modelEncodeWithCoder:aCoder];
+}
 
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super init];
+    return [self xr_modelInitWithCoder:aDecoder];
+}
 
+- (id)copyWithZone:(NSZone *)zone {
+    return [self xr_modelCopy];
+}
 
 @end

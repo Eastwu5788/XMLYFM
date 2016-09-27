@@ -6,8 +6,26 @@
 //  Copyright © 2016年 East_wu. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XMLYBaseController.h"
+#import "XMLYPlayPageModel.h"
+#import "XMLYAudioHelper.h"
+#import "XMLYAlbumListModel.h"
 
-@interface XMLYPlayViewController : UIViewController
+@interface XMLYPlayViewController : XMLYBaseController
+
+@property (nonatomic, strong) XMLYPlayPageModel *model;
+@property (nonatomic, assign) DOUAudioStreamerStatus status;
+
+@property (nonatomic, assign) NSInteger    progress;
+
+@property (nonatomic, copy) void(^playViewControllerStatusChangeBlock)(DOUAudioStreamerStatus status);
+
++ (instancetype)playViewController;
+
+- (void)startPlayWithAlbumID:(NSInteger)albumID trackID:(NSInteger)trackID cachePath:(NSString *)cachePath;
+
+- (void)startPlayLocalAudioWithTrackModel:(XMLYAlbumTrackItemModel *)trackModel;
+
+- (void)saveCurrentPlayHistory;
 
 @end

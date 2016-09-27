@@ -15,4 +15,11 @@
  */
 + (NSString *)getHelloStringByLocalTime;
 
++ (NSString *)dataStringFromTimeInterval:(NSTimeInterval)time dataFormatter:(NSString *)formatter;
+
++ (NSString *)dataStringWithTimeInterval:(NSTimeInterval)time;
+
+//
++ (NSString *)timeFromTimeInterval:(NSTimeInterval)timeInterval;
+
 @end

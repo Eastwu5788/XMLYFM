@@ -10,11 +10,27 @@
 #import "XMLYFindBaseCell.h"
 #import "XMLYFindRecommendModel.h"
 
+@class XMLYFindCellStyleSpecial;
 
+@protocol XMLYFindCellStyleSpecialDelegate <NSObject>
+
+/**
+ *  查看更多按钮的点击事件
+ */
+- (void)findCellStyleSpecial:(XMLYFindCellStyleSpecial *)cell didMoreButtonClickWithModel:(XMLYSpecialColumnModel *)model;
+
+@end
+
+
+/**
+ *  这个cell需要大改
+ */
 
 @interface XMLYFindCellStyleSpecial : XMLYFindBaseCell
 
 @property (nonatomic, strong) XMLYSpecialColumnModel *specialModel;
+
+@property (nonatomic, weak) __weak id<XMLYFindCellStyleSpecialDelegate> delegate;
 
 + (instancetype)findCellStyleSpecial:(UITableView *)tableView;
 

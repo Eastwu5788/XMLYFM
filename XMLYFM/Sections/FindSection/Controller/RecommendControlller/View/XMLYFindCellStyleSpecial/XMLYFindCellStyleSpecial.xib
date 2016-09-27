@@ -35,13 +35,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="liveRadioSectionMore_Normal" translatesAutoresizingMaskIntoConstraints="NO" id="SJE-qP-7pK">
-                                <rect key="frame" x="275" y="19" width="35" height="12"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="35" id="9Et-PS-83a"/>
-                                    <constraint firstAttribute="height" constant="12" id="RSp-Sd-FsM"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="find_usercover" translatesAutoresizingMaskIntoConstraints="NO" id="ji1-Cr-0Lf">
                                 <rect key="frame" x="10" y="132" width="70" height="70"/>
                                 <constraints>
@@ -148,7 +141,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="SJE-qP-7pK" secondAttribute="trailing" constant="10" id="1kc-W2-SdA"/>
                             <constraint firstItem="EkE-Tr-ARK" firstAttribute="top" secondItem="TWC-bZ-tvZ" secondAttribute="bottom" constant="9" id="2zz-6p-Ftd"/>
                             <constraint firstItem="TWC-bZ-tvZ" firstAttribute="trailing" secondItem="dfy-Za-UIF" secondAttribute="trailing" id="5Ii-bq-shd"/>
                             <constraint firstItem="w2O-gl-DlJ" firstAttribute="leading" secondItem="2An-4o-fZf" secondAttribute="leading" constant="10" id="6m0-E9-kot"/>
@@ -177,7 +169,6 @@
                             <constraint firstItem="Pd5-Z9-L4C" firstAttribute="top" secondItem="dUC-oi-GSH" secondAttribute="bottom" constant="9" id="f4P-H0-JWp"/>
                             <constraint firstItem="sUp-UN-SIP" firstAttribute="leading" secondItem="ji1-Cr-0Lf" secondAttribute="trailing" constant="5" id="fdB-KY-8bG"/>
                             <constraint firstItem="dUC-oi-GSH" firstAttribute="leading" secondItem="ji1-Cr-0Lf" secondAttribute="trailing" constant="5" id="fzh-ON-WRv"/>
-                            <constraint firstItem="SJE-qP-7pK" firstAttribute="centerY" secondItem="QCU-Cf-SZw" secondAttribute="centerY" id="hP6-81-qXp"/>
                             <constraint firstItem="EkE-Tr-ARK" firstAttribute="trailing" secondItem="TWC-bZ-tvZ" secondAttribute="trailing" id="leu-ij-bvT"/>
                             <constraint firstItem="dUC-oi-GSH" firstAttribute="centerY" secondItem="ji1-Cr-0Lf" secondAttribute="centerY" id="mG7-c1-p6P"/>
                             <constraint firstItem="RGR-n8-sy9" firstAttribute="leading" secondItem="w2O-gl-DlJ" secondAttribute="leading" id="mec-Gb-Gt8"/>
@@ -189,11 +180,26 @@
                             <constraint firstItem="ji1-Cr-0Lf" firstAttribute="leading" secondItem="RGR-n8-sy9" secondAttribute="leading" id="yi7-M2-d7o"/>
                         </constraints>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bQ-PI-yUG">
+                        <rect key="frame" x="10" y="10" width="300" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="1mX-om-jj3"/>
+                        </constraints>
+                        <state key="normal" image="liveRadioSectionMore_Normal"/>
+                        <state key="highlighted" image="liveRadioSectionMore_High"/>
+                        <state key="focused" image="liveRadioSectionMore_High"/>
+                        <connections>
+                            <action selector="showMoreButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aqw-UV-LfA"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="0bQ-PI-yUG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="1GN-AD-bzS"/>
                     <constraint firstItem="2An-4o-fZf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-8" id="3Tc-c2-dus"/>
                     <constraint firstAttribute="bottomMargin" secondItem="2An-4o-fZf" secondAttribute="bottom" constant="1.5" id="3bX-Qg-vbh"/>
                     <constraint firstItem="2An-4o-fZf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="5LR-BP-RHN"/>
+                    <constraint firstItem="0bQ-PI-yUG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="rFT-qX-ZS7"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="0bQ-PI-yUG" secondAttribute="trailing" constant="2" id="w9H-hd-BtR"/>
                     <constraint firstAttribute="trailingMargin" secondItem="2An-4o-fZf" secondAttribute="trailing" constant="-8" id="zr8-b1-0Cb"/>
                 </constraints>
             </tableViewCellContentView>
@@ -216,6 +222,7 @@
         <image name="find_usercover" width="145" height="145"/>
         <image name="findcell_arrow" width="9" height="13"/>
         <image name="findsection_logo" width="8" height="10"/>
+        <image name="liveRadioSectionMore_High" width="34" height="12"/>
         <image name="liveRadioSectionMore_Normal" width="34" height="12"/>
     </resources>
 </document>

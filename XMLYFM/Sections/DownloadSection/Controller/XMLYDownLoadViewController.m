@@ -13,6 +13,7 @@
 #import "XMLYDownVoiceController.h"
 #import "YYWebImageManager.h"
 #import "YYDiskCache.h"
+#import "XMLYSizeHelper.h"
 #import "Masonry.h"
 
 
@@ -28,21 +29,7 @@ static int64_t XMLYDiskSpaceFree() {
 
 
 
-static NSString *XMLYDiskSpaceFreeString() {
-    int64_t free = XMLYDiskSpaceFree();
-    
-    if(free < 1024) { //B
-        return [NSString stringWithFormat:@"%lldB",free];
-    } //KB
-    else if (free < 1024.0 * 1024.0) {
-        return [NSString stringWithFormat:@"%.1fKB",free / 1024.0f];
-    }
-    else if (free < 1024.0 * 1024.0 * 1024.0) {
-        return [NSString stringWithFormat:@"%.1fMB",free / (1024.0 * 1024.0)];
-    } else {
-        return [NSString stringWithFormat:@"%.1fG",free / (1024.0 * 1024.0 * 1024.0)];
-    }
-}
+
 
 @interface XMLYDownLoadViewController () <UIPageViewControllerDelegate,UIPageViewControllerDataSource>
 
@@ -85,7 +72,7 @@ static NSString *XMLYDiskSpaceFreeString() {
 
 - (void)setupStorageCostLabel {
     CGFloat cost = [self totalCostForStorage];
-    NSString *free = XMLYDiskSpaceFreeString();
+    NSString *free = [XMLYSizeHelper sizeStringFromInt64:XMLYDiskSpaceFree()];
     NSString *title = [NSString stringWithFormat:@"已占用空间%.1fM,可用空间%@",cost,free];
     self.storageLabel.text = title;
 }
@@ -102,7 +89,20 @@ static NSString *XMLYDiskSpaceFreeString() {
 
 //查找音频缓存
 - (NSInteger)sizeForVoiceCache {
-    return 0;
+    NSString *localPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    localPath = [localPath stringByAppendingPathComponent:@"XMLYAudioPathCache"];
+    
+    int64_t size = 0;
+    NSFileManager *manager = [NSFileManager defaultManager];
+    
+    NSDirectoryEnumerator *fileEnumer = [manager enumeratorAtPath:localPath];
+    for(NSString *fileName in fileEnumer) {
+        NSString *filePath = [localPath stringByAppendingPathComponent:fileName];
+        NSDictionary *dic = [manager attributesOfItemAtPath:filePath error:nil];
+        size += [[dic objectForKey:NSFileSize] longLongValue];
+     }
+    
+    return size;
 }
 
 

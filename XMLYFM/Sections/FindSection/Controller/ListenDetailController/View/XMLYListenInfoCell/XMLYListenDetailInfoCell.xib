@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="XMLYListenDetailInfoCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="206"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="findsubject_segline" translatesAutoresizingMaskIntoConstraints="NO" id="5KC-Xr-iQ3">
+                        <rect key="frame" x="75" y="0.0" width="170" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="ECR-sN-yf0"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Os2-US-A34">
+                        <rect key="frame" x="20" y="30" width="280" height="115"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="115" id="H0T-ag-2XE"/>
+                        </constraints>
+                        <string key="text">《微微一笑很倾城》完美收官，全程甜甜甜的剧情设定真是让老夫的少女心炸裂啊。说起看剧啊，颜值重要，演技重要，剧情更重要，但是烂片也同样重要，没经受过几部剧天雷滚滚地摧残和洗礼，怎么会有看到优质剧集时的感动涕零呢！下面这12部剧，简直是每个人充满血泪与欢笑的看剧生涯的缩影啊！</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.3843137254901961" green="0.39215686274509803" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小编" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xO-Ja-OTP">
+                        <rect key="frame" x="205" y="180" width="25" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="JXX-CM-d8a"/>
+                            <constraint firstAttribute="width" constant="25" id="wTd-as-XvY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.52156862745098043" green="0.52549019607843139" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="huY-yU-eFn">
+                        <rect key="frame" x="237" y="180" width="14" height="14"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="Bet-nw-ybf"/>
+                            <constraint firstAttribute="width" constant="14" id="IMt-st-hue"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="二喵小姐" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjS-ay-Jk0">
+                        <rect key="frame" x="258" y="180" width="52" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="52" id="34o-Dn-By2"/>
+                            <constraint firstAttribute="height" constant="14" id="Axk-Nw-fzl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.52156862745098043" green="0.52549019607843139" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="huY-yU-eFn" firstAttribute="centerY" secondItem="0xO-Ja-OTP" secondAttribute="centerY" id="145-1C-ltc"/>
+                <constraint firstItem="Os2-US-A34" firstAttribute="top" secondItem="5KC-Xr-iQ3" secondAttribute="bottom" constant="15" id="24h-k6-jnC"/>
+                <constraint firstAttribute="trailing" secondItem="5KC-Xr-iQ3" secondAttribute="trailing" constant="75" id="4Sm-Jv-j4G"/>
+                <constraint firstItem="Os2-US-A34" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="8wd-RE-N8f"/>
+                <constraint firstItem="huY-yU-eFn" firstAttribute="leading" secondItem="0xO-Ja-OTP" secondAttribute="trailing" constant="7" id="D7N-NH-k5b"/>
+                <constraint firstAttribute="trailing" secondItem="gjS-ay-Jk0" secondAttribute="trailing" constant="10" id="EYy-sn-BJk"/>
+                <constraint firstItem="gjS-ay-Jk0" firstAttribute="leading" secondItem="huY-yU-eFn" secondAttribute="trailing" constant="7" id="KzU-qI-swh"/>
+                <constraint firstItem="gjS-ay-Jk0" firstAttribute="centerY" secondItem="huY-yU-eFn" secondAttribute="centerY" id="Pfc-sB-Jar"/>
+                <constraint firstItem="5KC-Xr-iQ3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="75" id="j9Q-Fk-SFd"/>
+                <constraint firstItem="5KC-Xr-iQ3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="w66-Wa-sEd"/>
+                <constraint firstAttribute="trailing" secondItem="Os2-US-A34" secondAttribute="trailing" constant="20" id="wpA-lf-qp8"/>
+                <constraint firstAttribute="bottom" secondItem="gjS-ay-Jk0" secondAttribute="bottom" constant="12" id="y0y-a4-Ek6"/>
+            </constraints>
+            <size key="customSize" width="313" height="112"/>
+            <connections>
+                <outlet property="avatarImageView" destination="huY-yU-eFn" id="PAh-Su-xIX"/>
+                <outlet property="introLabel" destination="Os2-US-A34" id="v9B-Xt-YeV"/>
+                <outlet property="introLabelHeight" destination="H0T-ag-2XE" id="65f-5l-b7a"/>
+                <outlet property="nickNameLabel" destination="gjS-ay-Jk0" id="S4q-cq-duJ"/>
+                <outlet property="nicknameWidthConstraint" destination="34o-Dn-By2" id="BKL-bU-ceW"/>
+            </connections>
+            <point key="canvasLocation" x="535" y="454"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="findsubject_segline" width="170" height="15"/>
+    </resources>
+</document>
