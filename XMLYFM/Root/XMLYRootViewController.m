@@ -78,7 +78,7 @@
 
 
 - (void)tabBarItemSelected:(UIButton *)btn {
-<<<<<<< HEAD
+
     btn.selected = YES;
     self.selectedIndex = btn.tag - 100;
     btn.userInteractionEnabled = NO;
@@ -87,7 +87,7 @@
         sbtn.selected = NO;
         sbtn.userInteractionEnabled = YES;
     }
-=======
+
    btn.selected = YES;
    btn.userInteractionEnabled = NO;
    for(UIButton *sbtn in self.bgImageView.subviews) {
@@ -103,7 +103,7 @@
       btn.selected = NO;
       btn.userInteractionEnabled = YES;
    }
->>>>>>> Eastwu5788/master
+
 }
 
 

@@ -67,7 +67,7 @@
 
 @implementation XMLYFindRadioTelCell
 
-
+//新闻台，国家台
 - (void)setModel:(XMLYFindRadioModel *)model {
     _model = model;
     

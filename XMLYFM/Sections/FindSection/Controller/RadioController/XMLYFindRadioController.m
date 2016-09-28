@@ -57,9 +57,10 @@ static force_inline XMLYRadioSectionHeaderViewStyle XMLYGetSectionHeaderStyle(NS
     else {
         self.viewModel.model.style = XMLYFindRadioTelCellStyleHidden;
     }
-    [self.tableView beginUpdates];
+//    [self.tableView beginUpdates];
     [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self.tableView endUpdates];
+//    [self.tableView endUpdates];
+   
 }
 
 #pragma mark - UITableViewDelegate/UITableViewDataSource

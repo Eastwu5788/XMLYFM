@@ -73,11 +73,7 @@
     return self.controllers.count;
 }
 
-//- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers {
-//    UIViewController *con = pendingViewControllers.firstObject;
-//    NSInteger index = [self indexForViewController:con];
-//    [self.subTitleView trans2ShowAtIndex:index];
-//}
+
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
     UIViewController *viewController = self.pageViewController.viewControllers[0];
@@ -98,8 +94,8 @@
 
 - (UIPageViewController *)pageViewController {
     if(!_pageViewController) {
-        NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithInteger:UIPageViewControllerSpineLocationNone] forKey:UIPageViewControllerOptionSpineLocationKey];
-        UIPageViewController *page = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:options];
+    
+        UIPageViewController *page = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
         page.delegate = self;
         page.dataSource = self;
         [page setViewControllers:@[[self.controllers firstObject]] direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
@@ -127,7 +123,7 @@
  */
 - (NSMutableArray *)subTitleArray {
     if(!_subTitleArray) {
-        _subTitleArray = [[NSMutableArray alloc] initWithObjects:@"推荐",@"分类",@"广播",@"榜单",@"主播",nil];
+        _subTitleArray = [[NSMutableArray alloc] initWithObjects:@"推荐",@"分类",@"广播",@"榜单",@"主播",@"测试",nil];
     }
     return _subTitleArray;
 }
