@@ -44,9 +44,7 @@
 
 
 - (void)trans2ShowAtIndex:(NSInteger)index {
-    if(index < 0 || index >= self.subTitleButtonArray.count) {
-        return;
-    }
+    if(index < 0 || index >= self.subTitleButtonArray.count)return;
     UIButton *btn = [self.subTitleButtonArray objectAtIndex:index];
     [self selectedAtButton:btn isFirstStart:NO];
 }
@@ -61,7 +59,8 @@
         [btn setTitle:title forState:UIControlStateNormal];
         [btn setTitleColor:kSystemOriginColor forState:UIControlStateSelected];
         [btn setTitleColor:kSystemBlackColor forState:UIControlStateNormal];
-        [btn setTitleColor:kSystemOriginColor forState:UIControlStateHighlighted | UIControlStateSelected];
+        //跟那个重写去掉高亮状态的效果一样的
+        [btn setTitleColor:kSystemOriginColor forState:UIControlStateSelected|UIControlStateHighlighted ];
         btn.frame = CGRectMake(width * index, 0, width, 38);
         btn.titleLabel.font = [UIFont systemFontOfSize:15];
         btn.adjustsImageWhenHighlighted = NO;
@@ -97,20 +96,18 @@
  */
 - (void)unselectedAllButton:(UIButton *)btn {
     for(UIButton *sbtn in self.subTitleButtonArray) {
-        if(sbtn == btn) {
-            continue;
-        }
+        if(sbtn == btn)continue;
         sbtn.selected = NO;
     }
 }
+
 
 /**
  *  按钮点击事件回调
  */
 - (void)subTitleBtnClick:(UIButton *)btn {
-    if(btn == self.currentSelectedButton) {
-        return;
-    }
+    
+    if(btn == self.currentSelectedButton)return;
     if([self.delegate respondsToSelector:@selector(findSubTitleViewDidSelected:atIndex:title:)]) {
         [self.delegate findSubTitleViewDidSelected:self atIndex:[self.subTitleButtonArray indexOfObject:btn] title:btn.titleLabel.text];
     }

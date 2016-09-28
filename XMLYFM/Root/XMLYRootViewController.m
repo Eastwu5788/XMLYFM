@@ -51,12 +51,13 @@
     for(NSInteger index = 0; index < 5; index++ ) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         if(index == 2) {
-            btn.frame = CGRectMake(kScreenWidth / 2.0 - kTabBarHeight / 2.0 - 5 , -10, kTabBarHeight + 10, kTabBarHeight + 10);
+            btn.frame = CGRectMake((kScreenWidth -width-10)/2.0 , -10, width + 10, kTabBarHeight + 10);
             [btn setBackgroundImage:[UIImage imageNamed:@"tabbar_np_normal"] forState:UIControlStateNormal];
         }
         else{
             btn.frame = CGRectMake(width * index, 0, width, kTabBarHeight);
         }
+
         btn.tag = 100 + index;
         btn.adjustsImageWhenHighlighted = NO;
         [btn setImage:[self.normalImageArray objectAtIndex:index] forState:UIControlStateNormal];
@@ -66,17 +67,27 @@
         [self.bgImageView addSubview:btn];
     }
     
-    UIButton *playBtn = [self.bgImageView viewWithTag:102];
-    UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tabbar_np_shadow"]];
-    CGFloat btnW = playBtn.frame.size.width + 6;
-    img.frame = CGRectMake( -3 , -3, btnW , btnW * 13.0f / 15.0f);
-    [playBtn addSubview:img];
-    
+//    UIButton *playBtn = [self.bgImageView viewWithTag:102];
+//    UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"tabbar_np_shadow"]];
+//    CGFloat btnW = playBtn.frame.size.width + 6;
+//    img.frame = CGRectMake( -3 , -3, btnW , btnW * 13.0f / 15.0f);
+//    [playBtn addSubview:img];
+   
     [self tabBarItemSelected:[self.bgImageView viewWithTag:100]];
 }
 
 
 - (void)tabBarItemSelected:(UIButton *)btn {
+
+    btn.selected = YES;
+    self.selectedIndex = btn.tag - 100;
+    btn.userInteractionEnabled = NO;
+    for(UIButton *sbtn in self.bgImageView.subviews) {
+        if(sbtn.tag == btn.tag)continue;
+        sbtn.selected = NO;
+        sbtn.userInteractionEnabled = YES;
+    }
+
    btn.selected = YES;
    btn.userInteractionEnabled = NO;
    for(UIButton *sbtn in self.bgImageView.subviews) {
@@ -92,12 +103,12 @@
       btn.selected = NO;
       btn.userInteractionEnabled = YES;
    }
+
 }
 
 
 - (void)configSubControllers {
-    self.tabBar.hidden = YES;
-    
+   
     NSMutableArray *arr = [NSMutableArray new];
     [self.controllerIdentiferArray enumerateObjectsUsingBlock:^(NSString *identifier, NSUInteger idx, BOOL * _Nonnull stop) {
         XMLYBaseNavigationController *navi = [self navigationControllerWithIdentifier:identifier];
@@ -116,6 +127,8 @@
     XMLYBaseNavigationController *nav = [[UIStoryboard storyboardWithName:identifier bundle:nil] instantiateInitialViewController];
     return nav;
 }
+
+
 
 #pragma mark - UITabBarControllerDelegate
 
@@ -144,6 +157,18 @@
         
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 #pragma mark - getter
 

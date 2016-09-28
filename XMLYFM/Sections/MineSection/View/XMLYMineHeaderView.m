@@ -25,7 +25,7 @@
 
 - (instancetype)init {
     self = [super init];
-    
+    self.backgroundColor = [UIColor redColor];
     return self;
 }
 
@@ -52,6 +52,7 @@
     //点击登录按钮
     self.userNameButton.frame = CGRectMake(centx - 100.0f, self.subTitleLabel.frame.origin.y - 10 - 18.0, 200.0f, 18.0f);
     
+    //头像视图
     self.avatarImageView.frame = CGRectMake(centx - 45.0, self.userNameButton.frame.origin.y - 10 - 90.0, 90, 90);
     
     //设置按钮
@@ -179,6 +180,7 @@
         img.layer.masksToBounds = YES;
         [self addSubview:img];
         _backImageView = img;
+       
     }
     return _backImageView;
 }

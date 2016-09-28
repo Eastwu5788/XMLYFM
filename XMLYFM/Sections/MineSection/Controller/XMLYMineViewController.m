@@ -52,7 +52,6 @@ static NSString *const kMeSetting     = @"设置";
     _lightFlag = YES;
     [self.tableView bringSubviewToFront:self.headerView];
 }
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
@@ -183,6 +182,7 @@ static NSString *const kMeSetting     = @"设置";
         [self.view addSubview:view];
         [self.view bringSubviewToFront:view];
         _statusBackView = view;
+        _statusBackView.backgroundColor = [UIColor blueColor];
     }
     return _statusBackView;
 }
@@ -192,9 +192,11 @@ static NSString *const kMeSetting     = @"设置";
         _headerView = [[XMLYMineHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 288)];
         self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 288)];
         [self.tableView addSubview:_headerView];
+        _headerView.backgroundColor = [UIColor greenColor];
     }
     return _headerView;
 }
+
 
 - (NSArray *)titlesArray {
     if(!_titlesArray) {
@@ -206,7 +208,6 @@ static NSString *const kMeSetting     = @"设置";
     }
     return _titlesArray;
 }
-
 - (NSArray *)imageArray {
     if(!_imageArray) {
         _imageArray = @[@[@"me_setting_favAlbum",@"me_setting_playhis"],
@@ -216,9 +217,7 @@ static NSString *const kMeSetting     = @"设置";
     }
     return _imageArray;
 }
-
-
-- (UITableView *)tableView {
+-(UITableView *)tableView {
     if(!_tableView) {
         UITableView *tab = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, self.view.frame.size.height - 49)
                                                         style:UITableViewStyleGrouped];

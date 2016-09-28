@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,130 +13,114 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="230"/>
+                <frame key="frameInset" width="320" height="230"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19q-7b-Ccx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="findsection_logo" translatesAutoresizingMaskIntoConstraints="NO" id="WwL-I3-GSN">
-                                <rect key="frame" x="10" y="20" width="10" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="Aec-Ys-WiS"/>
                                     <constraint firstAttribute="width" constant="10" id="zBM-yc-6dN"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="付费精品" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXh-7T-xpd">
-                                <rect key="frame" x="23" y="18" width="141" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="141" id="X7X-Zo-3Zy"/>
                                     <constraint firstAttribute="height" constant="15" id="dQc-0t-BPE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="find_usercover" translatesAutoresizingMaskIntoConstraints="NO" id="HyW-P6-gYa">
-                                <rect key="frame" x="10" y="50" width="93" height="93"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="93" id="5av-pp-WkQ"/>
                                     <constraint firstAttribute="width" constant="93" id="D5t-uo-hQO"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="find_usercover" translatesAutoresizingMaskIntoConstraints="NO" id="G0b-n2-aGL">
-                                <rect key="frame" x="114" y="50" width="93" height="93"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="93" id="M8O-do-xoc"/>
                                     <constraint firstAttribute="width" constant="93" id="lWl-7n-e6A"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="find_usercover" translatesAutoresizingMaskIntoConstraints="NO" id="YnJ-Ws-jdS">
-                                <rect key="frame" x="217" y="50" width="93" height="93"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="V9x-6X-I9j"/>
                                     <constraint firstAttribute="height" constant="93" id="kdt-p5-0V0"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="马薇薇:被人鄙视,如何反击?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udC-wg-fDZ">
-                                <rect key="frame" x="10" y="155" width="93" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="2Qt-87-RSx"/>
                                     <constraint firstAttribute="width" constant="93" id="fPj-kL-nP1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="马薇薇:被人鄙视,如何反击?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vF7-Zc-bqa">
-                                <rect key="frame" x="114" y="155" width="93" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="MUz-ur-4de"/>
                                     <constraint firstAttribute="width" constant="93" id="gbt-RQ-cMP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="马薇薇:被人鄙视,如何反击?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIm-fi-YJO">
-                                <rect key="frame" x="217" y="155" width="93" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="93" id="QOH-CM-kUV"/>
                                     <constraint firstAttribute="height" constant="35" id="hKT-Ie-yOp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="find_specialicon" translatesAutoresizingMaskIntoConstraints="NO" id="ehy-Ee-1e6">
-                                <rect key="frame" x="10" y="200" width="10" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="91R-m0-iro"/>
                                     <constraint firstAttribute="width" constant="10" id="nAC-Nb-yld"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="马东携奇葩说" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UyQ-sP-NjS">
-                                <rect key="frame" x="25" y="198" width="78" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="VxL-k7-Eaf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.52549019607843139" green="0.52941176470588236" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.52549019607843139" green="0.52941176470588236" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="find_specialicon" translatesAutoresizingMaskIntoConstraints="NO" id="6kr-RK-w2o">
-                                <rect key="frame" x="114" y="200" width="10" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="Naz-25-JE4"/>
                                     <constraint firstAttribute="width" constant="10" id="qv7-Mb-nWu"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="马东携奇葩说" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTd-wd-ry1">
-                                <rect key="frame" x="129" y="197" width="78" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="BXQ-9a-JQv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.52549019610000003" green="0.52941176469999995" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.52549019610000003" green="0.52941176469999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="find_specialicon" translatesAutoresizingMaskIntoConstraints="NO" id="Yja-OV-kV3">
-                                <rect key="frame" x="217" y="200" width="10" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="uKN-Sj-mzF"/>
                                     <constraint firstAttribute="width" constant="10" id="v2S-X9-4U9"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="马东携奇葩说" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JN-Xv-9Nc">
-                                <rect key="frame" x="232" y="197" width="78" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="gKa-61-0N5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" red="0.52549019610000003" green="0.52941176469999995" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.52549019610000003" green="0.52941176469999995" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgE-yG-HxC">
-                                <rect key="frame" x="10" y="12" width="300" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Fsh-sh-rGb"/>
                                 </constraints>
@@ -146,7 +131,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Yja-OV-kV3" firstAttribute="top" secondItem="cIm-fi-YJO" secondAttribute="bottom" constant="10" id="1TR-Wz-k4d"/>
                             <constraint firstItem="udC-wg-fDZ" firstAttribute="top" secondItem="HyW-P6-gYa" secondAttribute="bottom" constant="12" id="1VI-QC-vHY"/>
@@ -192,7 +177,7 @@
                     <constraint firstItem="19q-7b-Ccx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="l7H-VB-zKP"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.90196078431372551" green="0.90588235294117647" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.90196078431372551" green="0.90588235294117647" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="contentLeft" destination="udC-wg-fDZ" id="gpA-xq-5sO"/>
                 <outlet property="contentMiddel" destination="vF7-Zc-bqa" id="vAz-dq-opi"/>
@@ -206,7 +191,7 @@
                 <outlet property="subContentRight" destination="2JN-Xv-9Nc" id="jtl-jr-fqP"/>
                 <outlet property="titleLabel" destination="ZXh-7T-xpd" id="WGu-uz-tpQ"/>
             </connections>
-            <point key="canvasLocation" x="391" y="461"/>
+            <point key="canvasLocation" x="-67" y="-21"/>
         </tableViewCell>
     </objects>
     <resources>

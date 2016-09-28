@@ -1443,7 +1443,6 @@
 				2B1DF3BC1D5DBED100C8BC7F /* XMLYExtension */,
 				2B331DFC1D5B20D90092AA75 /* XMLYBase */,
 				2B4005C91D59875600605EFB /* XMLYCommenUI */,
-				2B6E0A771D58846E000A8C58 /* XMLYConfig */,
 				2B6E0A781D58846E000A8C58 /* XMLYMacro */,
 				2B6E0A791D58846E000A8C58 /* XMLYNotification */,
 			);
@@ -1638,13 +1637,6 @@
 				2B0613B11D82F94E000E1C74 /* XMLYMineHeaderView.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		2B6E0A771D58846E000A8C58 /* XMLYConfig */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = XMLYConfig;
 			sourceTree = "<group>";
 		};
 		2B6E0A781D58846E000A8C58 /* XMLYMacro */ = {
@@ -2733,7 +2725,7 @@
 				TargetAttributes = {
 					2B6E09DD1D58367D000A8C58 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 4G9A7SWCTY;
+						DevelopmentTeam = WK732DSBFE;
 					};
 					2B6E09F61D58367D000A8C58 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -3218,16 +3210,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: shuping wu (CKJ6F942H8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: shuping wu (CKJ6F942H8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XMLYFM/XMLYFM-Prefix.pch";
 				INFOPLIST_FILE = XMLYFM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tuigirl.playboy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xmgztbw.baigebao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eef9aefc-b7e3-4e8f-a165-aa829952f069";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -3238,16 +3230,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: shuping wu (CKJ6F942H8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: shuping wu (CKJ6F942H8)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XMLYFM/XMLYFM-Prefix.pch";
 				INFOPLIST_FILE = XMLYFM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tuigirl.playboy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xmgztbw.baigebao;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eef9aefc-b7e3-4e8f-a165-aa829952f069";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
