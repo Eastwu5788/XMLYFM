@@ -18,8 +18,7 @@
  *  小滑块
  */
 @property (nonatomic, weak) UIView   *sliderView;
-
-
+@property(nonatomic,strong)NSMutableArray<UIButton *> *buttonArray;
 @property (nonatomic, strong) NSArray *titles;
 
 @end
@@ -43,13 +42,11 @@
 
 - (void)configSubView {
     if(self.titles.count == 0) return;
-    
-    CGFloat width = kScreenWidth / self.titles.count;
+    self.buttonArray = [[NSMutableArray alloc] init];
     
     for(NSInteger i = 0, max = self.titles.count; i < max; i++) {
         NSString *title = self.titles[i];
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.frame = CGRectMake(i * width, 0, width, 44);
         [btn setTitleColor:kTitleColorNormal forState:UIControlStateNormal];
         [btn setTitleColor:kTitleColorSelect forState:UIControlStateSelected];
         [btn setTitleColor:kTitleColorSelect forState:UIControlStateHighlighted | UIControlStateSelected];
@@ -58,6 +55,7 @@
         [btn addTarget:self action:@selector(subButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
         btn.tag = 100 + i;
         [self addSubview:btn];
+        [self.buttonArray addObject:btn];
     }
 }
 
@@ -106,14 +104,24 @@
  */
 - (UIView *)sliderView {
     if(!_sliderView) {
-        CGFloat width = kScreenWidth / self.titles.count;
         UIView *view = [[UIView alloc] init];
-        view.frame = CGRectMake(2, self.frame.size.height - 2.0f, width - 4, 2);
         view.backgroundColor = kTitleColorSelect;
         [self addSubview:view];
         _sliderView = view;
     }
     return _sliderView;
+}
+
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    NSInteger buttonCount = self.buttonArray.count;
+    CGFloat buttonWidth = self.frame.size.width / buttonCount;
+    for (NSInteger buttonIndex = 0; buttonIndex < buttonCount; buttonIndex++) {
+        self.buttonArray[buttonIndex].frame = CGRectMake(buttonIndex *buttonWidth , 0, buttonWidth, 44);
+    }
+    
+    self.sliderView.frame = CGRectMake(2, self.frame.size.height - 2.0f, buttonWidth - 4, 2);
 }
 
 @end
