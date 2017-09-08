@@ -1,8 +1,3 @@
-#说明
-本人在9月15日升级了Xcode版本到8.0。Xcode 8.0的代码很多在低版本上不兼容，最严重的就是使用Xcode8.0创建的xib在低版本上是打不开的。导致有朋友反馈代码无法运行。   
-
-#运行环境要求:Xcode 8.0
-
 # XMLYFM
 这个项目模仿喜马拉雅FM，目前仅实现了发现中的推荐页面、分类页面、广播页面、榜单页面、主播页面  
 持续更新中，更多功能正在赶来...
@@ -68,7 +63,5 @@
    
 直播详情页面    
 ![](https://github.com/Eastwu5788/XMLYFM/raw/master/GIF/LiveDetail.gif)     
-  
 
-更多的效果演示在我的博客中为大家展示:[http://www.jianshu.com/p/3929ec2eeb15](http://www.jianshu.com/p/3929ec2eeb15)
 
