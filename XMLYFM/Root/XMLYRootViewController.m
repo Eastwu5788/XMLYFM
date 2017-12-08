@@ -51,11 +51,11 @@
     for(NSInteger index = 0; index < 5; index++ ) {
         UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
         if(index == 2) {
-            btn.frame = CGRectMake(kScreenWidth / 2.0 - kTabBarHeight / 2.0 - 5 , -10, kTabBarHeight + 10, kTabBarHeight + 10);
+            btn.frame = CGRectMake(kScreenWidth / 2.0 - 49.0f / 2.0 - 5 , -10, 49.0f + 10, 49.0f + 10);
             [btn setBackgroundImage:[UIImage imageNamed:@"tabbar_np_normal"] forState:UIControlStateNormal];
         }
         else{
-            btn.frame = CGRectMake(width * index, 0, width, kTabBarHeight);
+            btn.frame = CGRectMake(width * index, 0, width, 49.0f);
         }
         btn.tag = 100 + index;
         btn.adjustsImageWhenHighlighted = NO;

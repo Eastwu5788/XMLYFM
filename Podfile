@@ -11,4 +11,5 @@ pod 'MJExtension'
 pod 'DZNEmptyDataSet'
 pod 'YYText'
 pod 'FMDB'
+pod 'FDFullscreenPopGesture'
 end
