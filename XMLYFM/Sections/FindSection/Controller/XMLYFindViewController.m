@@ -41,7 +41,7 @@
         make.top.mas_equalTo(self.subTitleView.mas_bottom);
         make.left.mas_equalTo(self.view.mas_left);
         make.right.mas_equalTo(self.view.mas_right);
-        make.bottom.equalTo(self.view.mas_bottom).offset(-49);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-kTabBarHeight);
     }];
 }
 
