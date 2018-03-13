@@ -3228,7 +3228,7 @@
 				INFOPLIST_FILE = XMLYFM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tuigirl.playboy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taole.narang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "eef9aefc-b7e3-4e8f-a165-aa829952f069";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -3248,7 +3248,7 @@
 				INFOPLIST_FILE = XMLYFM/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tuigirl.playboy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.taole.narang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "eef9aefc-b7e3-4e8f-a165-aa829952f069";
 				TARGETED_DEVICE_FAMILY = 1;

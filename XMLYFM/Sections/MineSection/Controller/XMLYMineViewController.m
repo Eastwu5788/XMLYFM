@@ -220,7 +220,7 @@ static NSString *const kMeSetting     = @"设置";
 
 - (UITableView *)tableView {
     if(!_tableView) {
-        UITableView *tab = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, self.view.frame.size.height - 49)
+        UITableView *tab = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, self.view.frame.size.height - kTabBarHeight)
                                                         style:UITableViewStyleGrouped];
         tab.delegate = self;
         tab.dataSource = self;
