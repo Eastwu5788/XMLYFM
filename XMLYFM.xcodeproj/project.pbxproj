@@ -2733,7 +2733,8 @@
 				TargetAttributes = {
 					2B6E09DD1D58367D000A8C58 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 4G9A7SWCTY;
+						DevelopmentTeam = 5HR76X3T43;
+						ProvisioningStyle = Automatic;
 					};
 					2B6E09F61D58367D000A8C58 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -3222,7 +3223,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: shuping wu (CKJ6F942H8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: shuping wu (CKJ6F942H8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HR76X3T43;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XMLYFM/XMLYFM-Prefix.pch";
 				INFOPLIST_FILE = XMLYFM/Info.plist;
@@ -3230,7 +3233,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taole.narang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eef9aefc-b7e3-4e8f-a165-aa829952f069";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -3242,7 +3246,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: shuping wu (CKJ6F942H8)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: shuping wu (CKJ6F942H8)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5HR76X3T43;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XMLYFM/XMLYFM-Prefix.pch";
 				INFOPLIST_FILE = XMLYFM/Info.plist;
@@ -3250,7 +3256,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taole.narang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "eef9aefc-b7e3-4e8f-a165-aa829952f069";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
